@@ -25,6 +25,7 @@ public static class GameplayVerification
     {
         if(!EditorApplication.isPlaying)throw new Exception("Enter Play Mode before verification.");
         if(suite!=null)throw new Exception("Verification is already running.");
+        EditorWindow.GetWindow(typeof(Editor).Assembly.GetType("UnityEditor.GameView")).Focus();
         report="Gameplay integration verification — "+DateTime.Now.ToString("O")+"\n";
         runtimeErrors="";Application.logMessageReceived+=Log;
         keyboard=InputSystem.AddDevice<Keyboard>("GameplayTestKeyboard");

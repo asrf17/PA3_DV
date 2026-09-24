@@ -2,7 +2,7 @@
 
 Prototipo de exploración 3D construido sobre el mapa original de PA3_DV, con Unity 6000.6.0f1.
 
-Abre `Assets/Scenes/Gameplay.unity`, entra en Play y selecciona **Jugar**. Controla la esfera con WASD o flechas, sigue la orientación aproximada y encuentra las diez monedas. Pulsa ESC para pausar, reiniciar o regresar al menú.
+Abre `Assets/Scenes/Gameplay.unity`, entra en Play y selecciona **Jugar**. Controla la esfera con WASD o flechas respecto a la cámara y usa el mouse para mirar alrededor con órbita TPS. Sigue la orientación aproximada y encuentra las diez monedas. Pulsa ESC para pausar y liberar el cursor, reiniciar o regresar al menú.
 
 - `main`: respaldo original del mapa, sin desarrollo de gameplay.
 - `feature/gameplay-3d`: personaje, cámara, coleccionables, brújula, interfaces y menús.

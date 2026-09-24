@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace ForestJourney
 {
-    // On the visual child, independent of the non-rotating physics root.
+    // On the visual child; rolling stays independent of the physics root's TPS yaw.
     public sealed class BallRollingVisual : MonoBehaviour
     {
         public Transform player;

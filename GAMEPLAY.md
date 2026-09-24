@@ -10,7 +10,7 @@ El terreno original se referencia sin modificar sus datos.
 
 1. Abre este proyecto con Unity 6000.6.0f1 y la rama `feature/gameplay-3d`.
 2. Abre `Assets/Scenes/Gameplay.unity` y pulsa Play en Unity.
-3. Selecciona **Jugar**. Usa WASD o flechas para mover la esfera; ESC abre y cierra la pausa.
+3. Selecciona **Jugar**. Usa WASD o flechas para mover la esfera respecto a la cámara, y el mouse para orbitar. ESC abre y cierra la pausa y libera el cursor.
 4. Busca diez monedas. La flecha superior señala un sector aproximado hacia la moneda disponible más cercana; no indica posición ni distancia.
 5. Al recoger las diez aparece el mensaje de objetivo completado. Puedes seguir explorando o reiniciar desde la pausa.
 
@@ -24,8 +24,8 @@ Todas las referencias indicadas ya están asignadas en el Inspector. Los scripts
 | Script | GameObject | Función y referencias |
 | --- | --- | --- |
 | PlayerController | Player Sphere | Movimiento relativo a cámara, velocidad 14, aceleración 32, adaptación a pendientes y recuperación de caídas. Referencia Gameplay Camera. Rigidbody de masa 2, interpolación y detección continua; SphereCollider de radio 1. |
-| BallRollingVisual | Player Sphere / Rolling Visual | Rueda la parte visual según distancia recorrida, sin rotar los ejes de control. Referencia Player Sphere. |
-| CameraController | Gameplay Camera | Seguimiento suave con comprobaciones de colisión; referencia Player Sphere. Distancia 10, altura 6. |
+| BallRollingVisual | Player Sphere / Rolling Visual | Rueda la pelota según distancia recorrida, independientemente del giro horizontal del personaje. Referencia Player Sphere. |
+| CameraController | Gameplay Camera | Órbita TPS con mouse, Pitch limitado y colisión; referencia Player Sphere. Distancia 7, altura de pivote 1,6 y hombro 0,55. |
 | Coin | Coin 01 a Coin 10 | Trigger esférico, recolección única y desactivación. Referencia CoinManager de Gameplay Systems. |
 | CoinMotion | Floating Coin Visual, dentro de cada moneda | Flotación y giro del modelo; no mueve el trigger. |
 | CoinManager | Gameplay Systems | Registro de diez monedas, contador, reinicio y búsqueda de la más cercana. Array de monedas asignado. |
@@ -37,6 +37,7 @@ Todas las referencias indicadas ya están asignadas en el Inspector. Los scripts
 | CollectionFeedback | Gameplay Systems | Sonido sintetizado y partículas doradas al recoger monedas. AudioSource, clip CoinChime y material CollectionSpark asignados. |
 
 El jugador utiliza la capa **Ignore Raycast** para evitar que las consultas de suelo y cámara detecten su propio collider; sigue colisionando físicamente con el entorno.
+La configuración TPS, sensibilidades, velocidad de giro y preparación para apuntado se detallan en [Documentation/TPS_CONTROLLER.md](Documentation/TPS_CONTROLLER.md).
 Los prefabs reutilizables están en `Assets/Prefabs/Gameplay`: PlayerSphere y GoldenCoin. Al instanciarlos en otra escena, asigna la cámara al jugador y el CoinManager a las monedas.
 
 ## Conservación del mapa

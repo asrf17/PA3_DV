@@ -32,6 +32,8 @@ public static class GameplayDevelopment
             else if (command == "qa") typeof(GameplayDevelopment).Assembly.GetType("GameplayVerification").GetMethod("Run").Invoke(null, null);
             else if (command == "polish") GameplaySceneBuilder.Polish();
             else if (command == "package") GameplaySceneBuilder.BuildPlayer();
+            else if (command == "tps") GameplayTPSSetup.Configure();
+            else if (command == "tpsqa") typeof(GameplayDevelopment).Assembly.GetType("TPSVerification").GetMethod("Run").Invoke(null, null);
         }
         catch (Exception e) { File.WriteAllText("Library/GameplayFailure.txt", e.ToString()); Debug.LogException(e); }
     }
