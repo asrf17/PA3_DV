@@ -14,6 +14,7 @@ namespace ForestJourney
         public Vector3 Heading { get; private set; } = Vector3.forward;
         public Rigidbody Body { get; private set; }
         Vector3 spawn;
+        public bool Grounded { get; private set; }
         void Awake()
         {
             Body = GetComponent<Rigidbody>(); spawn = transform.position;
@@ -35,9 +36,14 @@ namespace ForestJourney
             Vector3 right = Vector3.Cross(Vector3.up, forward);
             Vector3 direction = forward * MoveInput.y + right * MoveInput.x;
             if (direction.sqrMagnitude > .01f) Heading = direction.normalized;
-            Vector3 horizontal = Vector3.ProjectOnPlane(Body.linearVelocity, Vector3.up);
-            Vector3 change = Vector3.ClampMagnitude(direction * speed - horizontal, acceleration * Time.fixedDeltaTime);
+            Grounded = Physics.SphereCast(Body.position, .85f, Vector3.down, out var ground, .5f, ~4, QueryTriggerInteraction.Ignore)
+                && Vector3.Dot(ground.normal, Vector3.up) > .65f;
+            Vector3 normal = Grounded ? ground.normal : Vector3.up;
+            Vector3 target = Vector3.ProjectOnPlane(direction, normal).normalized * direction.magnitude * speed;
+            Vector3 horizontal = Vector3.ProjectOnPlane(Body.linearVelocity, normal);
+            Vector3 change = Vector3.ClampMagnitude(target - horizontal, acceleration * (Grounded ? 1f : .2f) * Time.fixedDeltaTime);
             Body.AddForce(change, ForceMode.VelocityChange);
+            if (Grounded) Body.AddForce(-Vector3.ProjectOnPlane(Physics.gravity, normal) - normal * 8f, ForceMode.Acceleration);
             if (Body.position.y < -30) ResetToSpawn();
         }
         public void ResetToSpawn()
