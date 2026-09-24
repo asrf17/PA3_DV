@@ -8,6 +8,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.LowLevel;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 using Object=UnityEngine.Object;
 
 // Runs against the actual scene and physics in Play Mode; never included in player builds.
@@ -55,16 +56,23 @@ public static class GameplayVerification
         if(fixture)Object.Destroy(fixture);
         suite=null;EditorApplication.update-=Tick;
         File.WriteAllText("Library/GameplayQA.txt",report);
-        var game=Object.FindFirstObjectByType<GameManager>();if(game)game.ShowMainMenu();
+        var game=Object.FindAnyObjectByType<GameManager>();if(game)game.ShowMainMenu();
     }
     static IEnumerator Verify()
     {
-        var game=Object.FindFirstObjectByType<GameManager>();var player=game.player;
+        var game=Object.FindAnyObjectByType<GameManager>();var player=game.player;
         var pause=game.GetComponent<PauseMenu>();
         var hud=game.hud.GetComponent<CoinCounterUI>();var guide=game.hud.GetComponent<CoinDirectionIndicator>();
         Check(game.State==GameState.MainMenu && Time.timeScale==0 && !player.ControlsEnabled,"Main menu freezes world and controls");
         ScreenCapture.CaptureScreenshot("Library/GameplayMenu.png");yield return .3f;
-        game.playButton.GetComponent<Button>().onClick.Invoke();yield return .8f;
+        Keys(Key.DownArrow);yield return .2f;
+        var inputModule=EventSystem.current.GetComponent<UnityEngine.InputSystem.UI.InputSystemUIInputModule>();
+        string navigationDetails=" selected="+EventSystem.current.currentSelectedGameObject.name+" move="+inputModule.move.action.ReadValue<Vector2>()+" controls="+inputModule.move.action.controls.Count+" keyboard="+keyboard.downArrowKey.isPressed;
+        Keys();yield return .1f;
+        Check(EventSystem.current.currentSelectedGameObject.name=="Quit","Keyboard navigation selects Exit in main menu"+navigationDetails);
+        Keys(Key.UpArrow);yield return .2f;Keys();yield return .1f;
+        Check(EventSystem.current.currentSelectedGameObject==game.playButton,"Keyboard navigation returns to Play");
+        Keys(Key.Enter);yield return .2f;Keys();yield return .8f;
         Check(game.State==GameState.Playing && Time.timeScale==1 && player.Grounded,"Play button starts player on terrain");
         Check(game.coins.Collected==0 && hud.counter.text=="Monedas: 0 / 10","Counter starts at zero");
         Check(guide.Target==game.coins.Nearest(player.transform.position) && guide.indicator.activeSelf,"Compass targets nearest available coin");
@@ -77,7 +85,7 @@ public static class GameplayVerification
         var frozen=player.Body.position;yield return .3f;
         Check(game.State==GameState.Paused && Time.timeScale==0 && !player.ControlsEnabled && Vector3.Distance(frozen,player.Body.position)<.001f,"Escape pauses physics and movement");
         ScreenCapture.CaptureScreenshot("Library/GameplayPause.png");yield return .2f;
-        game.continueButton.GetComponent<Button>().onClick.Invoke();yield return .2f;
+        Keys(Key.Enter);yield return .2f;Keys();yield return .2f;
         Check(game.State==GameState.Playing && Time.timeScale==1 && player.ControlsEnabled,"Continue button restores time and controls");
         fixture=new GameObject("Temporary Verification Physics");
         var floor=GameObject.CreatePrimitive(PrimitiveType.Cube);floor.transform.SetParent(fixture.transform);floor.transform.position=new Vector3(1200,99,1200);floor.transform.localScale=new Vector3(40,2,40);

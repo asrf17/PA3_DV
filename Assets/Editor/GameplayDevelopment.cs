@@ -39,8 +39,16 @@ public static class GameplayDevelopment
     {
         var scene = SceneManager.GetActiveScene();
         string report = "COMPILED " + DateTime.Now.ToString("O") + "\nScene: " + scene.path + " dirty=" + scene.isDirty;
+        report += "\nInput update: " + UnityEngine.InputSystem.InputSystem.settings.updateMode;
+        var events = UnityEngine.EventSystems.EventSystem.current;
+        if(events)
+        {
+            var module=events.GetComponent<UnityEngine.InputSystem.UI.InputSystemUIInputModule>();
+            report += "\nSelected: "+events.currentSelectedGameObject+" navigation="+events.sendNavigationEvents+" module="+events.currentInputModule;
+            if(module)report += "\nUI move enabled="+module.move.action.enabled+" controls="+module.move.action.controls.Count+" value="+module.move.action.ReadValue<Vector2>();
+        }
         foreach (var root in scene.GetRootGameObjects()) report += "\nRoot: " + root.name + " " + root.transform.position;
-        foreach (var t in UnityEngine.Object.FindObjectsByType<Terrain>(FindObjectsSortMode.None))
+        foreach (var t in UnityEngine.Object.FindObjectsByType<Terrain>())
         {
             report += "\nTerrain: " + t.name + " size=" + t.terrainData.size + " trees=" + t.terrainData.treeInstanceCount + " centerHeight=" + t.terrainData.GetInterpolatedHeight(.5f,.5f);
             foreach(var p in t.terrainData.treePrototypes) report += "\nPrototype: "+p.prefab.name+" colliders="+p.prefab.GetComponentsInChildren<Collider>().Length;

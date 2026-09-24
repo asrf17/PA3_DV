@@ -55,6 +55,7 @@ Las herramientas de `Assets/Editor` son exclusivas del editor. Los informes y co
 - Comprueba botones de inicio/continuación, WASD/flechas, rodamiento, pared, rampa de 12°, pausa, diez triggers, rechazo de recolección duplicada, cambio de objetivo, finalización, reinicio y recuperación de caídas. También detecta errores y excepciones de ejecución.
 - El informe se guarda en `Library/GameplayQA.txt`; las capturas de menú, juego, pausa y finalización se guardan en la misma carpeta.
 - **Tools > Forest Journey > Build Windows prototype** compila en `Builds/SenderoDorado/SenderoDorado.exe`. Para compartir el ejecutable, incluye toda la carpeta SenderoDorado.
+- Ya existe una compilación Windows funcional en esa ruta, comprobada el 24 de septiembre de 2026. La carpeta `SenderoDorado_BackUpThisFolder_ButDontShipItWithYourGame` contiene símbolos de respaldo y puede omitirse al distribuir el juego.
 - **Create gameplay scene** es una herramienta de creación inicial; usa directamente la escena existente para conservar ajustes manuales.
 
 La verificación automática comprueba rutas geométricas y teletransporta al jugador entre monedas para probar todos los triggers; no sustituye una valoración humana de la comodidad de todo el recorrido.

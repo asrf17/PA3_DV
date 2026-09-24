@@ -33,7 +33,7 @@ public static class GameplaySceneBuilder
         foreach (string path in new[]{"Assets/Materials/Gameplay","Assets/Prefabs/Gameplay","Assets/UI/Gameplay","Assets/Audio/Gameplay","Assets/Models/Gameplay"}) Directory.CreateDirectory(path);
         AssetDatabase.Refresh();
         font = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
-        var terrain = Object.FindFirstObjectByType<Terrain>();
+        var terrain = Object.FindAnyObjectByType<Terrain>();
         if (!terrain) throw new InvalidOperationException("The source map must contain its terrain.");
         AddEnvironmentCollisions(terrain);
         Physics.SyncTransforms();
@@ -139,7 +139,7 @@ public static class GameplaySceneBuilder
     static void AddEnvironmentCollisions(Terrain terrain)
     {
         // The imported foliage prefabs contain no colliders. Keep their assets untouched.
-        foreach(var filter in Object.FindObjectsByType<MeshFilter>(FindObjectsSortMode.None))
+        foreach(var filter in Object.FindObjectsByType<MeshFilter>())
             if(filter.sharedMesh && !filter.GetComponent<Collider>()) filter.gameObject.AddComponent<MeshCollider>().sharedMesh=filter.sharedMesh;
         var group=new GameObject("Environment Collision - Terrain Instances");
         var data=terrain.terrainData;
@@ -267,11 +267,11 @@ public static class GameplaySceneBuilder
 
     public static void Validate()
     {
-        var game=Object.FindFirstObjectByType<GameManager>();
+        var game=Object.FindAnyObjectByType<GameManager>();
         if(!game||!game.player||!game.followCamera||!game.coins||game.coins.Total!=10)throw new Exception("Missing gameplay references.");
         if(game.coins.coins.Any(c=>!c||c.manager!=game.coins||!c.GetComponent<SphereCollider>().isTrigger))throw new Exception("Invalid coin trigger/references.");
         if(!game.mainMenu||!game.pauseMenu||!game.hud||!game.playButton||!game.continueButton)throw new Exception("Missing UI references.");
-        var missing=Object.FindObjectsByType<Transform>(FindObjectsInactive.Include,FindObjectsSortMode.None).Sum(t=>GameObjectUtility.GetMonoBehavioursWithMissingScriptCount(t.gameObject));
+        var missing=Object.FindObjectsByType<Transform>(FindObjectsInactive.Include).Sum(t=>GameObjectUtility.GetMonoBehavioursWithMissingScriptCount(t.gameObject));
         if(missing!=0)throw new Exception("Missing scripts: "+missing);
         File.WriteAllText("Library/GameplayValidation.txt","PASS: player, camera, 10 trigger coins, UI references, no missing scripts. "+DateTime.Now.ToString("O"));
     }
@@ -279,8 +279,8 @@ public static class GameplaySceneBuilder
     public static void Polish()
     {
         if(EditorApplication.isPlaying)throw new Exception("Stop Play first.");
-        var game=Object.FindFirstObjectByType<GameManager>();
-        var terrain=Object.FindFirstObjectByType<Terrain>();
+        var game=Object.FindAnyObjectByType<GameManager>();
+        var terrain=Object.FindAnyObjectByType<Terrain>();
         // Only the gameplay scene's rendering distances change; shared terrain data stays untouched.
         terrain.treeDistance=450;terrain.detailObjectDistance=90;game.followCamera.GetComponent<Camera>().farClipPlane=500;
         var existing=AssetDatabase.LoadAssetAtPath<Mesh>("Assets/Models/Gameplay/BallBand.asset");
