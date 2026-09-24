@@ -39,7 +39,10 @@ public static class GameplayDevelopment
         string report = "COMPILED " + DateTime.Now.ToString("O") + "\nScene: " + scene.path + " dirty=" + scene.isDirty;
         foreach (var root in scene.GetRootGameObjects()) report += "\nRoot: " + root.name + " " + root.transform.position;
         foreach (var t in UnityEngine.Object.FindObjectsByType<Terrain>(FindObjectsSortMode.None))
+        {
             report += "\nTerrain: " + t.name + " size=" + t.terrainData.size + " trees=" + t.terrainData.treeInstanceCount + " centerHeight=" + t.terrainData.GetInterpolatedHeight(.5f,.5f);
+            foreach(var p in t.terrainData.treePrototypes) report += "\nPrototype: "+p.prefab.name+" colliders="+p.prefab.GetComponentsInChildren<Collider>().Length;
+        }
         File.WriteAllText("Library/GameplayInspection.txt", report);
     }
 }
