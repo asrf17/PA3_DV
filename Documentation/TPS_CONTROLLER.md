@@ -57,4 +57,6 @@ Mientras IsAiming es true, el personaje gira suavemente hacia el yaw de la cáma
 
 El informe está en `Library/TPSVerification.txt`; la captura en `Library/TPSGameplay.png`. La suite general anterior sigue disponible para comprobar monedas, pendientes, colisiones, contador y menús.
 
+Resultado del 24 de septiembre de 2026: 43 comprobaciones TPS y 40 de regresión aprobadas. El ejecutable Windows de `Builds/SenderoDorado/SenderoDorado.exe` ya incluye estos controles; se recompiló sin errores.
+
 La etiqueta Git `gameplay-before-tps-20260924` conserva la versión funcional anterior, commit `7f2e284`. El desarrollo continúa en `feature/gameplay-3d`, sin modificar ni integrar cambios en `main`.

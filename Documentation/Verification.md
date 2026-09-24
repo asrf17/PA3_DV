@@ -38,3 +38,15 @@ La compilación finalizada el 23 de septiembre produjo `Builds/SenderoDorado/Sen
 Las advertencias incluyen compatibilidad de shaders Polytope originales (`_FORWARD_PLUS`, `UnityGBuffer.hlsl`) y billboards de vegetación. El ejecutable también registra avisos de efectos de posprocesado descartados durante la compilación. No se modificaron los shaders originales para evitar introducir cambios innecesarios en el mapa. Las capturas revisadas en detalle corresponden al modo Play del editor.
 
 Unity actualizó la serialización de ajustes gráficos de la versión 6.6 durante la compilación; estos ajustes se conservaron exclusivamente en la rama de desarrollo. La compilación queda fuera de Git, como requiere `.gitignore`.
+
+## Adaptación TPS — 24 de septiembre de 2026
+
+Se reutilizó el movimiento físico existente y se añadió órbita independiente de mouse, rotación suave del personaje, límites de Pitch y gestión del cursor ligada a los estados del juego.
+
+- **43 comprobaciones TPS aprobadas**, sin errores ni excepciones de ejecución: WASD relativo a cámaras a 90°/180°, rotación suave, mouse y sensibilidad, mirada independiente, límites verticales, futura orientación de apuntado, pausa/cursor, colisión y recuperación de distancia de cámara, estabilidad en reposo y reinicio.
+- **40 comprobaciones de regresión aprobadas**, sin errores ni excepciones de ejecución: monedas, menú por teclado, física, pendientes, pausa, finalización y reinicio. Cada suite se ejecutó de forma independiente con foco en Game View.
+- La captura `Library/TPSGameplay.png` confirmó el encuadre sobre el hombro, las instrucciones actualizadas y el indicador frontal de la esfera.
+- El ejecutable se volvió a generar a las 07:30 del 24 de septiembre: **Succeeded, 0 errores, 14 advertencias heredadas**, 170.094.695 bytes según Unity. Se conserva en la misma ruta de Builds/SenderoDorado.
+- El respaldo anterior a TPS está identificado por la etiqueta `gameplay-before-tps-20260924`, commit `7f2e284`. La escena y los datos del terreno originales no cambiaron.
+
+Los parámetros y puntos de extensión para apuntado se describen en [TPS_CONTROLLER.md](TPS_CONTROLLER.md).
