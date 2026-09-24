@@ -25,7 +25,7 @@ public static class GameplaySceneBuilder
     public static void Build()
     {
         if (EditorApplication.isPlaying) throw new InvalidOperationException("Stop Play before building.");
-        if (File.Exists(ScenePath) && Object.FindFirstObjectByType<GameManager>()) throw new InvalidOperationException("Gameplay already exists; edit it directly to preserve your adjustments.");
+        if (File.Exists(ScenePath)) throw new InvalidOperationException("Gameplay already exists; edit it directly to preserve your adjustments.");
         if (EditorSceneManager.GetActiveScene().isDirty) throw new InvalidOperationException("Save the current scene first.");
         var original = EditorSceneManager.OpenScene("Assets/Scenes/SampleScene.unity");
         EditorSceneManager.SaveScene(original, ScenePath, true);
@@ -280,6 +280,9 @@ public static class GameplaySceneBuilder
     {
         if(EditorApplication.isPlaying)throw new Exception("Stop Play first.");
         var game=Object.FindFirstObjectByType<GameManager>();
+        var terrain=Object.FindFirstObjectByType<Terrain>();
+        // Only the gameplay scene's rendering distances change; shared terrain data stays untouched.
+        terrain.treeDistance=450;terrain.detailObjectDistance=90;game.followCamera.GetComponent<Camera>().farClipPlane=500;
         var existing=AssetDatabase.LoadAssetAtPath<Mesh>("Assets/Models/Gameplay/BallBand.asset");
         var updated=CreateTorus();EditorUtility.CopySerialized(updated,existing);Object.DestroyImmediate(updated);EditorUtility.SetDirty(existing);
         const string audioPath="Assets/Audio/Gameplay/CoinChime.wav";

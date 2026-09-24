@@ -51789,7 +51789,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.15
-  far clip plane: 700
+  far clip plane: 500
   field of view: 62
   orthographic: 0
   orthographic size: 5
@@ -93981,11 +93981,11 @@ Terrain:
   m_Enabled: 1
   serializedVersion: 6
   m_TerrainData: {fileID: 15600000, guid: 5f1bf4b18c22f214090793d6e588ee06, type: 2}
-  m_TreeDistance: 5000
+  m_TreeDistance: 450
   m_TreeBillboardDistance: 50
   m_TreeCrossFadeLength: 5
   m_TreeMaximumFullLODCount: 50
-  m_DetailObjectDistance: 283.9
+  m_DetailObjectDistance: 90
   m_DetailObjectDensity: 1
   m_HeightmapPixelError: 5
   m_SplatMapDistance: 1000

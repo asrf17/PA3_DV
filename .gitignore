@@ -112,3 +112,6 @@ InitTestScene*.unity*
 
 # Auto-generated cache in Assets folder
 /[Aa]ssets/[Ss]ceneDependencyCache*
+
+# Temporary metadata emitted by Unity's performance-test build hooks
+/[Aa]ssets/Resources/PerformanceTestRun*.json*
