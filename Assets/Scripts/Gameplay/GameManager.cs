@@ -34,7 +34,8 @@ namespace ForestJourney
             mainMenu.SetActive(state == GameState.MainMenu);
             hud.SetActive(state != GameState.MainMenu);
             if (pauseMenu) pauseMenu.SetActive(state == GameState.Paused);
-            Cursor.lockState = CursorLockMode.None; Cursor.visible = !playing;
+            Cursor.lockState = playing ? CursorLockMode.Locked : CursorLockMode.None; Cursor.visible = !playing;
+            if (!playing) player.SetAiming(false);
             if (EventSystem.current) EventSystem.current.SetSelectedGameObject(state == GameState.MainMenu ? playButton : state == GameState.Paused ? continueButton : null);
         }
         public void QuitGame()
