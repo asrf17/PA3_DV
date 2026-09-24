@@ -3,6 +3,7 @@ using UnityEngine.UI;
 
 namespace ForestJourney
 {
+    [RequireComponent(typeof(CanvasRenderer))]
     public sealed class CompassArrow : MaskableGraphic
     {
         protected override void OnPopulateMesh(VertexHelper vh)

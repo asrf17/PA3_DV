@@ -185,7 +185,7 @@ public static class GameplaySceneBuilder
         {
             float a=i*Mathf.PI*2/64,b=j*Mathf.PI*2/8;
             vertices.Add(new Vector3((.985f+.025f*Mathf.Cos(b))*Mathf.Cos(a),.025f*Mathf.Sin(b),(.985f+.025f*Mathf.Cos(b))*Mathf.Sin(a)));
-            if(i<64&&j<8){int v=i*9+j;triangles.AddRange(new[]{v,v+9,v+1,v+1,v+9,v+10});}
+            if(i<64&&j<8){int v=i*9+j;triangles.AddRange(new[]{v,v+1,v+9,v+1,v+10,v+9});}
         }
         var mesh=new Mesh{name="Brass sphere meridian"};mesh.SetVertices(vertices);mesh.SetTriangles(triangles,0);mesh.RecalculateNormals();return mesh;
     }
@@ -275,11 +275,59 @@ public static class GameplaySceneBuilder
         if(missing!=0)throw new Exception("Missing scripts: "+missing);
         File.WriteAllText("Library/GameplayValidation.txt","PASS: player, camera, 10 trigger coins, UI references, no missing scripts. "+DateTime.Now.ToString("O"));
     }
+    [MenuItem("Tools/Forest Journey/Apply presentation polish")]
+    public static void Polish()
+    {
+        if(EditorApplication.isPlaying)throw new Exception("Stop Play first.");
+        var game=Object.FindFirstObjectByType<GameManager>();
+        var existing=AssetDatabase.LoadAssetAtPath<Mesh>("Assets/Models/Gameplay/BallBand.asset");
+        var updated=CreateTorus();EditorUtility.CopySerialized(updated,existing);Object.DestroyImmediate(updated);EditorUtility.SetDirty(existing);
+        const string audioPath="Assets/Audio/Gameplay/CoinChime.wav";
+        const int rate=44100,count=17640;
+        using(var writer=new BinaryWriter(File.Create(audioPath)))
+        {
+            writer.Write(System.Text.Encoding.ASCII.GetBytes("RIFF"));writer.Write(36+count*2);writer.Write(System.Text.Encoding.ASCII.GetBytes("WAVEfmt "));
+            writer.Write(16);writer.Write((short)1);writer.Write((short)1);writer.Write(rate);writer.Write(rate*2);writer.Write((short)2);writer.Write((short)16);
+            writer.Write(System.Text.Encoding.ASCII.GetBytes("data"));writer.Write(count*2);
+            for(int i=0;i<count;i++){float t=(float)i/rate;float attack=Mathf.Min(1,t/.008f);float sample=(Mathf.Sin(t*880*2*Mathf.PI)+.4f*Mathf.Sin(t*1320*2*Mathf.PI))*Mathf.Exp(-t*12)*attack*.45f;writer.Write((short)(sample*32767));}
+        }
+        AssetDatabase.ImportAsset(audioPath);
+        var spark=AssetDatabase.LoadAssetAtPath<Material>("Assets/Materials/Gameplay/CollectionSpark.mat");
+        if(!spark){spark=new Material(Shader.Find("Universal Render Pipeline/Particles/Unlit"));spark.SetColor("_BaseColor",Gold);AssetDatabase.CreateAsset(spark,"Assets/Materials/Gameplay/CollectionSpark.mat");}
+        var feedback=game.GetComponent<CollectionFeedback>();if(!feedback)feedback=game.gameObject.AddComponent<CollectionFeedback>();
+        feedback.manager=game.coins;feedback.chime=AssetDatabase.LoadAssetAtPath<AudioClip>(audioPath);feedback.sparkMaterial=spark;
+        game.GetComponent<AudioSource>().playOnAwake=false;
+        var arrow=game.hud.GetComponent<CoinDirectionIndicator>().arrow;
+        if(!arrow.GetComponent<CanvasRenderer>())arrow.gameObject.AddComponent<CanvasRenderer>();
+        arrow.GetComponent<CompassArrow>().raycastTarget=false;
+        Directory.CreateDirectory("Assets/Textures/Gameplay");
+        var pattern=new Texture2D(512,256,TextureFormat.RGB24,false);
+        for(int y=0;y<256;y++)for(int x=0;x<512;x++)
+        {
+            float u=(float)x/512,v=(float)y/256;
+            bool stripe=Mathf.Abs(Mathf.Sin(u*Mathf.PI*6))<.12f || Mathf.Abs(v-.5f)<.026f;
+            pattern.SetPixel(x,y,stripe?new Color(1,.8f,.27f):new Color(.035f,.47f,.48f));
+        }
+        pattern.Apply();const string patternPath="Assets/Textures/Gameplay/JadeBrassBall.png";File.WriteAllBytes(patternPath,pattern.EncodeToPNG());Object.DestroyImmediate(pattern);AssetDatabase.ImportAsset(patternPath);
+        var ballMat=AssetDatabase.LoadAssetAtPath<Material>("Assets/Materials/Gameplay/Sphere - Jade enamel.mat");
+        ballMat.SetTexture("_BaseMap",AssetDatabase.LoadAssetAtPath<Texture2D>(patternPath));ballMat.SetColor("_BaseColor",Color.white);EditorUtility.SetDirty(ballMat);
+        EditorSceneManager.MarkSceneDirty(game.gameObject.scene);EditorSceneManager.SaveScene(game.gameObject.scene);AssetDatabase.SaveAssets();
+    }
     public static void CapturePreview(Camera camera,string path)
     {
         var previous=camera.targetTexture;var active=RenderTexture.active;
         var rt=new RenderTexture(1280,720,24);var texture=new Texture2D(1280,720,TextureFormat.RGB24,false);
         camera.targetTexture=rt;camera.Render();RenderTexture.active=rt;texture.ReadPixels(new Rect(0,0,1280,720),0,0);texture.Apply();
         File.WriteAllBytes(path,texture.EncodeToPNG());camera.targetTexture=previous;RenderTexture.active=active;rt.Release();Object.DestroyImmediate(rt);Object.DestroyImmediate(texture);
+    }
+    [MenuItem("Tools/Forest Journey/Build Windows prototype")]
+    public static void BuildPlayer()
+    {
+        if(EditorApplication.isPlaying)throw new Exception("Stop Play before building the application.");
+        Validate();
+        var options=new BuildPlayerOptions {scenes=new[]{ScenePath},locationPathName="Builds/SenderoDorado/SenderoDorado.exe",target=BuildTarget.StandaloneWindows64,options=BuildOptions.None};
+        var report=BuildPipeline.BuildPlayer(options);
+        File.WriteAllText("Library/GameplayBuild.txt",report.summary.result+"\nErrors: "+report.summary.totalErrors+"\nWarnings: "+report.summary.totalWarnings+"\nBytes: "+report.summary.totalSize);
+        if(report.summary.result!=UnityEditor.Build.Reporting.BuildResult.Succeeded)throw new Exception("Windows build failed.");
     }
 }

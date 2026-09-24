@@ -14,7 +14,12 @@ namespace ForestJourney
         void Refresh()
         {
             counter.text = $"Monedas: {manager.Collected} / {manager.Total}";
-            if (progress) progress.fillAmount = manager.Total == 0 ? 0 : (float)manager.Collected / manager.Total;
+            if (progress)
+            {
+                float value = manager.Total == 0 ? 0 : (float)manager.Collected / manager.Total;
+                progress.fillAmount = value;
+                progress.rectTransform.localScale = new Vector3(value, 1, 1);
+            }
             if (completion) completion.SetActive(manager.Complete);
         }
     }
