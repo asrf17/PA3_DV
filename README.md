@@ -7,6 +7,8 @@ Abre `Assets/Scenes/Gameplay.unity`, entra en Play y selecciona **Jugar**. Contr
 - `main`: respaldo original del mapa, sin desarrollo de gameplay.
 - `feature/gameplay-3d`: personaje, cámara, coleccionables, brújula, interfaces y menús.
 
+Las monedas incorporan un Shader Graph propio con un pulso de emisión dorada animado mediante tiempo y una onda seno.
+
 Consulta [GAMEPLAY.md](GAMEPLAY.md) para conocer los componentes, referencias del Inspector, controles, pruebas y compilación para Windows.
 
 Los recursos grandes utilizan Git LFS. Library, Temp, Logs y Builds no forman parte del repositorio.

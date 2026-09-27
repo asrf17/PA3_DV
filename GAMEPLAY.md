@@ -61,6 +61,12 @@ Las herramientas de `Assets/Editor` son exclusivas del editor. Los informes y co
 
 La verificación automática comprueba rutas geométricas y teletransporta al jugador entre monedas para probar todos los triggers; no sustituye una valoración humana de la comodidad de todo el recorrido.
 
+## Shader Graph de las monedas
+
+El material `Assets/Materials/Gameplay/Coin - Warm gold.mat` utiliza el Shader Graph propio `Assets/Shaders/Gameplay/GoldenCoinPulse.shadergraph`. El prefab `GoldenCoin` comparte ese material en su aro dorado, por lo que el efecto se observa en todas las monedas del nivel sin cambiar los triggers ni el sistema de recolección.
+
+El grafo conserva una superficie metálica e iluminada por URP y anima la **emisión dorada** con nodos `Time`, `Multiply`, `Sine` y `Add`. Su cálculo principal es `CoinGold × (0,6 + 0,4 × sin(Time × 3)) × 2,5`: el tiempo alimenta una onda periódica, el factor 0,4 controla la amplitud, el valor 0,6 mantiene el brillo y 2,5 refuerza la emisión. En el video se puede abrir el grafo, seguir esas conexiones de izquierda a derecha y mostrar las monedas mientras se mueven en la escena.
+
 ## Git
 
 `main` conserva exclusivamente el respaldo inicial `448a3200dbc27ff6560e1ebe7ec3ee717f9e88d1`. La rama `feature/gameplay-3d` contiene los commits progresivos del prototipo. No se hizo merge hacia main.
