@@ -19,6 +19,7 @@ public static class GameplayVerification
     static Keyboard keyboard;
     static string report;
     static GameObject fixture;
+    static bool guardianWasEnabled;
     static string runtimeErrors;
     [MenuItem("Tools/Forest Journey/Verify gameplay in Play Mode")]
     public static void Run()
@@ -58,10 +59,17 @@ public static class GameplayVerification
         suite=null;EditorApplication.update-=Tick;
         File.WriteAllText("Library/GameplayQA.txt",report);
         var game=Object.FindAnyObjectByType<GameManager>();if(game)game.ShowMainMenu();
+        if(game && game.guardian && guardianWasEnabled)
+        {
+            game.guardian.enabled=true;
+            game.guardian.ResetGuardian();
+        }
     }
     static IEnumerator Verify()
     {
         var game=Object.FindAnyObjectByType<GameManager>();var player=game.player;
+        guardianWasEnabled=game.guardian && game.guardian.enabled;
+        if(game.guardian)game.guardian.enabled=false;
         var pause=game.GetComponent<PauseMenu>();
         var hud=game.hud.GetComponent<CoinCounterUI>();var guide=game.hud.GetComponent<CoinDirectionIndicator>();
         Check(game.State==GameState.MainMenu && Time.timeScale==0 && !player.ControlsEnabled,"Main menu freezes world and controls");
@@ -110,8 +118,9 @@ public static class GameplayVerification
             if(coin==first && !game.coins.Complete)Check(guide.Target!=first,"Compass retargets after pickup");
         }
         yield return .2f;
-        Check(game.coins.Complete && hud.counter.text=="Monedas: 10 / 10" && hud.completion.activeSelf,"All coins produce completion message and final counter");
-        Check(!guide.indicator.activeSelf && guide.Target==null,"Compass hides when no coins remain");
+        Check(game.coins.Complete && game.resultSummary.text.Contains("10 monedas"),"All coins produce a complete objective summary");
+        Check(game.State==GameState.Victory && game.resultMenu.activeSelf && !game.hud.activeSelf && !player.ControlsEnabled,"Last coin ends the expedition in victory");
+        Check(!game.hud.activeSelf,"Compass and HUD hide when the round ends");
         ScreenCapture.CaptureScreenshot("Library/GameplayComplete.png");yield return .2f;
         pause.MainMenu();yield return .1f;
         Check(game.State==GameState.MainMenu && Time.timeScale==0 && game.coins.Collected==0,"Return to main menu resets session");
