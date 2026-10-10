@@ -41,6 +41,6 @@ El paquete listo para trasladar se encuentra en `output/build/PA4_Ecos_del_Bosqu
 
 ## Entrega PA4
 
-El informe de cinco páginas está en `output/pdf/PA4_Informe_Sendero_Dorado.pdf` y el video narrado de **5:35** en `output/video/PA4_Demostracion_Ecos_del_Bosque.mp4`. El repositorio se comparte desde la rama `codex/pa4-final` o se integra después en la rama de entrega del equipo. La visibilidad pública del repositorio debe comprobarse antes de enviar el enlace al docente.
+El informe de cinco páginas está en `output/pdf/PA4_Informe_Sendero_Dorado.pdf` y el video narrado de **5:35** en `output/video/PA4_Demostracion_Ecos_del_Bosque.mp4`. La [rama final en GitHub](https://github.com/asrf17/PA3_DV/tree/codex/pa4-final) está publicada en un repositorio público; se verificó el 10 de octubre de 2026. La rama predeterminada aún es `feature/gameplay-3d`, así que conviene entregar el enlace directo a la rama final.
 
 El video enseña exploración, hallazgo de santuarios, recolección, IA, UI, audio, efectos, victoria/derrota y Object Pooling. La recogida final se acelera en la demostración para mostrar el desenlace. La narración actual es sintética: si la rúbrica exige que todos los integrantes expliquen el proyecto con su voz, el equipo debe reemplazarla y añadir nombres y roles antes de presentar. [Guion y tiempos](GUION_VIDEO_PA4.md).

@@ -13,3 +13,5 @@ La esfera, las reliquias luminosas, el guardián y las piedras antiguas son Pref
 Consulta [GAMEPLAY.md](GAMEPLAY.md) para conocer los componentes y controles y [Documentation/PA4_FINAL.md](Documentation/PA4_FINAL.md) para las pruebas y la entrega. Los recursos grandes usan Git LFS. `Library`, `Temp`, `Logs` y `Builds` no se publican en Git.
 
 Entregables: [informe PDF](output/pdf/PA4_Informe_Sendero_Dorado.pdf), [video demostrativo de 5:35](output/video/PA4_Demostracion_Ecos_del_Bosque.mp4) y [juego Windows comprimido](output/build/PA4_Ecos_del_Bosque_Windows.zip). Para la exposición, el equipo debe sustituir la narración sintética del video por sus propias voces e indicar nombres y roles si el docente lo exige.
+
+La versión final está publicada en la [rama codex/pa4-final de GitHub](https://github.com/asrf17/PA3_DV/tree/codex/pa4-final). La rama predeterminada del repositorio todavía muestra la versión anterior.
