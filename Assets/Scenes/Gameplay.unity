@@ -168754,7 +168754,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 1fe2391de32acd441949b2c857e32c93, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.22
+  m_Volume: 0.45
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -321606,6 +321606,7 @@ MonoBehaviour:
   manager: {fileID: 2047581431}
   chime: {fileID: 8300000, guid: cdad439eb6058fd48a0f2add03f0537b, type: 3}
   sparkMaterial: {fileID: 2100000, guid: cf4a0e55ae8ded242aea1d79001f37b0, type: 2}
+  poolSize: 4
 --- !u!82 &2047581434
 AudioSource:
   m_ObjectHideFlags: 0

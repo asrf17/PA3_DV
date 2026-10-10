@@ -91,7 +91,7 @@ namespace ForestJourney
             Time.timeScale = playing ? 1 : 0;
             AudioListener.pause = !playing;
             mainMenu.SetActive(state == GameState.MainMenu);
-            hud.SetActive(state != GameState.MainMenu);
+            hud.SetActive(state == GameState.Playing || state == GameState.Paused);
             if (pauseMenu) pauseMenu.SetActive(state == GameState.Paused);
             if (resultMenu) resultMenu.SetActive(state == GameState.Victory || state == GameState.Defeat);
             Cursor.lockState = playing ? CursorLockMode.Locked : CursorLockMode.None; Cursor.visible = !playing;

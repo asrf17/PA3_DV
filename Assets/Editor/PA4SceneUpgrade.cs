@@ -201,17 +201,17 @@ public static class PA4SceneUpgrade
 
     static void CreateAmbientSound(GameManager game)
     {
-        if (game.transform.Find("Forest Ambience")) return;
         const string path = "Assets/Audio/Gameplay/ForestAmbience.wav";
         var clip = AssetDatabase.LoadAssetAtPath<AudioClip>(path);
         if (!clip) throw new InvalidOperationException("Missing original ambient clip: " + path);
-        var sound = new GameObject("Forest Ambience", typeof(AudioSource));
-        sound.transform.SetParent(game.transform, false);
+        var existing = game.transform.Find("Forest Ambience");
+        var sound = existing ? existing.gameObject : new GameObject("Forest Ambience", typeof(AudioSource));
+        if (!existing) sound.transform.SetParent(game.transform, false);
         var source = sound.GetComponent<AudioSource>();
         source.clip = clip;
         source.playOnAwake = true;
         source.loop = true;
         source.spatialBlend = 0;
-        source.volume = .22f;
+        source.volume = .45f;
     }
 }
