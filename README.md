@@ -11,3 +11,5 @@ Abre `Assets/Scenes/Gameplay.unity`, pulsa **Play** y elige **Jugar**. Muévete 
 La esfera, las reliquias luminosas, el guardián y las piedras antiguas son Prefabs. El brillo de las reliquias utiliza un Shader Graph propio. Los efectos de recolección reutilizan cuatro sistemas de partículas mediante Object Pooling.
 
 Consulta [GAMEPLAY.md](GAMEPLAY.md) para conocer los componentes y controles y [Documentation/PA4_FINAL.md](Documentation/PA4_FINAL.md) para las pruebas y la entrega. Los recursos grandes usan Git LFS. `Library`, `Temp`, `Logs` y `Builds` no se publican en Git.
+
+Entregables: [informe PDF](output/pdf/PA4_Informe_Sendero_Dorado.pdf), [video demostrativo de 5:35](output/video/PA4_Demostracion_Ecos_del_Bosque.mp4) y [juego Windows comprimido](output/build/PA4_Ecos_del_Bosque_Windows.zip). Para la exposición, el equipo debe sustituir la narración sintética del video por sus propias voces e indicar nombres y roles si el docente lo exige.

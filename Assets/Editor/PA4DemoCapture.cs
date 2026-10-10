@@ -10,7 +10,8 @@ using Object = UnityEngine.Object;
 // Captures an editor-only demonstration. It never changes the saved scene or the player build.
 public static class PA4DemoCapture
 {
-    const string Folder = "Library/PA4FantasyVideoFrames";
+    const string FullFolder = "Library/PA4FantasyVideoFrames";
+    const string ContinuationFolder = "Library/PA4FantasyVideoContinuation";
     const float Duration = 205f;
     const float FrameInterval = .125f;
     static double started;
@@ -25,16 +26,30 @@ public static class PA4DemoCapture
     static float lastProgressTime;
     static Vector3 lastProgressPosition;
     static float detourUntil;
+    static string folder;
+    static float startOffset;
 
     [MenuItem("Tools/Forest Journey/Capture PA4 demonstration")]
     public static void Run()
+    {
+        Begin(FullFolder, 0);
+    }
+
+    public static void RunContinuation()
+    {
+        Begin(ContinuationFolder, 90f);
+    }
+
+    static void Begin(string targetFolder, float offset)
     {
         if (!EditorApplication.isPlaying) throw new InvalidOperationException("Enter Play Mode first.");
         if (keyboard != null) throw new InvalidOperationException("Capture already running.");
         game = Object.FindAnyObjectByType<GameManager>();
         if (!game || !game.guardian) throw new InvalidOperationException("PA4 scene must be open.");
-        Directory.CreateDirectory(Folder);
-        if (Directory.GetFiles(Folder, "frame-*.jpg").Length > 0)
+        folder = targetFolder;
+        startOffset = offset;
+        Directory.CreateDirectory(folder);
+        if (Directory.GetFiles(folder, "frame-*.jpg").Length > 0)
             throw new InvalidOperationException("Move the previous video frames before recording again.");
         EditorWindow.GetWindow(typeof(Editor).Assembly.GetType("UnityEditor.GameView")).Focus();
         runInBackground = Application.runInBackground;
@@ -56,12 +71,17 @@ public static class PA4DemoCapture
     static void Tick()
     {
         if (!EditorApplication.isPlaying || !game) { Finish("Capture interrupted"); return; }
-        float elapsed = (float)(EditorApplication.timeSinceStartup - started);
+        float elapsed = (float)(EditorApplication.timeSinceStartup - started) + startOffset;
         if (elapsed >= Duration) { Finish("Capture completed"); return; }
         int stage = elapsed < 12 ? 0 : elapsed < 90 ? 1 : elapsed < 140 ? 2
             : elapsed < 155 ? 3 : elapsed < 177 ? 4 : elapsed < 190 ? 5 : 6;
         if (stage != lastStage) { EnterStage(stage); lastStage = stage; }
         if (stage == 1) DriveToCoin(elapsed);
+        if (stage == 2 && (game.State != GameState.Playing || game.LivesRemaining <= 1))
+        {
+            game.StartGame();
+            ShowGuardianAgain();
+        }
         if (stage == 2 && elapsed > 95 && Mathf.FloorToInt(elapsed - 95) % 12 == 0 &&
             Mathf.FloorToInt(elapsed - 95) != Mathf.FloorToInt(elapsed - 95 - Time.unscaledDeltaTime))
             ShowGuardianAgain();
@@ -87,13 +107,19 @@ public static class PA4DemoCapture
         try
         {
             Texture2D image = ScreenCapture.CaptureScreenshotAsTexture();
-            if (!image) throw new InvalidOperationException("Game View did not supply a rendered frame.");
-            File.WriteAllBytes(Path.Combine(Folder, "frame-" + frame.ToString("D5") + ".jpg"), image.EncodeToJPG(72));
-            Object.DestroyImmediate(image);
+            string path = Path.Combine(folder, "frame-" + frame.ToString("D5") + ".jpg");
+            if (image)
+            {
+                File.WriteAllBytes(path, image.EncodeToJPG(72));
+                Object.DestroyImmediate(image);
+            }
+            else if (frame > 0)
+                File.Copy(Path.Combine(folder, "frame-" + (frame - 1).ToString("D5") + ".jpg"), path);
+            else return;
             frame++;
             nextFrame += FrameInterval;
             if (nextFrame < EditorApplication.timeSinceStartup - FrameInterval) nextFrame = EditorApplication.timeSinceStartup;
-            float elapsed = (float)(EditorApplication.timeSinceStartup - started);
+            float elapsed = (float)(EditorApplication.timeSinceStartup - started) + startOffset;
             if (frame % 80 == 0)
                 File.WriteAllText("Library/PA4VideoCapture.txt", "Recording: " + elapsed.ToString("F1") + " s, " + frame + " frames");
         }
