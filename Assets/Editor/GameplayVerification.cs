@@ -83,7 +83,7 @@ public static class GameplayVerification
         Check(EventSystem.current.currentSelectedGameObject==game.playButton,"Keyboard navigation returns to Play");
         Keys(Key.Enter);yield return .2f;Keys();yield return .8f;
         Check(game.State==GameState.Playing && Time.timeScale==1 && player.Grounded,"Play button starts player on terrain");
-        Check(game.coins.Collected==0 && hud.counter.text=="Monedas: 0 / 10","Counter starts at zero");
+        Check(game.coins.Collected==0 && hud.counter.text=="Reliquias: 0 / 10","Counter starts at zero");
         Check(guide.Target==game.coins.Nearest(player.transform.position) && guide.indicator.activeSelf,"Compass targets nearest available coin");
         ScreenCapture.CaptureScreenshot("Library/GameplayPlaying.png");yield return .3f;
         var start=player.Body.position;var rotation=player.GetComponentInChildren<BallRollingVisual>().transform.rotation;
@@ -118,7 +118,7 @@ public static class GameplayVerification
             if(coin==first && !game.coins.Complete)Check(guide.Target!=first,"Compass retargets after pickup");
         }
         yield return .2f;
-        Check(game.coins.Complete && game.resultSummary.text.Contains("10 monedas"),"All coins produce a complete objective summary");
+        Check(game.coins.Complete && game.resultSummary.text.Contains("10 reliquias"),"All coins produce a complete objective summary");
         Check(game.State==GameState.Victory && game.resultMenu.activeSelf && !game.hud.activeSelf && !player.ControlsEnabled,"Last coin ends the expedition in victory");
         Check(!game.hud.activeSelf,"Compass and HUD hide when the round ends");
         ScreenCapture.CaptureScreenshot("Library/GameplayComplete.png");yield return .2f;

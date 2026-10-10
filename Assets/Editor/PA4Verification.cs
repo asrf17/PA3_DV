@@ -19,6 +19,7 @@ public static class PA4Verification
     static int originalLives;
     static float originalDetection;
     static LayerMask originalSight;
+    static bool originalRunInBackground;
 
     [MenuItem("Tools/Forest Journey/Verify PA4 in Play Mode")]
     public static void Run()
@@ -26,6 +27,8 @@ public static class PA4Verification
         if (!EditorApplication.isPlaying) throw new InvalidOperationException("Enter Play Mode first.");
         if (suite != null) throw new InvalidOperationException("PA4 verification is already running.");
         EditorWindow.GetWindow(typeof(Editor).Assembly.GetType("UnityEditor.GameView")).Focus();
+        originalRunInBackground = Application.runInBackground;
+        Application.runInBackground = true;
         report = "PA4 integration verification - " + DateTime.Now.ToString("O") + "\n";
         errors = "";
         Application.logMessageReceived += RecordError;
@@ -73,6 +76,7 @@ public static class PA4Verification
     {
         EditorApplication.update -= Tick;
         Application.logMessageReceived -= RecordError;
+        Application.runInBackground = originalRunInBackground;
         suite = null;
         var game = Object.FindAnyObjectByType<GameManager>();
         if (game)
@@ -96,6 +100,7 @@ public static class PA4Verification
         var guardian = game.guardian;
         var hud = game.hud.GetComponent<ExpeditionHUD>();
         var feedback = game.GetComponent<CollectionFeedback>();
+        var journal = game.discoveries;
         var ambience = game.transform.Find("Forest Ambience").GetComponent<AudioSource>();
         originalDuration = game.roundDuration;
         originalLives = game.startingLives;
@@ -106,14 +111,22 @@ public static class PA4Verification
         Check(guardian.waypoints.Length >= 3 && guardian.Mode == GuardianMode.Patrol, "Guardian begins on a multi-point patrol");
         Check(ambience.clip && ambience.loop && ambience.playOnAwake, "Original ambience is assigned and loops");
         Check(feedback.PooledEffectCount >= 3, "Collection effects use a preallocated pool");
+        Check(journal && journal.Total == 3 && journal.DiscoveredCount == 0,
+            "Three optional fantasy landmarks are available from a fresh menu");
+        Check(journal.landmarks.All(item => item && item.GetComponent<SphereCollider>().isTrigger && item.crystal),
+            "Each sanctuary has a discovery trigger and visible crystal");
         ScreenCapture.CaptureScreenshot("Library/PA4Menu.png");
         yield return .3f;
 
         game.StartGame();
+        Check(journal.Discover(journal.landmarks[0]) && !journal.Discover(journal.landmarks[0])
+            && journal.DiscoveredCount == 1, "A sanctuary records one discovery only");
+        Check(hud.discoveryStatus.text.Contains("1/3") && hud.discoveryStatus.text.Contains("Alba"),
+            "Exploration HUD announces the discovered sanctuary: " + hud.discoveryStatus.text);
         Vector3 guardianStart = guardian.transform.position;
         yield return .8f;
         Check(game.State == GameState.Playing && game.LivesRemaining == 3 && game.TimeRemaining < originalDuration,
-            "Session starts with three lives and a running countdown");
+            $"Session starts with three lives and a running countdown (state={game.State}, lives={game.LivesRemaining}, time={game.TimeRemaining}, initial={originalDuration}, scale={Time.timeScale}, paused={EditorApplication.isPaused}, frame={Time.frameCount}, delta={Time.deltaTime}, enabled={game.enabled})");
         Check(Vector3.Distance(guardianStart, guardian.transform.position) > .35f,
             "Guardian moves between waypoints while patrolling");
         Check(hud.timer.text.StartsWith("TIEMPO") && hud.lives.text.Contains("3") && game.resultMenu.activeSelf == false,
@@ -153,6 +166,8 @@ public static class PA4Verification
         guardian.sightMask = originalSight;
 
         game.StartGame();
+        Check(journal.DiscoveredCount == 0 && !journal.landmarks[0].Discovered,
+            "Starting a new expedition resets discovered places");
         int particleCount = feedback.GetComponentsInChildren<ParticleSystem>(true).Length;
         foreach (var coin in game.coins.coins) Check(coin.TryCollect(), "Coin " + coin.name + " can be collected");
         yield return .25f;
@@ -187,5 +202,33 @@ public static class PA4Verification
         yield return .1f;
         Check(game.State == GameState.MainMenu && game.coins.Collected == 0 && game.resultMenu.activeSelf == false,
             "Return to menu clears coins and result overlay");
+
+        game.roundDuration = originalDuration;
+        game.StartGame();
+        guardian.enabled = false;
+        var sanctuary = journal.landmarks[0];
+        var outside = sanctuary.transform.position + Vector3.back * 8f;
+        outside.y = terrain.SampleHeight(outside) + terrain.transform.position.y + 1.15f;
+        player.Body.position = outside;
+        player.Body.linearVelocity = Vector3.zero;
+        Physics.SyncTransforms();
+        game.followCamera.SetOrbit(0, 14f, true);
+        yield return .25f;
+        var inside = sanctuary.transform.position + Vector3.back * 2.5f;
+        inside.y = terrain.SampleHeight(inside) + terrain.transform.position.y + 1.15f;
+        player.Body.position = inside;
+        player.Body.linearVelocity = Vector3.zero;
+        Physics.SyncTransforms();
+        yield return .4f;
+        Check(journal.DiscoveredCount == 1 && sanctuary.Discovered,
+            "Entering a sanctuary trigger discovers the place during real gameplay");
+        player.Body.position = outside;
+        player.Body.linearVelocity = Vector3.zero;
+        Physics.SyncTransforms();
+        game.followCamera.SetOrbit(0, 8f, true);
+        yield return .2f;
+        ScreenCapture.CaptureScreenshot("Library/PA4Sanctuary.png");
+        yield return .3f;
+        guardian.enabled = true;
     }
 }

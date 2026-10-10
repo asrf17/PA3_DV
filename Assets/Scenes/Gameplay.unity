@@ -11066,6 +11066,40 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.25192297, y: 0.23156467, z: 0.21769409}
   m_Center: {x: -0.005520433, y: 0.12129615, z: 0.002885133}
+--- !u!1 &69856871
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 69856872}
+  m_Layer: 0
+  m_Name: Lost Sanctuaries
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &69856872
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 69856871}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1216500819}
+  - {fileID: 871704346}
+  - {fileID: 274042920}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &70280041
 GameObject:
   m_ObjectHideFlags: 0
@@ -24179,7 +24213,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: RUMBO APROXIMADO
+  m_Text: SIGUE LA LUZ
 --- !u!222 &155585442
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -35578,7 +35612,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Monedas: 0 / 10'
+  m_Text: 'Reliquias: 0 / 10'
 --- !u!1 &223217910
 GameObject:
   m_ObjectHideFlags: 0
@@ -42827,6 +42861,90 @@ CapsuleCollider:
   m_Height: 5.500305
   m_Direction: 1
   m_Center: {x: 0, y: 2.4579792, z: 0}
+--- !u!1001 &274042919
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 69856872}
+    m_Modifications:
+    - target: {fileID: 1707518549747665755, guid: 8256b2b2267fb5d428d0529596222272, type: 3}
+      propertyPath: journal
+      value: 
+      objectReference: {fileID: 2047581435}
+    - target: {fileID: 1707518549747665755, guid: 8256b2b2267fb5d428d0529596222272, type: 3}
+      propertyPath: displayName
+      value: Ruinas del Eco
+      objectReference: {fileID: 0}
+    - target: {fileID: 2136070340145101604, guid: 8256b2b2267fb5d428d0529596222272, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 169
+      objectReference: {fileID: 0}
+    - target: {fileID: 2136070340145101604, guid: 8256b2b2267fb5d428d0529596222272, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 58.019558
+      objectReference: {fileID: 0}
+    - target: {fileID: 2136070340145101604, guid: 8256b2b2267fb5d428d0529596222272, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 287
+      objectReference: {fileID: 0}
+    - target: {fileID: 2136070340145101604, guid: 8256b2b2267fb5d428d0529596222272, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.25881907
+      objectReference: {fileID: 0}
+    - target: {fileID: 2136070340145101604, guid: 8256b2b2267fb5d428d0529596222272, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2136070340145101604, guid: 8256b2b2267fb5d428d0529596222272, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.9659258
+      objectReference: {fileID: 0}
+    - target: {fileID: 2136070340145101604, guid: 8256b2b2267fb5d428d0529596222272, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2136070340145101604, guid: 8256b2b2267fb5d428d0529596222272, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2136070340145101604, guid: 8256b2b2267fb5d428d0529596222272, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2136070340145101604, guid: 8256b2b2267fb5d428d0529596222272, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6608799559279273865, guid: 8256b2b2267fb5d428d0529596222272, type: 3}
+      propertyPath: m_Name
+      value: Ruinas del Eco
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6608799559279273865, guid: 8256b2b2267fb5d428d0529596222272, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1362995475}
+  m_SourcePrefab: {fileID: 100100000, guid: 8256b2b2267fb5d428d0529596222272, type: 3}
+--- !u!4 &274042920 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2136070340145101604, guid: 8256b2b2267fb5d428d0529596222272, type: 3}
+  m_PrefabInstance: {fileID: 274042919}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &274042921 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1707518549747665755, guid: 8256b2b2267fb5d428d0529596222272, type: 3}
+  m_PrefabInstance: {fileID: 274042919}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1362995474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2b8495b67975cd449f396d39bc4b346, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ForestJourney.ExplorationLandmark
 --- !u!1 &274049417
 GameObject:
   m_ObjectHideFlags: 0
@@ -54058,7 +54176,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "WASD / FLECHAS \xB7 Moverte\nMOUSE \xB7 Mirar alrededor\nESC \xB7 Pausar y liberar el cursor"
+  m_Text: "WASD / FLECHAS   \xB7   Moverte\nMOUSE   \xB7   Mirar      ESC   \xB7   Pausar"
 --- !u!222 &339026115
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -79500,6 +79618,85 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.25192297, y: 0.23156467, z: 0.21769409}
   m_Center: {x: -0.005520433, y: 0.12129615, z: 0.002885133}
+--- !u!1 &493075897
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 493075898}
+  - component: {fileID: 493075900}
+  - component: {fileID: 493075899}
+  m_Layer: 0
+  m_Name: Discovery Status
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &493075898
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 493075897}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 596708950}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 20, y: -132}
+  m_SizeDelta: {x: 345, y: 30}
+  m_Pivot: {x: 0, y: 1}
+--- !u!114 &493075899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 493075897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Text
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.56, g: 0.95, b: 0.89, a: 1}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 16
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 3
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: LUGARES  0/3
+--- !u!222 &493075900
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 493075897}
+  m_CullTransparentMesh: 1
 --- !u!1 &493152179
 GameObject:
   m_ObjectHideFlags: 0
@@ -83743,7 +83940,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 20, y: -10}
-  m_SizeDelta: {x: 310, y: 40}
+  m_SizeDelta: {x: 345, y: 35}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &519229185
 MonoBehaviour:
@@ -95546,7 +95743,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\xA1Has recolectado todas las monedas!"
+  m_Text: "\xA1Las reliquias vuelven a brillar!"
 --- !u!222 &586550210
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -97155,12 +97352,13 @@ RectTransform:
   - {fileID: 519229184}
   - {fileID: 1276218012}
   - {fileID: 1142198693}
+  - {fileID: 493075898}
   m_Father: {fileID: 1610817561}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -32, y: -30}
-  m_SizeDelta: {x: 346, y: 148}
+  m_SizeDelta: {x: 385, y: 181}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &596708951
 MonoBehaviour:
@@ -100145,7 +100343,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Objetivo completado. Sigue explorando o pulsa ESC.
+  m_Text: El santuario ha recuperado su luz.
 --- !u!222 &618618601
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -137751,6 +137949,90 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.25192297, y: 0.23156467, z: 0.21769409}
   m_Center: {x: -0.005520433, y: 0.12129615, z: 0.002885133}
+--- !u!1001 &871704344
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 69856872}
+    m_Modifications:
+    - target: {fileID: 1707518549747665755, guid: 8256b2b2267fb5d428d0529596222272, type: 3}
+      propertyPath: journal
+      value: 
+      objectReference: {fileID: 2047581435}
+    - target: {fileID: 1707518549747665755, guid: 8256b2b2267fb5d428d0529596222272, type: 3}
+      propertyPath: displayName
+      value: Mirador del Viento
+      objectReference: {fileID: 0}
+    - target: {fileID: 2136070340145101604, guid: 8256b2b2267fb5d428d0529596222272, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 89
+      objectReference: {fileID: 0}
+    - target: {fileID: 2136070340145101604, guid: 8256b2b2267fb5d428d0529596222272, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 12.48753
+      objectReference: {fileID: 0}
+    - target: {fileID: 2136070340145101604, guid: 8256b2b2267fb5d428d0529596222272, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2136070340145101604, guid: 8256b2b2267fb5d428d0529596222272, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7933533
+      objectReference: {fileID: 0}
+    - target: {fileID: 2136070340145101604, guid: 8256b2b2267fb5d428d0529596222272, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2136070340145101604, guid: 8256b2b2267fb5d428d0529596222272, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.6087614
+      objectReference: {fileID: 0}
+    - target: {fileID: 2136070340145101604, guid: 8256b2b2267fb5d428d0529596222272, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2136070340145101604, guid: 8256b2b2267fb5d428d0529596222272, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2136070340145101604, guid: 8256b2b2267fb5d428d0529596222272, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2136070340145101604, guid: 8256b2b2267fb5d428d0529596222272, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6608799559279273865, guid: 8256b2b2267fb5d428d0529596222272, type: 3}
+      propertyPath: m_Name
+      value: Mirador del Viento
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6608799559279273865, guid: 8256b2b2267fb5d428d0529596222272, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1705594005}
+  m_SourcePrefab: {fileID: 100100000, guid: 8256b2b2267fb5d428d0529596222272, type: 3}
+--- !u!114 &871704345 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1707518549747665755, guid: 8256b2b2267fb5d428d0529596222272, type: 3}
+  m_PrefabInstance: {fileID: 871704344}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1705594004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2b8495b67975cd449f396d39bc4b346, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ForestJourney.ExplorationLandmark
+--- !u!4 &871704346 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2136070340145101604, guid: 8256b2b2267fb5d428d0529596222272, type: 3}
+  m_PrefabInstance: {fileID: 871704344}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &871719936
 GameObject:
   m_ObjectHideFlags: 0
@@ -177685,7 +177967,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 20, y: -100}
-  m_SizeDelta: {x: 310, y: 30}
+  m_SizeDelta: {x: 345, y: 35}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1142198694
 MonoBehaviour:
@@ -188339,6 +188621,124 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.25192297, y: 0.23156467, z: 0.21769409}
   m_Center: {x: -0.005520433, y: 0.12129615, z: 0.002885133}
+--- !u!1001 &1216500818
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 69856872}
+    m_Modifications:
+    - target: {fileID: 1707518549747665755, guid: 8256b2b2267fb5d428d0529596222272, type: 3}
+      propertyPath: journal
+      value: 
+      objectReference: {fileID: 2047581435}
+    - target: {fileID: 1707518549747665755, guid: 8256b2b2267fb5d428d0529596222272, type: 3}
+      propertyPath: displayName
+      value: Santuario del Alba
+      objectReference: {fileID: 0}
+    - target: {fileID: 2136070340145101604, guid: 8256b2b2267fb5d428d0529596222272, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 105
+      objectReference: {fileID: 0}
+    - target: {fileID: 2136070340145101604, guid: 8256b2b2267fb5d428d0529596222272, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 37.96374
+      objectReference: {fileID: 0}
+    - target: {fileID: 2136070340145101604, guid: 8256b2b2267fb5d428d0529596222272, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 103
+      objectReference: {fileID: 0}
+    - target: {fileID: 2136070340145101604, guid: 8256b2b2267fb5d428d0529596222272, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2136070340145101604, guid: 8256b2b2267fb5d428d0529596222272, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2136070340145101604, guid: 8256b2b2267fb5d428d0529596222272, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2136070340145101604, guid: 8256b2b2267fb5d428d0529596222272, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2136070340145101604, guid: 8256b2b2267fb5d428d0529596222272, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2136070340145101604, guid: 8256b2b2267fb5d428d0529596222272, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2136070340145101604, guid: 8256b2b2267fb5d428d0529596222272, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6608799559279273865, guid: 8256b2b2267fb5d428d0529596222272, type: 3}
+      propertyPath: m_Name
+      value: Santuario del Alba
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6608799559279273865, guid: 8256b2b2267fb5d428d0529596222272, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1216500821}
+  m_SourcePrefab: {fileID: 100100000, guid: 8256b2b2267fb5d428d0529596222272, type: 3}
+--- !u!4 &1216500819 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2136070340145101604, guid: 8256b2b2267fb5d428d0529596222272, type: 3}
+  m_PrefabInstance: {fileID: 1216500818}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1216500820 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6608799559279273865, guid: 8256b2b2267fb5d428d0529596222272, type: 3}
+  m_PrefabInstance: {fileID: 1216500818}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1216500821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1216500820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.UniversalAdditionalLightData
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_CustomShadowLayers: 0
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
+  m_RenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 1
+  m_ShadowRenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 1
+  m_Version: 4
+  m_LightLayerMask: 1
+  m_ShadowLayerMask: 1
+  m_RenderingLayers: 1
+  m_ShadowRenderingLayers: 1
+--- !u!114 &1216500822 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1707518549747665755, guid: 8256b2b2267fb5d428d0529596222272, type: 3}
+  m_PrefabInstance: {fileID: 1216500818}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1216500820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2b8495b67975cd449f396d39bc4b346, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ForestJourney.ExplorationLandmark
 --- !u!1 &1216511443
 GameObject:
   m_ObjectHideFlags: 0
@@ -188739,7 +189139,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\xA1Expedici\xF3n completada!"
+  m_Text: "\xA1El santuario despierta!"
 --- !u!1 &1220132021
 GameObject:
   m_ObjectHideFlags: 0
@@ -201637,7 +202037,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 23
+    m_FontSize: 21
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -201648,7 +202048,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Diez monedas. Siete minutos.\nEvita al guardi\xE1n del bosque."
+  m_Text: 'Explora un bosque encantado.
+
+    Recupera 10 reliquias de luz.
+
+    Descubre sus tres santuarios.'
 --- !u!222 &1265543090
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -202611,7 +203015,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 20, y: -53}
-  m_SizeDelta: {x: 310, y: 35}
+  m_SizeDelta: {x: 345, y: 35}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1276218013
 MonoBehaviour:
@@ -216520,6 +216924,40 @@ CapsuleCollider:
   m_Height: 5.500305
   m_Direction: 1
   m_Center: {x: 0, y: 2.4579792, z: 0}
+--- !u!1 &1362995474 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6608799559279273865, guid: 8256b2b2267fb5d428d0529596222272, type: 3}
+  m_PrefabInstance: {fileID: 274042919}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1362995475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1362995474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.UniversalAdditionalLightData
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_CustomShadowLayers: 0
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
+  m_RenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 1
+  m_ShadowRenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 1
+  m_Version: 4
+  m_LightLayerMask: 1
+  m_ShadowLayerMask: 1
+  m_RenderingLayers: 1
+  m_ShadowRenderingLayers: 1
 --- !u!1 &1363569446
 GameObject:
   m_ObjectHideFlags: 0
@@ -220838,7 +221276,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "TU EXPEDICI\xD3N"
+  m_Text: LUZ RECUPERADA
 --- !u!222 &1390059199
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -253559,6 +253997,7 @@ MonoBehaviour:
   timer: {fileID: 519229185}
   lives: {fileID: 1276218013}
   guardianStatus: {fileID: 1142198694}
+  discoveryStatus: {fileID: 493075899}
 --- !u!1 &1611914144
 GameObject:
   m_ObjectHideFlags: 0
@@ -266268,7 +266707,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "EXPLORACI\xD3N  /  01"
+  m_Text: ECOS DEL BOSQUE  /  AVENTURA
 --- !u!222 &1698738447
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -267061,6 +267500,40 @@ CapsuleCollider:
   m_Height: 0.732845
   m_Direction: 1
   m_Center: {x: 0, y: 0.07424894, z: 0}
+--- !u!1 &1705594004 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6608799559279273865, guid: 8256b2b2267fb5d428d0529596222272, type: 3}
+  m_PrefabInstance: {fileID: 871704344}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1705594005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1705594004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.UniversalAdditionalLightData
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_CustomShadowLayers: 0
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
+  m_RenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 1
+  m_ShadowRenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 1
+  m_Version: 4
+  m_LightLayerMask: 1
+  m_ShadowLayerMask: 1
+  m_RenderingLayers: 1
+  m_ShadowRenderingLayers: 1
 --- !u!1 &1705817371
 GameObject:
   m_ObjectHideFlags: 0
@@ -321505,6 +321978,7 @@ GameObject:
   - component: {fileID: 2047581430}
   - component: {fileID: 2047581434}
   - component: {fileID: 2047581433}
+  - component: {fileID: 2047581435}
   m_Layer: 0
   m_Name: Gameplay Systems
   m_TagString: Untagged
@@ -321537,6 +322011,7 @@ MonoBehaviour:
   resultTitle: {fileID: 1220054524}
   resultSummary: {fileID: 393565546}
   guardian: {fileID: 1874745728}
+  discoveries: {fileID: 2047581435}
   roundDuration: 420
   startingLives: 3
 --- !u!114 &2047581430
@@ -321704,6 +322179,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2047581435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2047581428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08e1285c8fcb70846883e791adf232b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ForestJourney.DiscoveryJournal
+  landmarks:
+  - {fileID: 1216500822}
+  - {fileID: 871704345}
+  - {fileID: 274042921}
 --- !u!1 &2048663097
 GameObject:
   m_ObjectHideFlags: 0
@@ -337531,3 +338022,4 @@ SceneRoots:
   - {fileID: 1573281475}
   - {fileID: 1874745727}
   - {fileID: 485585400}
+  - {fileID: 69856872}

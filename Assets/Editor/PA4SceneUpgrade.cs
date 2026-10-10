@@ -39,8 +39,8 @@ public static class PA4SceneUpgrade
         if (menuDescription)
         {
             var description = menuDescription.GetComponent<Text>();
-            description.text = "Diez monedas. Siete minutos.\nEvita al guardián del bosque.";
-            description.fontSize = 23;
+            description.text = "Explora un bosque encantado.\nRecupera 10 reliquias de luz.\nDescubre sus tres santuarios.";
+            description.fontSize = 21;
         }
         var hints = game.hud.transform.Find("Controls/Hints");
         if (hints) hints.GetComponent<Text>().text = "WASD / FLECHAS  ·  Moverte     MOUSE  ·  Mirar     ESC  ·  Pausa";

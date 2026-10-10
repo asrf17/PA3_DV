@@ -13,7 +13,7 @@ namespace ForestJourney
         void OnDisable() { if (manager) manager.Changed -= Refresh; }
         void Refresh()
         {
-            counter.text = $"Monedas: {manager.Collected} / {manager.Total}";
+            counter.text = $"Reliquias: {manager.Collected} / {manager.Total}";
             if (progress)
             {
                 float value = manager.Total == 0 ? 0 : (float)manager.Collected / manager.Total;

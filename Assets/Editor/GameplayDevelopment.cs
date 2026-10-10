@@ -24,6 +24,7 @@ public static class GameplayDevelopment
             else if (command == "inspect") Inspect();
             else if (command == "play") EditorApplication.isPlaying = true;
             else if (command == "stop") EditorApplication.isPlaying = false;
+            else if (command == "save") UnityEditor.SceneManagement.EditorSceneManager.SaveOpenScenes();
             else if (command == "build" || command == "validate")
             {
                 var type = typeof(GameplayDevelopment).Assembly.GetType("GameplaySceneBuilder");
@@ -35,7 +36,9 @@ public static class GameplayDevelopment
             else if (command == "tps") GameplayTPSSetup.Configure();
             else if (command == "tpsqa") typeof(GameplayDevelopment).Assembly.GetType("TPSVerification").GetMethod("Run").Invoke(null, null);
             else if (command == "pa4upgrade") PA4SceneUpgrade.Apply();
+            else if (command == "fantasy") FantasyExplorationUpgrade.Apply();
             else if (command == "pa4qa") PA4Verification.Run();
+            else if (command == "pa4video") PA4DemoCapture.Run();
         }
         catch (Exception e) { File.WriteAllText("Library/GameplayFailure.txt", e.ToString()); Debug.LogException(e); }
     }

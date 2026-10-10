@@ -20,6 +20,7 @@ namespace ForestJourney
         public UnityEngine.UI.Text resultTitle;
         public UnityEngine.UI.Text resultSummary;
         public ForestGuardian guardian;
+        public DiscoveryJournal discoveries;
         [Min(30)] public float roundDuration = 420f;
         [Min(1)] public int startingLives = 3;
         public GameState State { get; private set; }
@@ -46,6 +47,7 @@ namespace ForestJourney
             LivesRemaining = startingLives;
             InvulnerabilityRemaining = 0;
             player.ResetToSpawn(); coins.ResetCoins(); followCamera.Snap();
+            if (discoveries) discoveries.ResetDiscoveries();
             if (guardian) guardian.ResetGuardian();
             SetState(GameState.Playing);
         }
@@ -55,6 +57,7 @@ namespace ForestJourney
             LivesRemaining = startingLives;
             InvulnerabilityRemaining = 0;
             player.ResetToSpawn(); coins.ResetCoins(); followCamera.Snap();
+            if (discoveries) discoveries.ResetDiscoveries();
             if (guardian) guardian.ResetGuardian();
             SetState(GameState.MainMenu);
         }
@@ -77,9 +80,9 @@ namespace ForestJourney
         void Finish(bool victory)
         {
             if (State != GameState.Playing) return;
-            if (resultTitle) resultTitle.text = victory ? "¡Expedición completada!" : "Fin de la expedición";
+            if (resultTitle) resultTitle.text = victory ? "¡El santuario despierta!" : "El bosque espera";
             if (resultSummary) resultSummary.text = victory
-                ? $"Encontraste las {coins.Total} monedas. Tiempo restante: {Mathf.CeilToInt(TimeRemaining)} s."
+                ? $"Restauraste {coins.Total} reliquias de luz. Tiempo restante: {Mathf.CeilToInt(TimeRemaining)} s."
                 : LivesRemaining == 0 ? "El guardián agotó tus oportunidades." : "Se acabó el tiempo.";
             SetState(victory ? GameState.Victory : GameState.Defeat);
         }
