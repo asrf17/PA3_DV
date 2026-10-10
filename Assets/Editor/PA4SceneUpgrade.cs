@@ -33,6 +33,7 @@ public static class PA4SceneUpgrade
         if (!game.guardian) CreateGuardian(game, terrain);
         if (!game.hud.GetComponent<ExpeditionHUD>()) CreateStatusPanel(game);
         if (!game.resultMenu) CreateResultPanel(game);
+        CreateAmbientSound(game);
 
         var menuDescription = game.mainMenu.transform.Find("Expedition Panel/Description");
         if (menuDescription)
@@ -196,5 +197,21 @@ public static class PA4SceneUpgrade
         Button("Exit", panel, "Salir", new Vector2(0, -343), game.QuitGame);
         game.resultMenu = overlay.gameObject;
         overlay.gameObject.SetActive(false);
+    }
+
+    static void CreateAmbientSound(GameManager game)
+    {
+        if (game.transform.Find("Forest Ambience")) return;
+        const string path = "Assets/Audio/Gameplay/ForestAmbience.wav";
+        var clip = AssetDatabase.LoadAssetAtPath<AudioClip>(path);
+        if (!clip) throw new InvalidOperationException("Missing original ambient clip: " + path);
+        var sound = new GameObject("Forest Ambience", typeof(AudioSource));
+        sound.transform.SetParent(game.transform, false);
+        var source = sound.GetComponent<AudioSource>();
+        source.clip = clip;
+        source.playOnAwake = true;
+        source.loop = true;
+        source.spatialBlend = 0;
+        source.volume = .22f;
     }
 }
