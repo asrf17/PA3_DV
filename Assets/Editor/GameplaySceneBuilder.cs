@@ -271,9 +271,21 @@ public static class GameplaySceneBuilder
         if(!game||!game.player||!game.followCamera||!game.coins||game.coins.Total!=10)throw new Exception("Missing gameplay references.");
         if(game.coins.coins.Any(c=>!c||c.manager!=game.coins||!c.GetComponent<SphereCollider>().isTrigger))throw new Exception("Invalid coin trigger/references.");
         if(!game.mainMenu||!game.pauseMenu||!game.hud||!game.playButton||!game.continueButton)throw new Exception("Missing UI references.");
+        if(!game.guardian||game.guardian.game!=game||game.guardian.player!=game.player||
+            game.guardian.waypoints==null||game.guardian.waypoints.Length<2||
+            game.guardian.waypoints.Any(p=>!p))throw new Exception("Missing PA4 guardian patrol/chase references.");
+        if(!game.resultMenu||!game.retryButton||!game.resultTitle||!game.resultSummary||
+            !game.hud.GetComponent<ExpeditionHUD>())throw new Exception("Missing PA4 HUD or result UI.");
+        var ambient=game.transform.Find("Forest Ambience");
+        if(!ambient||!ambient.GetComponent<AudioSource>()||!ambient.GetComponent<AudioSource>().clip||
+            !ambient.GetComponent<AudioSource>().loop)throw new Exception("Missing looping forest ambience.");
+        var feedback=game.GetComponent<CollectionFeedback>();
+        if(!feedback||!feedback.chime||!feedback.sparkMaterial||feedback.poolSize<1)
+            throw new Exception("Missing coin sound or pooled visual effect.");
+        if(game.roundDuration<30||game.startingLives<1)throw new Exception("Invalid round duration or life count.");
         var missing=Object.FindObjectsByType<Transform>(FindObjectsInactive.Include).Sum(t=>GameObjectUtility.GetMonoBehavioursWithMissingScriptCount(t.gameObject));
         if(missing!=0)throw new Exception("Missing scripts: "+missing);
-        File.WriteAllText("Library/GameplayValidation.txt","PASS: player, camera, 10 trigger coins, UI references, no missing scripts. "+DateTime.Now.ToString("O"));
+        File.WriteAllText("Library/GameplayValidation.txt","PASS: player, camera, 10 trigger coins, guardian AI, win/loss UI, ambience, pooled effects, no missing scripts. "+DateTime.Now.ToString("O"));
     }
     [MenuItem("Tools/Forest Journey/Apply presentation polish")]
     public static void Polish()
