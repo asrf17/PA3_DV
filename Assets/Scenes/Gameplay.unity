@@ -51984,7 +51984,7 @@ MonoBehaviour:
   collisionPadding: 0.08
   obstructionMask:
     serializedVersion: 2
-    m_Bits: 4294967291
+    m_Bits: 51
 --- !u!1 &330608501
 GameObject:
   m_ObjectHideFlags: 0
