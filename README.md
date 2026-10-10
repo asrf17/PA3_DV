@@ -1,17 +1,13 @@
-# Sendero Dorado - Evaluación Final PA4
+# Sendero Dorado: Ecos del Bosque — evaluación final PA4
 
-Juego breve de exploración 3D construido sobre el mapa original de PA3_DV, con Unity 6000.6.0f1.
+Aventura original de exploración fantástica 3D hecha en Unity 6000.6.0f1. El jugador guía una esfera viajera por un bosque encantado para recuperar diez reliquias de luz y descubrir tres santuarios. Un guardián patrulla las ruinas y persigue al explorador si lo detecta. La partida tiene menú, pausa, victoria y derrota; dura como máximo siete minutos y comienza con tres oportunidades.
 
-Abre `Assets/Scenes/Gameplay.unity`, entra en Play y selecciona **Jugar**. Controla la esfera con WASD o flechas respecto a la cámara y usa el mouse para mirar alrededor con órbita TPS. Encuentra diez monedas en siete minutos y evita al guardián, que patrulla y persigue. Pulsa ESC para pausar y liberar el cursor, reiniciar o regresar al menú. Hay victoria al reunir todas las monedas y derrota al agotar el tiempo o tres oportunidades.
+Abre `Assets/Scenes/Gameplay.unity`, pulsa **Play** y elige **Jugar**. Muévete con WASD o flechas en relación con la cámara. Usa el mouse para observar y **Escape** para pausar o liberar el cursor. La flecha indica el rumbo aproximado de la reliquia disponible más cercana. Acércate a los santuarios para registrarlos en el HUD; son hallazgos opcionales que premian la exploración. Recuperar las diez reliquias despierta el santuario y completa la aventura.
 
-- `main`: respaldo original del mapa, sin desarrollo de gameplay.
-- `feature/gameplay-3d`: personaje, cámara, coleccionables, brújula, interfaces y menús.
-- `codex/pa4-final`: partida completa PA4, guardián, audio ambiental, finales, optimización y pruebas.
+- `main`: mapa original.
+- `feature/gameplay-3d`: personaje, cámara, coleccionables, brújula e interfaces.
+- `codex/pa4-final`: experiencia PA4 completa, con temática fantástica, guardián, santuarios, audio, efectos, finales y pruebas.
 
-Las monedas incorporan un Shader Graph propio con un pulso de emisión dorada animado mediante tiempo y una onda seno.
+La esfera, las reliquias luminosas, el guardián y las piedras antiguas son Prefabs. El brillo de las reliquias utiliza un Shader Graph propio. Los efectos de recolección reutilizan cuatro sistemas de partículas mediante Object Pooling.
 
-Consulta [GAMEPLAY.md](GAMEPLAY.md) para conocer los componentes, referencias del Inspector, controles, pruebas y compilación para Windows.
-
-Consulta [Documentation/PA4_FINAL.md](Documentation/PA4_FINAL.md) para conocer el objetivo, la IA, el pool de partículas, las pruebas y la entrega final.
-
-Los recursos grandes utilizan Git LFS. Library, Temp, Logs y Builds no forman parte del repositorio.
+Consulta [GAMEPLAY.md](GAMEPLAY.md) para conocer los componentes y controles y [Documentation/PA4_FINAL.md](Documentation/PA4_FINAL.md) para las pruebas y la entrega. Los recursos grandes usan Git LFS. `Library`, `Temp`, `Logs` y `Builds` no se publican en Git.

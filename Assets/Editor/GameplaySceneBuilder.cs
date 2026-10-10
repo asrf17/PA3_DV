@@ -276,6 +276,11 @@ public static class GameplaySceneBuilder
             game.guardian.waypoints.Any(p=>!p))throw new Exception("Missing PA4 guardian patrol/chase references.");
         if(!game.resultMenu||!game.retryButton||!game.resultTitle||!game.resultSummary||
             !game.hud.GetComponent<ExpeditionHUD>())throw new Exception("Missing PA4 HUD or result UI.");
+        if(!game.discoveries||game.discoveries.Total!=3||
+            game.discoveries.landmarks.Any(l=>!l||l.journal!=game.discoveries||
+                !l.GetComponent<SphereCollider>().isTrigger)||
+            !game.hud.GetComponent<ExpeditionHUD>().discoveryStatus)
+            throw new Exception("Missing fantasy sanctuary discovery references.");
         var ambient=game.transform.Find("Forest Ambience");
         if(!ambient||!ambient.GetComponent<AudioSource>()||!ambient.GetComponent<AudioSource>().clip||
             !ambient.GetComponent<AudioSource>().loop)throw new Exception("Missing looping forest ambience.");
@@ -285,7 +290,7 @@ public static class GameplaySceneBuilder
         if(game.roundDuration<30||game.startingLives<1)throw new Exception("Invalid round duration or life count.");
         var missing=Object.FindObjectsByType<Transform>(FindObjectsInactive.Include).Sum(t=>GameObjectUtility.GetMonoBehavioursWithMissingScriptCount(t.gameObject));
         if(missing!=0)throw new Exception("Missing scripts: "+missing);
-        File.WriteAllText("Library/GameplayValidation.txt","PASS: player, camera, 10 trigger coins, guardian AI, win/loss UI, ambience, pooled effects, no missing scripts. "+DateTime.Now.ToString("O"));
+        File.WriteAllText("Library/GameplayValidation.txt","PASS: player, camera, 10 relic triggers, three discoverable sanctuaries, guardian AI, win/loss UI, ambience, pooled effects, no missing scripts. "+DateTime.Now.ToString("O"));
     }
     [MenuItem("Tools/Forest Journey/Apply presentation polish")]
     public static void Polish()

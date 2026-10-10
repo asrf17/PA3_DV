@@ -1,23 +1,26 @@
-# Exploración 3D
+# Sendero Dorado: Ecos del Bosque — exploración 3D
 
 Proyecto Unity 6000.6.0f1. La rama `main` conserva el mapa original en el commit `448a320`.
-Todo el prototipo se desarrolla en `feature/gameplay-3d`, sin merge automático.
+La entrega PA4 se desarrolla en `codex/pa4-final`, a partir de `feature/gameplay-3d`.
 
 La escena original se conserva. La escena jugable es `Assets/Scenes/Gameplay.unity`, ya configurada como escena inicial de compilación.
-El terreno original se referencia sin modificar sus datos.
+El terreno original se conserva como base; se abrieron pequeños claros para tres santuarios de exploración.
 
 ## Cómo jugar
 
-1. Abre este proyecto con Unity 6000.6.0f1 y la rama `feature/gameplay-3d`.
+1. Abre este proyecto con Unity 6000.6.0f1 y la rama `codex/pa4-final`.
 2. Abre `Assets/Scenes/Gameplay.unity` y pulsa Play en Unity.
 3. Selecciona **Jugar**. Usa WASD o flechas para mover la esfera respecto a la cámara, y el mouse para orbitar. ESC abre y cierra la pausa y libera el cursor.
-4. Busca diez monedas. La flecha superior señala un sector aproximado hacia la moneda disponible más cercana; no indica posición ni distancia.
-5. Al recoger las diez aparece el mensaje de objetivo completado. Puedes seguir explorando o reiniciar desde la pausa.
+4. Busca diez reliquias de luz. La flecha superior señala un sector aproximado hacia la reliquia disponible más cercana; no indica posición ni distancia.
+5. Descubre los tres santuarios opcionales acercándote a sus piedras antiguas. El HUD muestra cuántos lugares encontraste.
+6. Al recuperar las diez reliquias aparece la victoria. El guardián puede quitarte oportunidades y también puedes perder si se agota el tiempo.
 
 La pausa ofrece Continuar, Reiniciar partida, Volver al menú principal y Salir del juego. Salir termina Play en el editor y cierra la aplicación compilada. Perder el foco pausa la partida.
-La partida es de una sesión: reiniciar o volver al menú restablece las diez monedas y la posición inicial.
+La partida es de una sesión: reiniciar o volver al menú restablece las diez reliquias, los tres hallazgos y la posición inicial.
 
 ## Escena y componentes
+
+Los nombres técnicos `Coin`, `CoinManager` y `GoldenCoin` vienen del prototipo anterior. En la aventura final estos objetos son las **reliquias de luz**; se conservan las clases para no romper referencias serializadas de Unity.
 
 Todas las referencias indicadas ya están asignadas en el Inspector. Los scripts de juego están en `Assets/Scripts/Gameplay`, bajo el espacio de nombres `ForestJourney`.
 

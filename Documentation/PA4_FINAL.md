@@ -1,42 +1,45 @@
-# Producto Académico 4 - Sendero Dorado
+# Producto Académico 4 — Sendero Dorado: Ecos del Bosque
 
 ## Juego y objetivo
 
-Sendero Dorado es una partida de exploración 3D en un bosque. La esfera debe reunir las diez monedas antes de que pasen siete minutos. Hay tres oportunidades: el guardián del bosque patrulla una ruta y persigue al jugador cuando lo detecta. Al tocarlo, quita una oportunidad, devuelve la esfera al inicio y aplica una breve protección para evitar pérdidas consecutivas. Se gana al recoger las diez monedas; se pierde al agotar las oportunidades o el tiempo. Ambas condiciones muestran una pantalla final con opciones para reiniciar o volver al menú.
+Sendero Dorado es una aventura breve de exploración fantástica 3D. La esfera viajera debe recuperar diez reliquias de luz en distintas zonas de un bosque encantado. También puede descubrir tres santuarios opcionales: Santuario del Alba, Mirador del Viento y Ruinas del Eco. Al acercarse a cada uno, el HUD registra el hallazgo. El guardián de las ruinas patrulla cuatro puntos y persigue al jugador cuando lo ve. Hay siete minutos y tres oportunidades; el contacto con el guardián quita una y devuelve al jugador al inicio con protección breve. Se gana al reunir las diez reliquias y se pierde al agotar tiempo u oportunidades. Las pantallas finales permiten reiniciar o volver al menú.
+
+La inspiración es la sensación de exploración de aventuras fantásticas de mundo abierto. Personajes, modelos sencillos, historia, nombres y recursos son propios de este proyecto; no se usan personajes ni arte de otra franquicia.
 
 ## Abrir y jugar
 
-1. Abrir el proyecto con Unity **6000.6.0f1** y la rama `codex/pa4-final`.
-2. Abrir `Assets/Scenes/Gameplay.unity`, pulsar **Play** y seleccionar **Jugar**.
-3. Usar **WASD** o las flechas para mover la esfera en relación con la cámara. Mover el mouse para mirar alrededor. La flecha superior indica aproximadamente la dirección de la moneda más cercana.
-4. Pulsar **Escape** para pausar, continuar, reiniciar o regresar al menú. La pausa libera el cursor.
+1. Abre el proyecto con Unity **6000.6.0f1** y la rama `codex/pa4-final`.
+2. Abre `Assets/Scenes/Gameplay.unity`, pulsa **Play** y selecciona **Jugar**.
+3. Usa **WASD** o las flechas para mover la esfera respecto a la cámara; mueve el mouse para mirar alrededor. La flecha superior señala aproximadamente la reliquia pendiente más cercana.
+4. Entra en los círculos de las piedras antiguas para descubrir los santuarios. Son opcionales y se reinician al comenzar otra expedición.
+5. Pulsa **Escape** para pausar. La pausa libera el cursor y detiene al personaje, el tiempo y la IA.
 
 ## Sistemas y decisiones técnicas
 
-- `PlayerController` conserva el Rigidbody, la detección de suelo, la aceleración, la respuesta a pendientes y la rotación hacia la marcha.
-- `CameraController` sigue a la esfera, permite una órbita independiente con el mouse, limita el Pitch y se retrae cuando una pared obstruye la vista.
-- `Coin` y `CoinManager` registran una sola recolección por Trigger, actualizan el objetivo y restauran las diez monedas al reiniciar.
-- `GameManager` controla menú, juego, pausa, victoria y derrota; administra siete minutos, tres oportunidades y el contacto con el guardián.
-- `ForestGuardian` usa dos estados: **Patrol**, entre cuatro waypoints, y **Chase**, cuando el jugador está cerca y visible. Usa Raycast para línea de visión y SphereCast para esquivar obstáculos cercanos. Su percepción se calcula cada 0,2 segundos.
-- `ExpeditionHUD` muestra tiempo, oportunidades y una alerta cuando el guardián persigue al jugador. El menú de resultados sustituye al HUD al terminar.
-- `CollectionFeedback` reproduce un sonido por moneda y reutiliza un grupo fijo de cuatro sistemas de partículas. Esta **técnica de optimización (Object Pooling)** evita crear y destruir un objeto de partículas en cada recolección. Los efectos usan tiempo no escalado para que el último se vea incluso al congelarse la partida.
-- `Forest Ambience` reproduce en bucle una pista de viento y pájaros sintetizada para el proyecto. La escena conserva materiales diferenciados, URP, Volume global y relieve de Terrain. Las monedas emplean el Shader Graph animado propio `GoldenCoinPulse.shadergraph`.
-- `PlayerSphere`, `GoldenCoin` y `ForestGuardian` son Prefabs. El controlador del guardián, el HUD y la lógica de partida tienen responsabilidades separadas.
+- `PlayerController` conserva el Rigidbody, la detección de suelo, aceleración, respuesta a pendientes y giro hacia la marcha.
+- `CameraController` sigue a la esfera con órbita independiente, limita el Pitch y se acerca cuando encuentra obstáculos.
+- `Coin` y `CoinManager` mantienen los Triggers y el registro interno del sistema original. En pantalla se presentan como reliquias. La recolección es única y se restablece al reiniciar.
+- `ExplorationLandmark` y `DiscoveryJournal` añaden tres lugares opcionales. Sus Triggers registran el hallazgo solo una vez; el contador y nombre aparecen en `ExpeditionHUD`. El registro se restablece en una nueva partida.
+- `GameManager` controla menú, juego, pausa, victoria, derrota, tiempo, oportunidades y reinicios.
+- `ForestGuardian` alterna entre **Patrol** y **Chase**. Recorre cuatro waypoints, usa Raycast para comprobar visión y SphereCast para evitar obstáculos. Actualiza la percepción cada 0,2 segundos.
+- `CollectionFeedback` reproduce una campanada por reliquia y reutiliza cuatro sistemas de partículas. Este **Object Pooling** evita crear y destruir partículas en cada recogida. Usa tiempo no escalado para conservar el último efecto al ganar.
+- `Forest Ambience` reproduce viento y pájaros sintetizados. El nivel tiene Terrain, relieve, vegetación, materiales, iluminación URP y Volume global. Las reliquias combinan cristales luminosos y un Shader Graph propio con pulso de emisión. Tres piedras antiguas con luces suaves crean puntos de interés; se despejaron pequeños claros sin eliminar el bosque.
+- `PlayerSphere`, `GoldenCoin`, `ForestGuardian` y `AncientWaystone` son Prefabs reutilizables.
 
 ## Pruebas y compilación
 
-En Unity, abrir la escena, entrar en Play y ejecutar desde el menú **Tools > Forest Journey**:
+En Play Mode, el menú **Tools > Forest Journey** ejecuta las suites:
 
-- **Verify gameplay in Play Mode**: 41 comprobaciones de movimiento, colisiones, monedas, menú, pausa, victoria y reinicio.
+- **Verify gameplay in Play Mode**: 41 comprobaciones de movimiento, colisiones, Triggers, menú, pausa, victoria y reinicio.
 - **Verify TPS in Play Mode**: 43 comprobaciones de cámara, WASD relativo, giro, cursor y estabilidad.
-- **Verify PA4 in Play Mode**: 29 comprobaciones de patrulla, persecución, contacto, temporizador, resultados, interfaz, audio y reutilización de partículas.
+- **Verify PA4 in Play Mode**: 35 comprobaciones de patrulla, persecución, contacto, tiempo, resultados, UI, audio, pool y descubrimiento de santuarios tanto por lógica como por Trigger real.
 
-Los tres informes se guardan en `Library/GameplayQA.txt`, `Library/TPSVerification.txt` y `Library/PA4QA.txt`. Sus capturas también aparecen en `Library`. Estas pruebas automáticas incluyen teletransporte entre monedas para comprobar los diez Triggers; conviene realizar además un recorrido manual completo antes de presentar el video.
+Los informes y capturas se guardan localmente en `Library`. Las 119 comprobaciones automatizadas incluyen traslados directos para cubrir todos los Triggers; conviene recorrer también el bosque manualmente para valorar la experiencia. La validación previa al Build comprueba referencias, Triggers, santuarios, HUD y ausencia de scripts faltantes.
 
-**Tools > Forest Journey > Build Windows prototype** valida la escena y genera `Builds/SenderoDorado/SenderoDorado.exe`. La compilación del 10 de octubre de 2026 terminó con cero errores y 14 advertencias de recursos importados, y se verificó que el ejecutable arranca fuera del editor. Para compartirlo, conservar la carpeta `SenderoDorado_Data` junto al `.exe`. `Builds` y `Library` quedan fuera de Git.
+**Tools > Forest Journey > Build Windows prototype** genera `Builds/SenderoDorado/SenderoDorado.exe`. Conserva junto al ejecutable la carpeta `SenderoDorado_Data`. `Builds` y `Library` están excluidos de Git.
 
 ## Entrega PA4
 
-El informe PDF de 4 a 6 páginas está en `output/pdf/PA4_Informe_Sendero_Dorado.pdf`. El repositorio debe compartirse desde la rama `codex/pa4-final` o integrarse después en la rama de entrega acordada por el equipo. La visibilidad pública de GitHub debe confirmarse antes del envío.
+El informe de cinco páginas está en `output/pdf/PA4_Informe_Sendero_Dorado.pdf`. El repositorio se comparte desde la rama `codex/pa4-final` o se integra después en la rama de entrega del equipo. La visibilidad pública del repositorio y la subida del video deben comprobarse antes de enviar los enlaces al docente.
 
-La consigna solicita un video de **5 a 7 minutos** que enseñe gameplay, IA, UI, audio, efectos y la optimización. Una estructura sugerida es: 1 minuto de introducción y controles; 2 minutos de exploración y monedas; 1 minuto de patrulla/persecución; 1 minuto de victoria/derrota e interfaz; 1 minuto para explicar el pool de partículas, pruebas y Build. Todos los integrantes deben poder explicar las decisiones principales; los nombres y roles los debe añadir el equipo.
+El video de 5 a 7 minutos debe enseñar exploración, hallazgo de santuarios, recolección, IA, UI, audio, efectos, victoria/derrota y Object Pooling. Todos los integrantes deben poder explicar las decisiones principales y añadir sus nombres y roles antes de presentar.
