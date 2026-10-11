@@ -68,12 +68,25 @@ public static class SurvivalExplorationUpgrade
 
     static void AddGuardianDirector(GameManager game, Terrain terrain)
     {
+        const string guardianPath = "Assets/Prefabs/Gameplay/ForestGuardian.prefab";
+        var template = PrefabUtility.LoadPrefabContents(guardianPath);
+        try
+        {
+            var settings = template.GetComponent<ForestGuardian>();
+            settings.patrolSpeed = 4.2f;
+            settings.chaseSpeed = 10.6f;
+            settings.detectionRange = 27f;
+            settings.releaseRange = 48f;
+            settings.alertDelay = 5f;
+            PrefabUtility.SaveAsPrefabAsset(template, guardianPath);
+        }
+        finally { PrefabUtility.UnloadPrefabContents(template); }
         var director = game.GetComponent<GuardianDirector>();
         if (!director) director = game.gameObject.AddComponent<GuardianDirector>();
         director.game = game;
         director.coins = game.coins;
         director.firstGuardian = game.guardian;
-        director.guardianPrefab = AssetDatabase.LoadAssetAtPath<GameObject>("Assets/Prefabs/Gameplay/ForestGuardian.prefab")
+        director.guardianPrefab = AssetDatabase.LoadAssetAtPath<GameObject>(guardianPath)
             .GetComponent<ForestGuardian>();
         director.terrain = terrain;
         director.safeSpawnRadius = 18f;
@@ -83,6 +96,7 @@ public static class SurvivalExplorationUpgrade
         game.guardian.detectionRange = 27f;
         game.guardian.releaseRange = 48f;
         game.guardian.alertDelay = 5f;
+        PrefabUtility.RecordPrefabInstancePropertyModifications(game.guardian);
         game.maxHealth = 100;
         game.guardianDamage = 25;
     }

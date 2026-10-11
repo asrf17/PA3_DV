@@ -188,8 +188,19 @@ public static class PA4Verification
         Check(game.Health == 75 && game.State == GameState.Playing,
             "Guardian contact removes 25 health while the player stays in the world");
         Check(game.InvulnerabilityRemaining > 0, "Damage grants brief contact protection");
-        Check(game.medkits[0].TryUse() && game.Health == 100 && !game.medkits[0].gameObject.activeSelf,
-            "A medkit restores health once and disappears");
+        var medkit = game.medkits[0];
+        Vector3 outsideKit = medkit.transform.position + Vector3.back * 4f;
+        outsideKit.y = terrain.SampleHeight(outsideKit) + terrain.transform.position.y + 1.15f;
+        player.Body.position = outsideKit;
+        player.Body.linearVelocity = Vector3.zero;
+        Physics.SyncTransforms();
+        yield return .15f;
+        player.Body.position = medkit.transform.position;
+        player.Body.linearVelocity = Vector3.zero;
+        Physics.SyncTransforms();
+        yield return .35f;
+        Check(game.Health == 100 && !medkit.gameObject.activeSelf,
+            "Entering a medkit trigger restores health once and hides the pickup");
         guardian.detectionRange = originalDetection;
         guardian.alertDelay = originalAlertDelay;
         guardian.sightMask = originalSight;

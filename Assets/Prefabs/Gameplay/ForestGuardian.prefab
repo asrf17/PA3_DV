@@ -258,12 +258,13 @@ MonoBehaviour:
   game: {fileID: 0}
   player: {fileID: 0}
   waypoints: []
-  patrolSpeed: 3.8
-  chaseSpeed: 6.6
+  patrolSpeed: 4.2
+  chaseSpeed: 10.6
   detectionRange: 27
-  releaseRange: 42
+  releaseRange: 48
   catchDistance: 2.2
   senseInterval: 0.2
+  alertDelay: 5
   sightMask:
     serializedVersion: 2
     m_Bits: 4294967291
