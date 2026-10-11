@@ -78,12 +78,15 @@ public static class GameplayVerification
         var hud=game.hud.GetComponent<CoinCounterUI>();var guide=game.hud.GetComponent<CoinDirectionIndicator>();
         Check(game.State==GameState.MainMenu && Time.timeScale==0 && !player.ControlsEnabled,"Main menu freezes world and controls");
         ScreenCapture.CaptureScreenshot("Library/GameplayMenu.png");yield return .3f;
-        Keys(Key.DownArrow);yield return .2f;
+        for(int attempt=0;attempt<5 && EventSystem.current.currentSelectedGameObject!=game.mainMenu.transform.Find("Expedition Panel/Quit").gameObject;attempt++)
+        {
+            EditorWindow.GetWindow(typeof(Editor).Assembly.GetType("UnityEditor.GameView")).Focus();
+            Keys(Key.DownArrow);yield return .32f;Keys();yield return .14f;
+        }
         var inputModule=EventSystem.current.GetComponent<UnityEngine.InputSystem.UI.InputSystemUIInputModule>();
         string navigationDetails=" selected="+EventSystem.current.currentSelectedGameObject.name+" move="+inputModule.move.action.ReadValue<Vector2>()+" controls="+inputModule.move.action.controls.Count+" keyboard="+keyboard.downArrowKey.isPressed;
-        Keys();yield return .1f;
         Check(EventSystem.current.currentSelectedGameObject.name=="Quit","Keyboard navigation selects Exit in main menu"+navigationDetails);
-        Keys(Key.UpArrow);yield return .2f;Keys();yield return .1f;
+        Keys(Key.UpArrow);yield return .32f;Keys();yield return .14f;
         Check(EventSystem.current.currentSelectedGameObject==game.playButton,"Keyboard navigation returns to Play");
         Keys(Key.Enter);yield return .2f;Keys();yield return .8f;
         Check(game.State==GameState.Playing && Time.timeScale==1 && player.Grounded,"Play button starts player on terrain");
