@@ -17,7 +17,7 @@ namespace ForestJourney
         }
         public bool TryCollect()
         {
-            if (Collected || !manager) return false;
+            if (Collected || !manager || !gameObject.activeInHierarchy) return false;
             Collected = true; manager.RegisterCollection(); PickedUp?.Invoke(transform.position);
             gameObject.SetActive(false); return true;
         }

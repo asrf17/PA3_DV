@@ -10,12 +10,13 @@ namespace ForestJourney
         public GameManager game;
         public PlayerController player;
         public Transform[] waypoints;
-        [Min(0.1f)] public float patrolSpeed = 3.8f;
-        [Min(0.1f)] public float chaseSpeed = 6.6f;
+        [Min(0.1f)] public float patrolSpeed = 4.2f;
+        [Min(0.1f)] public float chaseSpeed = 10.6f;
         [Min(1f)] public float detectionRange = 27f;
-        [Min(1f)] public float releaseRange = 42f;
+        [Min(1f)] public float releaseRange = 48f;
         [Min(0.1f)] public float catchDistance = 2.2f;
         [Min(0.05f)] public float senseInterval = 0.2f;
+        [Min(0)] public float alertDelay = 5f;
         public LayerMask sightMask = ~4;
 
         public GuardianMode Mode { get; private set; }
@@ -29,6 +30,7 @@ namespace ForestJourney
         float verticalSpeed;
         float senseCountdown;
         float lostSightTime;
+        float alertCountdown;
 
         void Awake()
         {
@@ -50,14 +52,17 @@ namespace ForestJourney
             verticalSpeed = 0;
             senseCountdown = 0;
             lostSightTime = 0;
+            alertCountdown = alertDelay;
         }
 
         void Update()
         {
             if (!game || game.State != GameState.Playing || !player) return;
 
+            if (alertCountdown > 0) alertCountdown = Mathf.Max(0, alertCountdown - Time.deltaTime);
+
             senseCountdown -= Time.deltaTime;
-            if (senseCountdown <= 0)
+            if (senseCountdown <= 0 && alertCountdown <= 0)
             {
                 SensePlayer();
                 senseCountdown = senseInterval;
@@ -76,13 +81,20 @@ namespace ForestJourney
             verticalSpeed = controller.isGrounded ? -2f : Mathf.Max(-25f, verticalSpeed + Physics.gravity.y * Time.deltaTime);
             controller.Move((horizontalVelocity + Vector3.up * verticalSpeed) * Time.deltaTime);
 
-            if (Vector3.Distance(transform.position, player.transform.position) < catchDistance)
+            if (alertCountdown <= 0 && Vector3.Distance(transform.position, player.transform.position) < catchDistance)
                 game.GuardianCaughtPlayer();
         }
 
         Vector3 PatrolTarget()
         {
-            if (waypoints == null || waypoints.Length == 0) return initialPosition;
+            if (waypoints == null || waypoints.Length == 0)
+            {
+                float angle = CurrentWaypoint * Mathf.PI * .5f;
+                Vector3 roaming = initialPosition + new Vector3(Mathf.Cos(angle), 0, Mathf.Sin(angle)) * 8f;
+                if (Vector3.ProjectOnPlane(roaming - transform.position, Vector3.up).sqrMagnitude < 9f)
+                    CurrentWaypoint = (CurrentWaypoint + 1) % 4;
+                return roaming;
+            }
             Transform point = waypoints[CurrentWaypoint % waypoints.Length];
             if (!point) return initialPosition;
             if (Vector3.ProjectOnPlane(point.position - transform.position, Vector3.up).sqrMagnitude < 3f)
@@ -111,7 +123,7 @@ namespace ForestJourney
             else if (Mode == GuardianMode.Chase)
             {
                 lostSightTime += senseInterval;
-                if (distance > releaseRange || lostSightTime > 3f)
+                if (distance > releaseRange || lostSightTime > 4f)
                 {
                     Mode = GuardianMode.Patrol;
                     lostSightTime = 0;
