@@ -9,9 +9,9 @@ namespace ForestJourney
         public Transform cameraTransform;
         public float speed = 14f;
         public float acceleration = 32f;
-        [Min(.1f)] public float jumpHeight = 2.4f;
-        [Min(0f)] public float jumpBufferTime = .14f;
-        [Min(0f)] public float coyoteTime = .12f;
+        [Min(.1f)] public float jumpHeight = 4.5f;
+        [Min(0f)] public float jumpBufferTime = .2f;
+        [Min(0f)] public float coyoteTime = .16f;
         [Tooltip("Maximum yaw rotation in degrees per second.")]
         [Min(0)] public float rotationSpeed = 540f;
         public bool ControlsEnabled { get; set; }
@@ -62,7 +62,8 @@ namespace ForestJourney
             if (facing.sqrMagnitude > .001f)
                 Body.MoveRotation(Quaternion.RotateTowards(Body.rotation, Quaternion.LookRotation(facing, Vector3.up), rotationSpeed * Time.fixedDeltaTime));
             RaycastHit ground = default;
-            Grounded = jumpLockRemaining <= 0 && Body.linearVelocity.y <= .2f &&
+            // Uphill travel has positive vertical velocity too; it must still count as grounded.
+            Grounded = jumpLockRemaining <= 0 &&
                 Physics.SphereCast(Body.position, .85f, Vector3.down, out ground, .5f, ~4, QueryTriggerInteraction.Ignore)
                 && Vector3.Dot(ground.normal, Vector3.up) > .65f;
             if (Grounded) coyoteRemaining = coyoteTime;

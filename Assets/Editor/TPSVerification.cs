@@ -131,6 +131,17 @@ public static class TPSVerification
         Check(player.Body.interpolation==RigidbodyInterpolation.Interpolate,"Physics interpolation remains enabled");
         game.StartGame();yield return .4f;
         Check(!player.IsAiming&&Mathf.Abs(Mathf.DeltaAngle(camera.Yaw,0))<.1f&&Mathf.Abs(camera.Pitch-camera.initialPitch)<.1f,"Restart resets facing, aim state and orbit");
+        Vector3 routeStart=player.Body.position;
+        Keys(Key.W);yield return .65f;Keys();yield return .12f;
+        Check(player.Body.position.z-routeStart.z>5f&&player.Body.position.y>routeStart.y+.5f,
+            "W climbs directly toward the first relic at a useful speed without invisible obstacles");
+        Check(player.Grounded,"Uphill motion still counts as grounded");
+        var terrain=Object.FindAnyObjectByType<Terrain>();
+        Keys(Key.W,Key.Space);yield return .16f;Keys(Key.W);
+        float groundLevel=terrain.SampleHeight(player.Body.position)+terrain.transform.position.y+1.15f;
+        Check(player.Body.position.y>groundLevel+.5f&&!player.Grounded,
+            $"Space key jumps while moving uphill (height={player.Body.position.y-groundLevel:0.00}, grounded={player.Grounded}, vy={player.Body.linearVelocity.y:0.00}, keyboard={Keyboard.current?.name}, input={player.MoveInput})");
+        Keys();yield return .1f;
         ScreenCapture.CaptureScreenshot("Library/TPSGameplay.png");yield return .2f;
         game.ShowMainMenu();yield return .1f;
         Check(Cursor.lockState==CursorLockMode.None&&Cursor.visible,"Main menu leaves cursor free");

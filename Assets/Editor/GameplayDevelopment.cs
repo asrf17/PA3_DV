@@ -40,6 +40,8 @@ public static class GameplayDevelopment
             else if (command == "survival") SurvivalExplorationUpgrade.Apply();
             else if (command == "roundui") RoundedInterfaceUpgrade.Apply();
             else if (command == "experience") GameplayExperienceUpgrade.Apply();
+            else if (command == "routecheck") TraversalDiagnostics.Run();
+            else if (command == "routefix") TraversalFix.Apply();
             else if (command == "music") BackgroundMusicSetup.Apply();
             else if (command == "pa4qa") PA4Verification.Run();
             else if (command == "pa4video") PA4DemoCapture.Run();

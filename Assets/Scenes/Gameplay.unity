@@ -10075,61 +10075,6 @@ CapsuleCollider:
   m_Height: 6.4127107
   m_Direction: 1
   m_Center: {x: 0, y: 3.8313296, z: 0}
---- !u!1 &65022787
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 65022788}
-  - component: {fileID: 65022789}
-  m_Layer: 0
-  m_Name: PT_Pine_Tree_03_green_cut Collision
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &65022788
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 65022787}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.7061207, z: -0, w: 0.7080915}
-  m_LocalPosition: {x: 42.70699, y: 26.299788, z: 202.5071}
-  m_LocalScale: {x: 1.0713658, y: 1.0713658, z: 1.0713658}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1256197256}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &65022789
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 65022787}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.38
-  m_Height: 6.4127107
-  m_Direction: 1
-  m_Center: {x: 0, y: 3.8313296, z: 0}
 --- !u!1 &65136222
 GameObject:
   m_ObjectHideFlags: 0
@@ -24181,61 +24126,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.25192297, y: 0.23156467, z: 0.21769409}
   m_Center: {x: -0.005520433, y: 0.12129615, z: 0.002885133}
---- !u!1 &153975681
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 153975682}
-  - component: {fileID: 153975683}
-  m_Layer: 0
-  m_Name: PT_Pine_Tree_03_green_cut Collision
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &153975682
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 153975681}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.9348932, z: -0, w: 0.3549292}
-  m_LocalPosition: {x: 236.06447, y: 39.326324, z: 64.291275}
-  m_LocalScale: {x: 1.0289814, y: 1.0289814, z: 1.0289814}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1256197256}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &153975683
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 153975681}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.38
-  m_Height: 6.4127107
-  m_Direction: 1
-  m_Center: {x: 0, y: 3.8313296, z: 0}
 --- !u!1 &155585439
 GameObject:
   m_ObjectHideFlags: 0
@@ -26611,61 +26501,6 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 168480111}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.38
-  m_Height: 6.4127107
-  m_Direction: 1
-  m_Center: {x: 0, y: 3.8313296, z: 0}
---- !u!1 &168816778
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 168816779}
-  - component: {fileID: 168816780}
-  m_Layer: 0
-  m_Name: PT_Pine_Tree_03_green_cut Collision
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &168816779
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 168816778}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.071595006, z: -0, w: 0.99743384}
-  m_LocalPosition: {x: 167.38596, y: 50.774506, z: 208.76923}
-  m_LocalScale: {x: 1.0367732, y: 1.0367732, z: 1.0367732}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1256197256}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &168816780
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 168816778}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -34233,59 +34068,6 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 212435497}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.25192297, y: 0.23156467, z: 0.21769409}
-  m_Center: {x: -0.005520433, y: 0.12129615, z: 0.002885133}
---- !u!1 &212877615
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 212877616}
-  - component: {fileID: 212877617}
-  m_Layer: 0
-  m_Name: PT_Generic_Rock_01 Collision
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &212877616
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 212877615}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.29782522, z: -0, w: 0.9546204}
-  m_LocalPosition: {x: 167.9004, y: 57.09587, z: 275.31647}
-  m_LocalScale: {x: 1.0873517, y: 1.0873517, z: 1.0873517}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1256197256}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &212877617
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 212877615}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -42639,61 +42421,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 270047384}
   m_Mesh: {fileID: 4300000, guid: 7ef30cc7758b61f4e865ce2b8a535c33, type: 2}
---- !u!1 &270910084
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 270910085}
-  - component: {fileID: 270910086}
-  m_Layer: 0
-  m_Name: PT_Fruit_Tree_01_apples Collision
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &270910085
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 270910084}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.9999998, z: -0, w: 0.00059934054}
-  m_LocalPosition: {x: 164.36304, y: 56.976273, z: 297.26236}
-  m_LocalScale: {x: 1.0605165, y: 1.0605165, z: 1.0605165}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1256197256}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &270910086
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 270910084}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.38
-  m_Height: 5.500305
-  m_Direction: 1
-  m_Center: {x: 0, y: 2.4579792, z: 0}
 --- !u!1 &271033643
 GameObject:
   m_ObjectHideFlags: 0
@@ -54175,61 +53902,6 @@ CapsuleCollider:
   m_Height: 5.500305
   m_Direction: 1
   m_Center: {x: 0, y: 2.4579792, z: 0}
---- !u!1 &337712960
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 337712961}
-  - component: {fileID: 337712962}
-  m_Layer: 0
-  m_Name: PT_Pine_Tree_03_green_cut Collision
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &337712961
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 337712960}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.9919798, z: -0, w: 0.12639701}
-  m_LocalPosition: {x: 96.79294, y: 35.796593, z: 106.262}
-  m_LocalScale: {x: 1.0786632, y: 1.0786632, z: 1.0786632}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1256197256}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &337712962
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 337712960}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.38
-  m_Height: 6.4127107
-  m_Direction: 1
-  m_Center: {x: 0, y: 3.8313296, z: 0}
 --- !u!1 &337946644
 GameObject:
   m_ObjectHideFlags: 0
@@ -56096,61 +55768,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.25192297, y: 0.23156467, z: 0.21769409}
   m_Center: {x: -0.005520433, y: 0.12129615, z: 0.002885133}
---- !u!1 &348407449
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 348407450}
-  - component: {fileID: 348407451}
-  m_Layer: 0
-  m_Name: PT_Pine_Tree_03_green_cut Collision
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &348407450
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 348407449}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.90237457, z: -0, w: 0.43095258}
-  m_LocalPosition: {x: 99.58209, y: 15.225802, z: 15.929326}
-  m_LocalScale: {x: 1.052599, y: 1.052599, z: 1.052599}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1256197256}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &348407451
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 348407449}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.38
-  m_Height: 6.4127107
-  m_Direction: 1
-  m_Center: {x: 0, y: 3.8313296, z: 0}
 --- !u!1 &348547820
 GameObject:
   m_ObjectHideFlags: 0
@@ -60722,61 +60339,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.25192297, y: 0.23156467, z: 0.21769409}
   m_Center: {x: -0.005520433, y: 0.12129615, z: 0.002885133}
---- !u!1 &376783628
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 376783629}
-  - component: {fileID: 376783630}
-  m_Layer: 0
-  m_Name: PT_Fruit_Tree_01_apples Collision
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &376783629
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 376783628}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.50661844, z: -0, w: 0.8621704}
-  m_LocalPosition: {x: 119.01186, y: 45.47955, z: 150.87337}
-  m_LocalScale: {x: 0.91016865, y: 0.91016865, z: 0.91016865}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1256197256}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &376783630
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 376783628}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.38
-  m_Height: 5.500305
-  m_Direction: 1
-  m_Center: {x: 0, y: 2.4579792, z: 0}
 --- !u!1 &377043180
 GameObject:
   m_ObjectHideFlags: 0
@@ -70586,61 +70148,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.25192297, y: 0.23156467, z: 0.21769409}
   m_Center: {x: -0.005520433, y: 0.12129615, z: 0.002885133}
---- !u!1 &438361176
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 438361177}
-  - component: {fileID: 438361178}
-  m_Layer: 0
-  m_Name: PT_Fruit_Tree_01_apples Collision
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &438361177
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 438361176}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.12884277, z: -0, w: 0.991665}
-  m_LocalPosition: {x: 167.96669, y: 57.830425, z: 292.41333}
-  m_LocalScale: {x: 1.0949584, y: 1.0949584, z: 1.0949584}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1256197256}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &438361178
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 438361176}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.38
-  m_Height: 5.500305
-  m_Direction: 1
-  m_Center: {x: 0, y: 2.4579792, z: 0}
 --- !u!1 &438593484
 GameObject:
   m_ObjectHideFlags: 0
@@ -70961,61 +70468,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.25192297, y: 0.23156467, z: 0.21769409}
   m_Center: {x: -0.005520433, y: 0.12129615, z: 0.002885133}
---- !u!1 &439818832
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 439818833}
-  - component: {fileID: 439818834}
-  m_Layer: 0
-  m_Name: PT_Fruit_Tree_01_apples Collision
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &439818833
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 439818832}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.7708054, z: -0, w: -0.63707066}
-  m_LocalPosition: {x: 157.74254, y: 49.526524, z: 212.72603}
-  m_LocalScale: {x: 0.91764545, y: 0.91764545, z: 0.91764545}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1256197256}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &439818834
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 439818832}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.38
-  m_Height: 5.500305
-  m_Direction: 1
-  m_Center: {x: 0, y: 2.4579792, z: 0}
 --- !u!1 &439926442
 GameObject:
   m_ObjectHideFlags: 0
@@ -80450,61 +79902,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.25192297, y: 0.23156467, z: 0.21769409}
   m_Center: {x: -0.005520433, y: 0.12129615, z: 0.002885133}
---- !u!1 &493348223
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 493348224}
-  - component: {fileID: 493348225}
-  m_Layer: 0
-  m_Name: PT_Fruit_Tree_01_apples Collision
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &493348224
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 493348223}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.040801704, z: -0, w: 0.99916726}
-  m_LocalPosition: {x: 98.86209, y: 38.094955, z: 113.18747}
-  m_LocalScale: {x: 1.0473895, y: 1.0473895, z: 1.0473895}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1256197256}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &493348225
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 493348223}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.38
-  m_Height: 5.500305
-  m_Direction: 1
-  m_Center: {x: 0, y: 2.4579792, z: 0}
 --- !u!1 &493962284
 GameObject:
   m_ObjectHideFlags: 0
@@ -84222,61 +83619,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.25192297, y: 0.23156467, z: 0.21769409}
   m_Center: {x: -0.005520433, y: 0.12129615, z: 0.002885133}
---- !u!1 &518005333
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 518005334}
-  - component: {fileID: 518005335}
-  m_Layer: 0
-  m_Name: PT_Pine_Tree_03_green_cut Collision
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &518005334
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 518005333}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.8753797, z: -0, w: -0.48343602}
-  m_LocalPosition: {x: 40.57868, y: 20.388128, z: 91.88082}
-  m_LocalScale: {x: 0.9230894, y: 0.9230894, z: 0.9230894}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1256197256}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &518005335
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 518005333}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.38
-  m_Height: 6.4127107
-  m_Direction: 1
-  m_Center: {x: 0, y: 3.8313296, z: 0}
 --- !u!1 &518106453
 GameObject:
   m_ObjectHideFlags: 0
@@ -110485,61 +109827,6 @@ CapsuleCollider:
   m_Height: 6.4127107
   m_Direction: 1
   m_Center: {x: 0, y: 3.8313296, z: 0}
---- !u!1 &676842711
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 676842712}
-  - component: {fileID: 676842713}
-  m_Layer: 0
-  m_Name: PT_Fruit_Tree_01_apples Collision
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &676842712
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 676842711}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.8360919, z: -0, w: 0.5485895}
-  m_LocalPosition: {x: 171.07104, y: 51.60411, z: 146.81741}
-  m_LocalScale: {x: 1.0457528, y: 1.0457528, z: 1.0457528}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1256197256}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &676842713
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 676842711}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.38
-  m_Height: 5.500305
-  m_Direction: 1
-  m_Center: {x: 0, y: 2.4579792, z: 0}
 --- !u!1 &678077591
 GameObject:
   m_ObjectHideFlags: 0
@@ -117600,61 +116887,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.25192297, y: 0.23156467, z: 0.21769409}
   m_Center: {x: -0.005520433, y: 0.12129615, z: 0.002885133}
---- !u!1 &722108243
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 722108244}
-  - component: {fileID: 722108245}
-  m_Layer: 0
-  m_Name: PT_Pine_Tree_03_green_cut Collision
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &722108244
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 722108243}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.10152476, z: -0, w: -0.99483305}
-  m_LocalPosition: {x: 146.68864, y: 51.598248, z: 258.87537}
-  m_LocalScale: {x: 0.94182086, y: 0.94182086, z: 0.94182086}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1256197256}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &722108245
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 722108243}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.38
-  m_Height: 6.4127107
-  m_Direction: 1
-  m_Center: {x: 0, y: 3.8313296, z: 0}
 --- !u!1 &722148638
 GameObject:
   m_ObjectHideFlags: 0
@@ -119402,61 +118634,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.25192297, y: 0.23156467, z: 0.21769409}
   m_Center: {x: -0.005520433, y: 0.12129615, z: 0.002885133}
---- !u!1 &734365962
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 734365963}
-  - component: {fileID: 734365964}
-  m_Layer: 0
-  m_Name: PT_Pine_Tree_03_green_cut Collision
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &734365963
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 734365962}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.5481604, z: -0, w: -0.8363732}
-  m_LocalPosition: {x: 106.98097, y: 36.47852, z: 96.515755}
-  m_LocalScale: {x: 1.0689826, y: 1.0689826, z: 1.0689826}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1256197256}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &734365964
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 734365962}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.38
-  m_Height: 6.4127107
-  m_Direction: 1
-  m_Center: {x: 0, y: 3.8313296, z: 0}
 --- !u!1 &734904833
 GameObject:
   m_ObjectHideFlags: 0
@@ -125198,61 +124375,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.25192297, y: 0.23156467, z: 0.21769409}
   m_Center: {x: -0.005520433, y: 0.12129615, z: 0.002885133}
---- !u!1 &778050514
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 778050515}
-  - component: {fileID: 778050516}
-  m_Layer: 0
-  m_Name: PT_Fruit_Tree_01_apples Collision
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &778050515
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 778050514}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.019848695, z: -0, w: 0.999803}
-  m_LocalPosition: {x: 159.17723, y: 55.904865, z: 289.2747}
-  m_LocalScale: {x: 0.9003135, y: 0.9003135, z: 0.9003135}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1256197256}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &778050516
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 778050514}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.38
-  m_Height: 5.500305
-  m_Direction: 1
-  m_Center: {x: 0, y: 2.4579792, z: 0}
 --- !u!1 &779291511
 GameObject:
   m_ObjectHideFlags: 0
@@ -136097,61 +135219,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.25192297, y: 0.23156467, z: 0.21769409}
   m_Center: {x: -0.005520433, y: 0.12129615, z: 0.002885133}
---- !u!1 &853051109
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 853051110}
-  - component: {fileID: 853051111}
-  m_Layer: 0
-  m_Name: PT_Pine_Tree_03_green_cut Collision
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &853051110
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 853051109}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.9489534, z: -0, w: -0.31541649}
-  m_LocalPosition: {x: 55.149353, y: 27.873857, z: 167.10231}
-  m_LocalScale: {x: 0.9784726, y: 0.9784726, z: 0.9784726}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1256197256}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &853051111
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 853051109}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.38
-  m_Height: 6.4127107
-  m_Direction: 1
-  m_Center: {x: 0, y: 3.8313296, z: 0}
 --- !u!1 &853166590
 GameObject:
   m_ObjectHideFlags: 0
@@ -145168,59 +144235,6 @@ CapsuleCollider:
   m_Height: 5.500305
   m_Direction: 1
   m_Center: {x: 0, y: 2.4579792, z: 0}
---- !u!1 &913956360
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 913956361}
-  - component: {fileID: 913956362}
-  m_Layer: 0
-  m_Name: PT_Generic_Rock_01 Collision
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &913956361
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 913956360}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.6935883, z: -0, w: -0.7203716}
-  m_LocalPosition: {x: 168.94315, y: 57.97975, z: 285.2966}
-  m_LocalScale: {x: 1.0973636, y: 1.0973636, z: 1.0973636}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1256197256}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &913956362
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 913956360}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.25192297, y: 0.23156467, z: 0.21769409}
-  m_Center: {x: -0.005520433, y: 0.12129615, z: 0.002885133}
 --- !u!1 &914071079
 GameObject:
   m_ObjectHideFlags: 0
@@ -146822,61 +145836,6 @@ CapsuleCollider:
   m_Height: 6.4127107
   m_Direction: 1
   m_Center: {x: 0, y: 3.8313296, z: 0}
---- !u!1 &922876828
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 922876829}
-  - component: {fileID: 922876830}
-  m_Layer: 0
-  m_Name: PT_Pine_Tree_03_green_cut Collision
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &922876829
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 922876828}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.13090442, z: -0, w: 0.991395}
-  m_LocalPosition: {x: 100.260895, y: 36.205566, z: 101.522606}
-  m_LocalScale: {x: 0.92136467, y: 0.92136467, z: 0.92136467}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1256197256}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &922876830
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 922876828}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.38
-  m_Height: 6.4127107
-  m_Direction: 1
-  m_Center: {x: 0, y: 3.8313296, z: 0}
 --- !u!1 &923063567
 GameObject:
   m_ObjectHideFlags: 0
@@ -147307,116 +146266,6 @@ CapsuleCollider:
   m_Height: 5.500305
   m_Direction: 1
   m_Center: {x: 0, y: 2.4579792, z: 0}
---- !u!1 &925933073
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 925933074}
-  - component: {fileID: 925933075}
-  m_Layer: 0
-  m_Name: PT_Fruit_Tree_01_apples Collision
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &925933074
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 925933073}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.4875553, z: -0, w: -0.8730921}
-  m_LocalPosition: {x: 176.5229, y: 59.270184, z: 284.24582}
-  m_LocalScale: {x: 0.99915564, y: 0.99915564, z: 0.99915564}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1256197256}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &925933075
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 925933073}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.38
-  m_Height: 5.500305
-  m_Direction: 1
-  m_Center: {x: 0, y: 2.4579792, z: 0}
---- !u!1 &925964565
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 925964566}
-  - component: {fileID: 925964567}
-  m_Layer: 0
-  m_Name: PT_Pine_Tree_03_green_cut Collision
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &925964566
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 925964565}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.19189695, z: -0, w: -0.9814151}
-  m_LocalPosition: {x: 123.00278, y: 46.519943, z: 146.49011}
-  m_LocalScale: {x: 1.0287523, y: 1.0287523, z: 1.0287523}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1256197256}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &925964567
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 925964565}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.38
-  m_Height: 6.4127107
-  m_Direction: 1
-  m_Center: {x: 0, y: 3.8313296, z: 0}
 --- !u!1 &926050482
 GameObject:
   m_ObjectHideFlags: 0
@@ -155112,61 +153961,6 @@ CapsuleCollider:
   m_Height: 5.500305
   m_Direction: 1
   m_Center: {x: 0, y: 2.4579792, z: 0}
---- !u!1 &974317845
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 974317846}
-  - component: {fileID: 974317847}
-  m_Layer: 0
-  m_Name: PT_Pine_Tree_03_green_cut Collision
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &974317846
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 974317845}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.7098525, z: -0, w: 0.70435035}
-  m_LocalPosition: {x: 161.56882, y: 49.830574, z: 209.55777}
-  m_LocalScale: {x: 0.9917443, y: 0.9917443, z: 0.9917443}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1256197256}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &974317847
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 974317845}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.38
-  m_Height: 6.4127107
-  m_Direction: 1
-  m_Center: {x: 0, y: 3.8313296, z: 0}
 --- !u!1 &974384972
 GameObject:
   m_ObjectHideFlags: 0
@@ -167437,61 +166231,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.25192297, y: 0.23156467, z: 0.21769409}
   m_Center: {x: -0.005520433, y: 0.12129615, z: 0.002885133}
---- !u!1 &1061218803
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1061218804}
-  - component: {fileID: 1061218805}
-  m_Layer: 0
-  m_Name: PT_Fruit_Tree_01_apples Collision
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &1061218804
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1061218803}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.6235022, z: -0, w: 0.7818216}
-  m_LocalPosition: {x: 46.454453, y: 27.24933, z: 202.35867}
-  m_LocalScale: {x: 1.017312, y: 1.017312, z: 1.017312}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1256197256}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &1061218805
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1061218803}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.38
-  m_Height: 5.500305
-  m_Direction: 1
-  m_Center: {x: 0, y: 2.4579792, z: 0}
 --- !u!1 &1061846900
 GameObject:
   m_ObjectHideFlags: 0
@@ -171617,61 +170356,6 @@ CapsuleCollider:
   m_Height: 5.500305
   m_Direction: 1
   m_Center: {x: 0, y: 2.4579792, z: 0}
---- !u!1 &1091717826
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1091717827}
-  - component: {fileID: 1091717828}
-  m_Layer: 0
-  m_Name: PT_Fruit_Tree_01_dead_cut Collision
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &1091717827
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1091717826}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.4512424, z: -0, w: 0.89240146}
-  m_LocalPosition: {x: 154.57443, y: 48.881355, z: 207.86063}
-  m_LocalScale: {x: 1.0365614, y: 1.0365614, z: 1.0365614}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1256197256}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &1091717828
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1091717826}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.38
-  m_Height: 3.6955338
-  m_Direction: 1
-  m_Center: {x: 0, y: 2.4664326, z: 0}
 --- !u!1 &1093143850
 GameObject:
   m_ObjectHideFlags: 0
@@ -175906,61 +174590,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.25192297, y: 0.23156467, z: 0.21769409}
   m_Center: {x: -0.005520433, y: 0.12129615, z: 0.002885133}
---- !u!1 &1124802015
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1124802016}
-  - component: {fileID: 1124802017}
-  m_Layer: 0
-  m_Name: PT_Pine_Tree_03_green_cut Collision
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &1124802016
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1124802015}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.57626283, z: -0, w: 0.81726444}
-  m_LocalPosition: {x: 128.90968, y: 49.035583, z: 137.88718}
-  m_LocalScale: {x: 1.0533082, y: 1.0533082, z: 1.0533082}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1256197256}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &1124802017
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1124802015}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.38
-  m_Height: 6.4127107
-  m_Direction: 1
-  m_Center: {x: 0, y: 3.8313296, z: 0}
 --- !u!1 &1124922841
 GameObject:
   m_ObjectHideFlags: 0
@@ -178290,61 +176919,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.25192297, y: 0.23156467, z: 0.21769409}
   m_Center: {x: -0.005520433, y: 0.12129615, z: 0.002885133}
---- !u!1 &1136905384
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1136905385}
-  - component: {fileID: 1136905386}
-  m_Layer: 0
-  m_Name: PT_Fruit_Tree_01_apples Collision
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &1136905385
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1136905384}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.9469601, z: -0, w: -0.32135132}
-  m_LocalPosition: {x: 171.6964, y: 58.611485, z: 288.7212}
-  m_LocalScale: {x: 0.92802405, y: 0.92802405, z: 0.92802405}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1256197256}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &1136905386
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1136905384}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.38
-  m_Height: 5.500305
-  m_Direction: 1
-  m_Center: {x: 0, y: 2.4579792, z: 0}
 --- !u!1 &1137867239
 GameObject:
   m_ObjectHideFlags: 0
@@ -181148,59 +179722,6 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1154345571}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.25192297, y: 0.23156467, z: 0.21769409}
-  m_Center: {x: -0.005520433, y: 0.12129615, z: 0.002885133}
---- !u!1 &1154675037
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1154675038}
-  - component: {fileID: 1154675039}
-  m_Layer: 0
-  m_Name: PT_Generic_Rock_01 Collision
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &1154675038
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1154675037}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.9954439, z: -0, w: -0.0953496}
-  m_LocalPosition: {x: 174.73727, y: 59.087547, z: 285.80444}
-  m_LocalScale: {x: 0.99059904, y: 0.99059904, z: 0.99059904}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1256197256}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1154675039
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1154675037}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -184739,61 +183260,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.25192297, y: 0.23156467, z: 0.21769409}
   m_Center: {x: -0.005520433, y: 0.12129615, z: 0.002885133}
---- !u!1 &1181476916
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1181476917}
-  - component: {fileID: 1181476918}
-  m_Layer: 0
-  m_Name: PT_Fruit_Tree_01_dead_cut Collision
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &1181476917
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1181476916}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.62658805, z: -0, w: 0.77935064}
-  m_LocalPosition: {x: 168.14507, y: 50.88305, z: 198.54324}
-  m_LocalScale: {x: 0.91223717, y: 0.91223717, z: 0.91223717}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1256197256}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &1181476918
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1181476916}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.38
-  m_Height: 3.6955338
-  m_Direction: 1
-  m_Center: {x: 0, y: 2.4664326, z: 0}
 --- !u!1 &1181638142
 GameObject:
   m_ObjectHideFlags: 0
@@ -188925,61 +187391,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.25192297, y: 0.23156467, z: 0.21769409}
   m_Center: {x: -0.005520433, y: 0.12129615, z: 0.002885133}
---- !u!1 &1211061107
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1211061108}
-  - component: {fileID: 1211061109}
-  m_Layer: 0
-  m_Name: PT_Fruit_Tree_01_apples Collision
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &1211061108
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1211061107}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.73826885, z: -0, w: 0.67450655}
-  m_LocalPosition: {x: 176.86952, y: 59.111336, z: 281.50403}
-  m_LocalScale: {x: 1.0597742, y: 1.0597742, z: 1.0597742}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1256197256}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &1211061109
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1211061107}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.38
-  m_Height: 5.500305
-  m_Direction: 1
-  m_Center: {x: 0, y: 2.4579792, z: 0}
 --- !u!1 &1211226683
 GameObject:
   m_ObjectHideFlags: 0
@@ -195736,7 +194147,6 @@ Transform:
   - {fileID: 400630727}
   - {fileID: 1016758036}
   - {fileID: 121967331}
-  - {fileID: 438361177}
   - {fileID: 1481536478}
   - {fileID: 2133367169}
   - {fileID: 781610444}
@@ -196126,7 +194536,6 @@ Transform:
   - {fileID: 1722129159}
   - {fileID: 196230399}
   - {fileID: 1284947301}
-  - {fileID: 65022788}
   - {fileID: 790121555}
   - {fileID: 16311156}
   - {fileID: 2076614629}
@@ -196138,14 +194547,12 @@ Transform:
   - {fileID: 161569563}
   - {fileID: 2016884129}
   - {fileID: 1268981560}
-  - {fileID: 1436898129}
   - {fileID: 1129731643}
   - {fileID: 910208248}
   - {fileID: 2066523806}
   - {fileID: 119683321}
   - {fileID: 195026827}
   - {fileID: 1782906028}
-  - {fileID: 1884390510}
   - {fileID: 1938814919}
   - {fileID: 249425134}
   - {fileID: 134365606}
@@ -196191,7 +194598,6 @@ Transform:
   - {fileID: 59180987}
   - {fileID: 1209326237}
   - {fileID: 101693753}
-  - {fileID: 734365963}
   - {fileID: 87678009}
   - {fileID: 1470312148}
   - {fileID: 360120841}
@@ -196705,7 +195111,6 @@ Transform:
   - {fileID: 969985064}
   - {fileID: 99945529}
   - {fileID: 1836966347}
-  - {fileID: 1091717827}
   - {fileID: 751966585}
   - {fileID: 1604778190}
   - {fileID: 625029195}
@@ -196847,7 +195252,6 @@ Transform:
   - {fileID: 952589528}
   - {fileID: 1165235955}
   - {fileID: 88037752}
-  - {fileID: 1181476917}
   - {fileID: 678077592}
   - {fileID: 120120439}
   - {fileID: 1390554785}
@@ -197571,7 +195975,6 @@ Transform:
   - {fileID: 1961512086}
   - {fileID: 718753817}
   - {fileID: 745610951}
-  - {fileID: 2065130679}
   - {fileID: 1249022510}
   - {fileID: 1866281916}
   - {fileID: 1754784967}
@@ -198289,7 +196692,6 @@ Transform:
   - {fileID: 950764182}
   - {fileID: 114882557}
   - {fileID: 1933154934}
-  - {fileID: 1595510168}
   - {fileID: 1963550859}
   - {fileID: 342638362}
   - {fileID: 1757972610}
@@ -198353,7 +196755,6 @@ Transform:
   - {fileID: 91905347}
   - {fileID: 804544305}
   - {fileID: 699052213}
-  - {fileID: 212877616}
   - {fileID: 1685703616}
   - {fileID: 1200110100}
   - {fileID: 792809427}
@@ -198704,7 +197105,6 @@ Transform:
   - {fileID: 1980994765}
   - {fileID: 744805374}
   - {fileID: 1843032603}
-  - {fileID: 1154675038}
   - {fileID: 1095987139}
   - {fileID: 2082978592}
   - {fileID: 1026720360}
@@ -198761,7 +197161,6 @@ Transform:
   - {fileID: 248305732}
   - {fileID: 877139495}
   - {fileID: 299629406}
-  - {fileID: 1473830800}
   - {fileID: 1871357595}
   - {fileID: 1899659658}
   - {fileID: 421264323}
@@ -199057,7 +197456,6 @@ Transform:
   - {fileID: 481190199}
   - {fileID: 345009807}
   - {fileID: 1624780540}
-  - {fileID: 913956361}
   - {fileID: 1495937938}
   - {fileID: 272400415}
   - {fileID: 29030830}
@@ -199264,7 +197662,6 @@ Transform:
   - {fileID: 524360966}
   - {fileID: 1225144314}
   - {fileID: 1410878776}
-  - {fileID: 1449752078}
   - {fileID: 1678131951}
   - {fileID: 1763611567}
   - {fileID: 295856694}
@@ -199711,7 +198108,6 @@ Transform:
   - {fileID: 937411610}
   - {fileID: 1177763062}
   - {fileID: 2088613526}
-  - {fileID: 1373361935}
   - {fileID: 1261917512}
   - {fileID: 1518076191}
   - {fileID: 1653203009}
@@ -199729,7 +198125,6 @@ Transform:
   - {fileID: 426098665}
   - {fileID: 1038231030}
   - {fileID: 2121551812}
-  - {fileID: 1061218804}
   - {fileID: 504845968}
   - {fileID: 1490251977}
   - {fileID: 1288807581}
@@ -199747,7 +198142,6 @@ Transform:
   - {fileID: 402333827}
   - {fileID: 1958862579}
   - {fileID: 2103976069}
-  - {fileID: 1746214877}
   - {fileID: 1524048322}
   - {fileID: 1772880267}
   - {fileID: 2008828561}
@@ -199756,7 +198150,6 @@ Transform:
   - {fileID: 97745831}
   - {fileID: 573876988}
   - {fileID: 939407390}
-  - {fileID: 925933074}
   - {fileID: 1617491231}
   - {fileID: 1065700163}
   - {fileID: 1983827461}
@@ -199811,7 +198204,6 @@ Transform:
   - {fileID: 691286103}
   - {fileID: 1899074774}
   - {fileID: 1242226300}
-  - {fileID: 1136905385}
   - {fileID: 1667721043}
   - {fileID: 1377641389}
   - {fileID: 861356770}
@@ -199819,13 +198211,9 @@ Transform:
   - {fileID: 660788521}
   - {fileID: 84710636}
   - {fileID: 159269359}
-  - {fileID: 1439122156}
-  - {fileID: 493348224}
   - {fileID: 1571437201}
-  - {fileID: 1665659970}
   - {fileID: 856648949}
   - {fileID: 1787117828}
-  - {fileID: 1281249705}
   - {fileID: 548275907}
   - {fileID: 936235989}
   - {fileID: 1491063893}
@@ -199835,7 +198223,6 @@ Transform:
   - {fileID: 1348295484}
   - {fileID: 365063533}
   - {fileID: 1696293816}
-  - {fileID: 1659705756}
   - {fileID: 913204866}
   - {fileID: 1764959044}
   - {fileID: 1926146023}
@@ -199848,7 +198235,6 @@ Transform:
   - {fileID: 1886711116}
   - {fileID: 1389568243}
   - {fileID: 44263109}
-  - {fileID: 1826797310}
   - {fileID: 72665634}
   - {fileID: 1376798213}
   - {fileID: 75319896}
@@ -200191,7 +198577,6 @@ Transform:
   - {fileID: 1897324253}
   - {fileID: 1151722636}
   - {fileID: 2067902352}
-  - {fileID: 778050515}
   - {fileID: 426089576}
   - {fileID: 459577316}
   - {fileID: 585037125}
@@ -200202,7 +198587,6 @@ Transform:
   - {fileID: 371139947}
   - {fileID: 1835656977}
   - {fileID: 361734944}
-  - {fileID: 270910085}
   - {fileID: 886696598}
   - {fileID: 400418919}
   - {fileID: 1863144532}
@@ -200542,7 +198926,6 @@ Transform:
   - {fileID: 346919906}
   - {fileID: 1899192053}
   - {fileID: 1498558566}
-  - {fileID: 1756953880}
   - {fileID: 1056661516}
   - {fileID: 1156420760}
   - {fileID: 914418559}
@@ -200585,7 +198968,6 @@ Transform:
   - {fileID: 300693526}
   - {fileID: 529536753}
   - {fileID: 342977541}
-  - {fileID: 439818833}
   - {fileID: 1242074969}
   - {fileID: 1106858601}
   - {fileID: 73483568}
@@ -200723,12 +199105,10 @@ Transform:
   - {fileID: 482769530}
   - {fileID: 1030699201}
   - {fileID: 490446129}
-  - {fileID: 1456618651}
   - {fileID: 891454810}
   - {fileID: 128248342}
   - {fileID: 19485034}
   - {fileID: 1823597660}
-  - {fileID: 1211061108}
   - {fileID: 1640823018}
   - {fileID: 501093754}
   - {fileID: 1516227754}
@@ -200744,7 +199124,6 @@ Transform:
   - {fileID: 295880814}
   - {fileID: 1099047716}
   - {fileID: 932963063}
-  - {fileID: 2016764681}
   - {fileID: 800062446}
   - {fileID: 682350735}
   - {fileID: 559798168}
@@ -200791,7 +199170,6 @@ Transform:
   - {fileID: 1991689889}
   - {fileID: 469660480}
   - {fileID: 1709028821}
-  - {fileID: 376783629}
   - {fileID: 494799732}
   - {fileID: 1663283144}
   - {fileID: 1692591930}
@@ -200801,7 +199179,6 @@ Transform:
   - {fileID: 502715646}
   - {fileID: 360272000}
   - {fileID: 2135721847}
-  - {fileID: 676842712}
   - {fileID: 2131685693}
   - {fileID: 1260662648}
   - {fileID: 429513402}
@@ -200829,7 +199206,6 @@ Transform:
   - {fileID: 793679247}
   - {fileID: 17094643}
   - {fileID: 889311496}
-  - {fileID: 1960821240}
   - {fileID: 358049387}
   - {fileID: 1077842405}
   - {fileID: 1729413499}
@@ -200840,7 +199216,6 @@ Transform:
   - {fileID: 1359258391}
   - {fileID: 660377393}
   - {fileID: 166231715}
-  - {fileID: 1733249206}
   - {fileID: 274521676}
   - {fileID: 1820873302}
   - {fileID: 1184177038}
@@ -200872,7 +199247,6 @@ Transform:
   - {fileID: 1299735278}
   - {fileID: 1774117184}
   - {fileID: 1627784241}
-  - {fileID: 1481373704}
   - {fileID: 901919770}
   - {fileID: 1937730039}
   - {fileID: 1915317182}
@@ -200884,7 +199258,6 @@ Transform:
   - {fileID: 483978779}
   - {fileID: 687972563}
   - {fileID: 1824839649}
-  - {fileID: 337712961}
   - {fileID: 663904208}
   - {fileID: 1985374913}
   - {fileID: 1747060732}
@@ -200894,7 +199267,6 @@ Transform:
   - {fileID: 1388607049}
   - {fileID: 183411293}
   - {fileID: 1220132022}
-  - {fileID: 2146032738}
   - {fileID: 306796399}
   - {fileID: 1963389549}
   - {fileID: 65441842}
@@ -200913,7 +199285,6 @@ Transform:
   - {fileID: 1880106787}
   - {fileID: 931838327}
   - {fileID: 1431756841}
-  - {fileID: 1651059931}
   - {fileID: 1979078001}
   - {fileID: 1997710746}
   - {fileID: 1821077624}
@@ -200948,7 +199319,6 @@ Transform:
   - {fileID: 1723727750}
   - {fileID: 1109817223}
   - {fileID: 1865739075}
-  - {fileID: 1712341721}
   - {fileID: 591458281}
   - {fileID: 2009816733}
   - {fileID: 1978632273}
@@ -200989,7 +199359,6 @@ Transform:
   - {fileID: 397521037}
   - {fileID: 1379936806}
   - {fileID: 1992904558}
-  - {fileID: 974317846}
   - {fileID: 1976966230}
   - {fileID: 1541402184}
   - {fileID: 1386469005}
@@ -201016,7 +199385,6 @@ Transform:
   - {fileID: 2053698229}
   - {fileID: 1279326241}
   - {fileID: 1674775623}
-  - {fileID: 1124802016}
   - {fileID: 649201042}
   - {fileID: 1595806793}
   - {fileID: 87337370}
@@ -201029,7 +199397,6 @@ Transform:
   - {fileID: 1604067719}
   - {fileID: 1284072446}
   - {fileID: 122027784}
-  - {fileID: 1380013789}
   - {fileID: 1815082280}
   - {fileID: 824136458}
   - {fileID: 1653009138}
@@ -201065,7 +199432,6 @@ Transform:
   - {fileID: 1494805774}
   - {fileID: 1179313278}
   - {fileID: 655116027}
-  - {fileID: 2058481639}
   - {fileID: 1290433766}
   - {fileID: 543697400}
   - {fileID: 1481684509}
@@ -201103,7 +199469,6 @@ Transform:
   - {fileID: 976282017}
   - {fileID: 1581319980}
   - {fileID: 1752108721}
-  - {fileID: 2000962150}
   - {fileID: 1695555772}
   - {fileID: 1954044955}
   - {fileID: 717667932}
@@ -201223,7 +199588,6 @@ Transform:
   - {fileID: 1398666924}
   - {fileID: 1758112169}
   - {fileID: 1397024163}
-  - {fileID: 1963746774}
   - {fileID: 1641762549}
   - {fileID: 1424882450}
   - {fileID: 2095792295}
@@ -201252,7 +199616,6 @@ Transform:
   - {fileID: 691911044}
   - {fileID: 1875039809}
   - {fileID: 1596796561}
-  - {fileID: 925964566}
   - {fileID: 1885789153}
   - {fileID: 1878783114}
   - {fileID: 123594039}
@@ -201338,8 +199701,6 @@ Transform:
   - {fileID: 281329347}
   - {fileID: 70280042}
   - {fileID: 1039088434}
-  - {fileID: 348407450}
-  - {fileID: 1896656257}
   - {fileID: 1605159245}
   - {fileID: 1294767566}
   - {fileID: 871028961}
@@ -201459,7 +199820,6 @@ Transform:
   - {fileID: 1003562967}
   - {fileID: 1737813243}
   - {fileID: 894155740}
-  - {fileID: 1393164831}
   - {fileID: 854445713}
   - {fileID: 233569493}
   - {fileID: 1988232353}
@@ -201491,7 +199851,6 @@ Transform:
   - {fileID: 457042794}
   - {fileID: 675379835}
   - {fileID: 266445336}
-  - {fileID: 853051110}
   - {fileID: 957434833}
   - {fileID: 171288144}
   - {fileID: 536104480}
@@ -201499,7 +199858,6 @@ Transform:
   - {fileID: 1623878563}
   - {fileID: 1349040018}
   - {fileID: 181517333}
-  - {fileID: 722108244}
   - {fileID: 414520571}
   - {fileID: 674122151}
   - {fileID: 1914338315}
@@ -201516,14 +199874,12 @@ Transform:
   - {fileID: 1768522428}
   - {fileID: 1643361233}
   - {fileID: 1667766188}
-  - {fileID: 1440739670}
   - {fileID: 1743646699}
   - {fileID: 105945400}
   - {fileID: 1399631273}
   - {fileID: 647139921}
   - {fileID: 198005294}
   - {fileID: 1913974710}
-  - {fileID: 168816779}
   - {fileID: 1370463144}
   - {fileID: 268356570}
   - {fileID: 131065220}
@@ -201557,13 +199913,11 @@ Transform:
   - {fileID: 1395981059}
   - {fileID: 1961010763}
   - {fileID: 182516312}
-  - {fileID: 518005334}
   - {fileID: 929174135}
   - {fileID: 1198989665}
   - {fileID: 1982613266}
   - {fileID: 566299987}
   - {fileID: 1393851959}
-  - {fileID: 1752904247}
   - {fileID: 601787536}
   - {fileID: 2052136665}
   - {fileID: 1568458011}
@@ -201572,7 +199926,6 @@ Transform:
   - {fileID: 1486877352}
   - {fileID: 578319729}
   - {fileID: 929444942}
-  - {fileID: 153975682}
   - {fileID: 929676951}
   - {fileID: 1823421582}
   - {fileID: 1739275203}
@@ -201587,7 +199940,6 @@ Transform:
   - {fileID: 1591830216}
   - {fileID: 1576537436}
   - {fileID: 1496814011}
-  - {fileID: 1953005219}
   - {fileID: 1183363674}
   - {fileID: 1491833868}
   - {fileID: 1559110535}
@@ -201601,7 +199953,6 @@ Transform:
   - {fileID: 1248858187}
   - {fileID: 631633148}
   - {fileID: 349412596}
-  - {fileID: 922876829}
   - {fileID: 237773536}
   - {fileID: 1743443392}
   - {fileID: 682715168}
@@ -201615,7 +199966,6 @@ Transform:
   - {fileID: 604471590}
   - {fileID: 911085466}
   - {fileID: 984084427}
-  - {fileID: 1540939817}
   - {fileID: 566653879}
   - {fileID: 20032134}
   - {fileID: 822739588}
@@ -205450,61 +203800,6 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1281182839}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.38
-  m_Height: 5.500305
-  m_Direction: 1
-  m_Center: {x: 0, y: 2.4579792, z: 0}
---- !u!1 &1281249704
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1281249705}
-  - component: {fileID: 1281249706}
-  m_Layer: 0
-  m_Name: PT_Fruit_Tree_01_apples Collision
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &1281249705
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1281249704}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.84674114, z: -0, w: 0.5320051}
-  m_LocalPosition: {x: 80.384094, y: 11.812193, z: 15.186585}
-  m_LocalScale: {x: 0.9014386, y: 0.9014386, z: 0.9014386}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1256197256}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &1281249706
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1281249704}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -220257,61 +218552,6 @@ CapsuleCollider:
   m_Height: 5.500305
   m_Direction: 1
   m_Center: {x: 0, y: 2.4579792, z: 0}
---- !u!1 &1373361934
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1373361935}
-  - component: {fileID: 1373361936}
-  m_Layer: 0
-  m_Name: PT_Fruit_Tree_01_apples Collision
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &1373361935
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1373361934}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.9454716, z: -0, w: 0.32570451}
-  m_LocalPosition: {x: 105.615685, y: 39.838142, z: 114.20952}
-  m_LocalScale: {x: 1.0044421, y: 1.0044421, z: 1.0044421}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1256197256}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &1373361936
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1373361934}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.38
-  m_Height: 5.500305
-  m_Direction: 1
-  m_Center: {x: 0, y: 2.4579792, z: 0}
 --- !u!1 &1373595243
 GameObject:
   m_ObjectHideFlags: 0
@@ -221496,61 +219736,6 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1379936805}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.38
-  m_Height: 6.4127107
-  m_Direction: 1
-  m_Center: {x: 0, y: 3.8313296, z: 0}
---- !u!1 &1380013788
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1380013789}
-  - component: {fileID: 1380013790}
-  m_Layer: 0
-  m_Name: PT_Pine_Tree_03_green_cut Collision
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &1380013789
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1380013788}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.88348997, z: -0, w: -0.46845007}
-  m_LocalPosition: {x: 48.78324, y: 27.639914, z: 205.6311}
-  m_LocalScale: {x: 1.0841047, y: 1.0841047, z: 1.0841047}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1256197256}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &1380013790
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1380013788}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -223103,61 +221288,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.25192297, y: 0.23156467, z: 0.21769409}
   m_Center: {x: -0.005520433, y: 0.12129615, z: 0.002885133}
---- !u!1 &1393164830
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1393164831}
-  - component: {fileID: 1393164832}
-  m_Layer: 0
-  m_Name: PT_Pine_Tree_03_green_cut Collision
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &1393164831
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1393164830}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.33599532, z: -0, w: -0.94186366}
-  m_LocalPosition: {x: 94.167404, y: 12.408109, z: 5.015001}
-  m_LocalScale: {x: 1.0073758, y: 1.0073758, z: 1.0073758}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1256197256}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &1393164832
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1393164830}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.38
-  m_Height: 6.4127107
-  m_Direction: 1
-  m_Center: {x: 0, y: 3.8313296, z: 0}
 --- !u!1 &1393851958
 GameObject:
   m_ObjectHideFlags: 0
@@ -229268,61 +227398,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.25192297, y: 0.23156467, z: 0.21769409}
   m_Center: {x: -0.005520433, y: 0.12129615, z: 0.002885133}
---- !u!1 &1436898128
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1436898129}
-  - component: {fileID: 1436898130}
-  m_Layer: 0
-  m_Name: PT_Pine_Tree_03_green_cut Collision
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &1436898129
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1436898128}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.7494193, z: -0, w: 0.6620957}
-  m_LocalPosition: {x: 60.484528, y: 28.809093, z: 164.12564}
-  m_LocalScale: {x: 1.0591909, y: 1.0591909, z: 1.0591909}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1256197256}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &1436898130
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1436898128}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.38
-  m_Height: 6.4127107
-  m_Direction: 1
-  m_Center: {x: 0, y: 3.8313296, z: 0}
 --- !u!1 &1436917309
 GameObject:
   m_ObjectHideFlags: 0
@@ -229590,61 +227665,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.25192297, y: 0.23156467, z: 0.21769409}
   m_Center: {x: -0.005520433, y: 0.12129615, z: 0.002885133}
---- !u!1 &1439122155
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1439122156}
-  - component: {fileID: 1439122157}
-  m_Layer: 0
-  m_Name: PT_Fruit_Tree_01_apples Collision
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &1439122156
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1439122155}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.5538383, z: -0, w: 0.83262426}
-  m_LocalPosition: {x: 170.35452, y: 58.26819, z: 283.7186}
-  m_LocalScale: {x: 0.9654274, y: 0.9654274, z: 0.9654274}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1256197256}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &1439122157
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1439122155}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.38
-  m_Height: 5.500305
-  m_Direction: 1
-  m_Center: {x: 0, y: 2.4579792, z: 0}
 --- !u!1 &1439425693
 GameObject:
   m_ObjectHideFlags: 0
@@ -229916,61 +227936,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.25192297, y: 0.23156467, z: 0.21769409}
   m_Center: {x: -0.005520433, y: 0.12129615, z: 0.002885133}
---- !u!1 &1440739669
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1440739670}
-  - component: {fileID: 1440739671}
-  m_Layer: 0
-  m_Name: PT_Pine_Tree_03_green_cut Collision
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &1440739670
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1440739669}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.9049303, z: -0, w: 0.4255598}
-  m_LocalPosition: {x: 92.74493, y: 13.7100525, z: 15.700683}
-  m_LocalScale: {x: 0.9642215, y: 0.9642215, z: 0.9642215}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1256197256}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &1440739671
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1440739669}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.38
-  m_Height: 6.4127107
-  m_Direction: 1
-  m_Center: {x: 0, y: 3.8313296, z: 0}
 --- !u!1 &1440929244
 GameObject:
   m_ObjectHideFlags: 0
@@ -230986,59 +228951,6 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1449535951}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.25192297, y: 0.23156467, z: 0.21769409}
-  m_Center: {x: -0.005520433, y: 0.12129615, z: 0.002885133}
---- !u!1 &1449752077
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1449752078}
-  - component: {fileID: 1449752079}
-  m_Layer: 0
-  m_Name: PT_Generic_Rock_01 Collision
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &1449752078
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1449752077}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.8064334, z: -0, w: -0.591325}
-  m_LocalPosition: {x: 112.80823, y: 43.690117, z: 132.9934}
-  m_LocalScale: {x: 1.07491, y: 1.07491, z: 1.07491}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1256197256}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1449752079
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1449752077}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -232506,61 +230418,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.25192297, y: 0.23156467, z: 0.21769409}
   m_Center: {x: -0.005520433, y: 0.12129615, z: 0.002885133}
---- !u!1 &1456618650
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1456618651}
-  - component: {fileID: 1456618652}
-  m_Layer: 0
-  m_Name: PT_Fruit_Tree_01_apples Collision
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &1456618651
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1456618650}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.97801226, z: -0, w: -0.20854743}
-  m_LocalPosition: {x: 173.58745, y: 52.672413, z: 203.31653}
-  m_LocalScale: {x: 1.0704244, y: 1.0704244, z: 1.0704244}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1256197256}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &1456618652
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1456618650}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.38
-  m_Height: 5.500305
-  m_Direction: 1
-  m_Center: {x: 0, y: 2.4579792, z: 0}
 --- !u!1 &1457093234
 GameObject:
   m_ObjectHideFlags: 0
@@ -234831,59 +232688,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.25192297, y: 0.23156467, z: 0.21769409}
   m_Center: {x: -0.005520433, y: 0.12129615, z: 0.002885133}
---- !u!1 &1473830799
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1473830800}
-  - component: {fileID: 1473830801}
-  m_Layer: 0
-  m_Name: PT_Generic_Rock_01 Collision
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &1473830800
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1473830799}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.1104139, z: -0, w: -0.9938857}
-  m_LocalPosition: {x: 244.82375, y: 42.77323, z: 66.30888}
-  m_LocalScale: {x: 1.0054089, y: 1.0054089, z: 1.0054089}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1256197256}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1473830801
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1473830799}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.25192297, y: 0.23156467, z: 0.21769409}
-  m_Center: {x: -0.005520433, y: 0.12129615, z: 0.002885133}
 --- !u!1 &1474525029
 GameObject:
   m_ObjectHideFlags: 0
@@ -235475,61 +233279,6 @@ CapsuleCollider:
   m_Height: 5.500305
   m_Direction: 1
   m_Center: {x: 0, y: 2.4579792, z: 0}
---- !u!1 &1481373703
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1481373704}
-  - component: {fileID: 1481373705}
-  m_Layer: 0
-  m_Name: PT_Pine_Tree_03_green_cut Collision
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &1481373704
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1481373703}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.6811976, z: -0, w: -0.73209965}
-  m_LocalPosition: {x: 117.25837, y: 45.18024, z: 145.3549}
-  m_LocalScale: {x: 1.0284067, y: 1.0284067, z: 1.0284067}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1256197256}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &1481373705
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1481373703}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.38
-  m_Height: 6.4127107
-  m_Direction: 1
-  m_Center: {x: 0, y: 3.8313296, z: 0}
 --- !u!1 &1481501727
 GameObject:
   m_ObjectHideFlags: 0
@@ -239426,9 +237175,9 @@ MonoBehaviour:
   cameraTransform: {fileID: 330585546}
   speed: 14
   acceleration: 32
-  jumpHeight: 2.4
-  jumpBufferTime: 0.14
-  coyoteTime: 0.12
+  jumpHeight: 4.5
+  jumpBufferTime: 0.2
+  coyoteTime: 0.16
   rotationSpeed: 540
 --- !u!54 &1507792590
 Rigidbody:
@@ -244099,61 +241848,6 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1540462829}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.38
-  m_Height: 6.4127107
-  m_Direction: 1
-  m_Center: {x: 0, y: 3.8313296, z: 0}
---- !u!1 &1540939816
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1540939817}
-  - component: {fileID: 1540939818}
-  m_Layer: 0
-  m_Name: PT_Pine_Tree_03_green_cut Collision
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &1540939817
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1540939816}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.1099274, z: -0, w: -0.99393964}
-  m_LocalPosition: {x: 43.33716, y: 22.165016, z: 99.905876}
-  m_LocalScale: {x: 0.9002993, y: 0.9002993, z: 0.9002993}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1256197256}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &1540939818
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1540939816}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -252269,59 +249963,6 @@ CapsuleCollider:
   m_Height: 5.500305
   m_Direction: 1
   m_Center: {x: 0, y: 2.4579792, z: 0}
---- !u!1 &1595510167
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1595510168}
-  - component: {fileID: 1595510169}
-  m_Layer: 0
-  m_Name: PT_Generic_Rock_01 Collision
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &1595510168
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1595510167}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.64683175, z: -0, w: 0.7626327}
-  m_LocalPosition: {x: 170.6148, y: 58.228943, z: 285.232}
-  m_LocalScale: {x: 0.9847387, y: 0.9847387, z: 0.9847387}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1256197256}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1595510169
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1595510167}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.25192297, y: 0.23156467, z: 0.21769409}
-  m_Center: {x: -0.005520433, y: 0.12129615, z: 0.002885133}
 --- !u!1 &1595535777
 GameObject:
   m_ObjectHideFlags: 0
@@ -260460,61 +258101,6 @@ CapsuleCollider:
   m_Height: 6.4127107
   m_Direction: 1
   m_Center: {x: 0, y: 3.8313296, z: 0}
---- !u!1 &1651059930
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1651059931}
-  - component: {fileID: 1651059932}
-  m_Layer: 0
-  m_Name: PT_Pine_Tree_03_green_cut Collision
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &1651059931
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1651059930}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.8846704, z: -0, w: -0.46621707}
-  m_LocalPosition: {x: 119.45592, y: 38.910183, z: 98.29108}
-  m_LocalScale: {x: 0.9944309, y: 0.9944309, z: 0.9944309}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1256197256}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &1651059932
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1651059930}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.38
-  m_Height: 6.4127107
-  m_Direction: 1
-  m_Center: {x: 0, y: 3.8313296, z: 0}
 --- !u!1 &1651131688
 GameObject:
   m_ObjectHideFlags: 0
@@ -262171,61 +259757,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1659055052}
   m_CullTransparentMesh: 1
---- !u!1 &1659705755
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1659705756}
-  - component: {fileID: 1659705757}
-  m_Layer: 0
-  m_Name: PT_Fruit_Tree_01_apples Collision
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &1659705756
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1659705755}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.9759153, z: -0, w: 0.2181498}
-  m_LocalPosition: {x: 55.621754, y: 28.445408, z: 181.3224}
-  m_LocalScale: {x: 1.0085024, y: 1.0085024, z: 1.0085024}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1256197256}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &1659705757
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1659705755}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.38
-  m_Height: 5.500305
-  m_Direction: 1
-  m_Center: {x: 0, y: 2.4579792, z: 0}
 --- !u!1 &1659913103
 GameObject:
   m_ObjectHideFlags: 0
@@ -263202,61 +260733,6 @@ CapsuleCollider:
   m_Height: 6.4127107
   m_Direction: 1
   m_Center: {x: 0, y: 3.8313296, z: 0}
---- !u!1 &1665659969
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1665659970}
-  - component: {fileID: 1665659971}
-  m_Layer: 0
-  m_Name: PT_Fruit_Tree_01_apples Collision
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &1665659970
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1665659969}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.9809605, z: -0, w: 0.19420743}
-  m_LocalPosition: {x: 105.475266, y: 35.00816, z: 91.8981}
-  m_LocalScale: {x: 1.0204931, y: 1.0204931, z: 1.0204931}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1256197256}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &1665659971
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1665659969}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.38
-  m_Height: 5.500305
-  m_Direction: 1
-  m_Center: {x: 0, y: 2.4579792, z: 0}
 --- !u!1 &1667423788
 GameObject:
   m_ObjectHideFlags: 0
@@ -270214,61 +267690,6 @@ CapsuleCollider:
   m_Height: 5.500305
   m_Direction: 1
   m_Center: {x: 0, y: 2.4579792, z: 0}
---- !u!1 &1712341720
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1712341721}
-  - component: {fileID: 1712341722}
-  m_Layer: 0
-  m_Name: PT_Pine_Tree_03_green_cut Collision
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &1712341721
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1712341720}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.9792143, z: -0, w: 0.2028283}
-  m_LocalPosition: {x: 89.786514, y: 11.675683, z: 2.2197068}
-  m_LocalScale: {x: 1.0924969, y: 1.0924969, z: 1.0924969}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1256197256}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &1712341722
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1712341720}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.38
-  m_Height: 6.4127107
-  m_Direction: 1
-  m_Center: {x: 0, y: 3.8313296, z: 0}
 --- !u!1 &1713200761
 GameObject:
   m_ObjectHideFlags: 0
@@ -273187,61 +270608,6 @@ CapsuleCollider:
   m_Height: 6.4127107
   m_Direction: 1
   m_Center: {x: 0, y: 3.8313296, z: 0}
---- !u!1 &1733249205
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1733249206}
-  - component: {fileID: 1733249207}
-  m_Layer: 0
-  m_Name: PT_Pine_Tree_03_green_cut Collision
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &1733249206
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1733249205}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.757554, z: -0, w: -0.65277255}
-  m_LocalPosition: {x: 174.07576, y: 52.637585, z: 206.77275}
-  m_LocalScale: {x: 0.9515878, y: 0.9515878, z: 0.9515878}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1256197256}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &1733249207
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1733249205}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.38
-  m_Height: 6.4127107
-  m_Direction: 1
-  m_Center: {x: 0, y: 3.8313296, z: 0}
 --- !u!1 &1734555722
 GameObject:
   m_ObjectHideFlags: 0
@@ -275424,61 +272790,6 @@ CapsuleCollider:
   m_Height: 6.4127107
   m_Direction: 1
   m_Center: {x: 0, y: 3.8313296, z: 0}
---- !u!1 &1746214876
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1746214877}
-  - component: {fileID: 1746214878}
-  m_Layer: 0
-  m_Name: PT_Fruit_Tree_01_apples Collision
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &1746214877
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1746214876}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.25774327, z: -0, w: -0.96621346}
-  m_LocalPosition: {x: 169.22472, y: 58.0308, z: 291.0549}
-  m_LocalScale: {x: 1.0748374, y: 1.0748374, z: 1.0748374}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1256197256}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &1746214878
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1746214876}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.38
-  m_Height: 5.500305
-  m_Direction: 1
-  m_Center: {x: 0, y: 2.4579792, z: 0}
 --- !u!1 &1746912986
 GameObject:
   m_ObjectHideFlags: 0
@@ -277001,61 +274312,6 @@ CapsuleCollider:
   m_Height: 6.4127107
   m_Direction: 1
   m_Center: {x: 0, y: 3.8313296, z: 0}
---- !u!1 &1752904246
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1752904247}
-  - component: {fileID: 1752904248}
-  m_Layer: 0
-  m_Name: PT_Pine_Tree_03_green_cut Collision
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &1752904247
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1752904246}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.89492035, z: -0, w: 0.44622594}
-  m_LocalPosition: {x: 60.514946, y: 29.207802, z: 181.67996}
-  m_LocalScale: {x: 1.0498883, y: 1.0498883, z: 1.0498883}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1256197256}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &1752904248
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1752904246}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.38
-  m_Height: 6.4127107
-  m_Direction: 1
-  m_Center: {x: 0, y: 3.8313296, z: 0}
 --- !u!1 &1753515767
 GameObject:
   m_ObjectHideFlags: 0
@@ -277627,61 +274883,6 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1756036768}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.38
-  m_Height: 5.500305
-  m_Direction: 1
-  m_Center: {x: 0, y: 2.4579792, z: 0}
---- !u!1 &1756953879
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1756953880}
-  - component: {fileID: 1756953881}
-  m_Layer: 0
-  m_Name: PT_Fruit_Tree_01_apples Collision
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &1756953880
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1756953879}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.4273411, z: -0, w: 0.90409046}
-  m_LocalPosition: {x: 159.89172, y: 49.318947, z: 206.37566}
-  m_LocalScale: {x: 1.0266737, y: 1.0266737, z: 1.0266737}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1256197256}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &1756953881
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1756953879}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -289854,61 +287055,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.25192297, y: 0.23156467, z: 0.21769409}
   m_Center: {x: -0.005520433, y: 0.12129615, z: 0.002885133}
---- !u!1 &1826797309
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1826797310}
-  - component: {fileID: 1826797311}
-  m_Layer: 0
-  m_Name: PT_Fruit_Tree_01_apples Collision
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &1826797310
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1826797309}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.15225911, z: -0, w: -0.9883406}
-  m_LocalPosition: {x: 99.54556, y: 37.638203, z: 110.490944}
-  m_LocalScale: {x: 1.0870925, y: 1.0870925, z: 1.0870925}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1256197256}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &1826797311
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1826797309}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.38
-  m_Height: 5.500305
-  m_Direction: 1
-  m_Center: {x: 0, y: 2.4579792, z: 0}
 --- !u!1 &1826886901
 GameObject:
   m_ObjectHideFlags: 0
@@ -298813,61 +295959,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.25192297, y: 0.23156467, z: 0.21769409}
   m_Center: {x: -0.005520433, y: 0.12129615, z: 0.002885133}
---- !u!1 &1884390509
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1884390510}
-  - component: {fileID: 1884390511}
-  m_Layer: 0
-  m_Name: PT_Pine_Tree_03_green_cut Collision
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &1884390510
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1884390509}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.9303974, z: -0, w: -0.3665524}
-  m_LocalPosition: {x: 169.66974, y: 57.86342, z: 280.67453}
-  m_LocalScale: {x: 1.0124861, y: 1.0124861, z: 1.0124861}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1256197256}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &1884390511
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1884390509}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.38
-  m_Height: 6.4127107
-  m_Direction: 1
-  m_Center: {x: 0, y: 3.8313296, z: 0}
 --- !u!1 &1884555346
 GameObject:
   m_ObjectHideFlags: 0
@@ -300948,61 +298039,6 @@ CapsuleCollider:
   m_Height: 5.500305
   m_Direction: 1
   m_Center: {x: 0, y: 2.4579792, z: 0}
---- !u!1 &1896656256
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1896656257}
-  - component: {fileID: 1896656258}
-  m_Layer: 0
-  m_Name: PT_Pine_Tree_03_green_cut Collision
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &1896656257
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1896656256}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.71004134, z: -0, w: -0.70416003}
-  m_LocalPosition: {x: 180.53677, y: 59.879524, z: 286.2556}
-  m_LocalScale: {x: 0.91986036, y: 0.91986036, z: 0.91986036}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1256197256}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &1896656258
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1896656256}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.38
-  m_Height: 6.4127107
-  m_Direction: 1
-  m_Center: {x: 0, y: 3.8313296, z: 0}
 --- !u!1 &1897324252
 GameObject:
   m_ObjectHideFlags: 0
@@ -310603,61 +307639,6 @@ CapsuleCollider:
   m_Height: 6.4127107
   m_Direction: 1
   m_Center: {x: 0, y: 3.8313296, z: 0}
---- !u!1 &1953005218
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1953005219}
-  - component: {fileID: 1953005220}
-  m_Layer: 0
-  m_Name: PT_Pine_Tree_03_green_cut Collision
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &1953005219
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1953005218}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.6890712, z: -0, w: 0.72469366}
-  m_LocalPosition: {x: 47.151737, y: 22.03438, z: 93.99595}
-  m_LocalScale: {x: 0.9187813, y: 0.9187813, z: 0.9187813}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1256197256}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &1953005220
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1953005218}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.38
-  m_Height: 6.4127107
-  m_Direction: 1
-  m_Center: {x: 0, y: 3.8313296, z: 0}
 --- !u!1 &1954044954
 GameObject:
   m_ObjectHideFlags: 0
@@ -311850,61 +308831,6 @@ CapsuleCollider:
   m_Height: 6.4127107
   m_Direction: 1
   m_Center: {x: 0, y: 3.8313296, z: 0}
---- !u!1 &1960821239
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1960821240}
-  - component: {fileID: 1960821241}
-  m_Layer: 0
-  m_Name: PT_Pine_Tree_03_green_cut Collision
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &1960821240
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1960821239}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.7856012, z: -0, w: -0.6187333}
-  m_LocalPosition: {x: 106.017044, y: 38.440857, z: 109.03979}
-  m_LocalScale: {x: 1.0548439, y: 1.0548439, z: 1.0548439}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1256197256}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &1960821241
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1960821239}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.38
-  m_Height: 6.4127107
-  m_Direction: 1
-  m_Center: {x: 0, y: 3.8313296, z: 0}
 --- !u!1 &1961010762
 GameObject:
   m_ObjectHideFlags: 0
@@ -312500,61 +309426,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.25192297, y: 0.23156467, z: 0.21769409}
   m_Center: {x: -0.005520433, y: 0.12129615, z: 0.002885133}
---- !u!1 &1963746773
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1963746774}
-  - component: {fileID: 1963746775}
-  m_Layer: 0
-  m_Name: PT_Pine_Tree_03_green_cut Collision
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &1963746774
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1963746773}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.3961172, z: -0, w: 0.91819996}
-  m_LocalPosition: {x: 118.398605, y: 40.43304, z: 104.68986}
-  m_LocalScale: {x: 1.0900098, y: 1.0900098, z: 1.0900098}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1256197256}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &1963746775
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1963746773}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.38
-  m_Height: 6.4127107
-  m_Direction: 1
-  m_Center: {x: 0, y: 3.8313296, z: 0}
 --- !u!1 &1964810440
 GameObject:
   m_ObjectHideFlags: 0
@@ -318184,61 +315055,6 @@ CapsuleCollider:
   m_Height: 5.500305
   m_Direction: 1
   m_Center: {x: 0, y: 2.4579792, z: 0}
---- !u!1 &2000962149
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2000962150}
-  - component: {fileID: 2000962151}
-  m_Layer: 0
-  m_Name: PT_Pine_Tree_03_green_cut Collision
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &2000962150
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2000962149}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.90035605, z: -0, w: 0.43515402}
-  m_LocalPosition: {x: 48.931644, y: 27.218048, z: 176.34816}
-  m_LocalScale: {x: 1.0288851, y: 1.0288851, z: 1.0288851}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1256197256}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &2000962151
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2000962149}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.38
-  m_Height: 6.4127107
-  m_Direction: 1
-  m_Center: {x: 0, y: 3.8313296, z: 0}
 --- !u!1 &2001222583
 GameObject:
   m_ObjectHideFlags: 0
@@ -320750,61 +317566,6 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2016573760}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.38
-  m_Height: 5.500305
-  m_Direction: 1
-  m_Center: {x: 0, y: 2.4579792, z: 0}
---- !u!1 &2016764680
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2016764681}
-  - component: {fileID: 2016764682}
-  m_Layer: 0
-  m_Name: PT_Fruit_Tree_01_apples Collision
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &2016764681
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2016764680}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.6761978, z: -0, w: -0.7367201}
-  m_LocalPosition: {x: 48.40216, y: 27.523846, z: 182.1441}
-  m_LocalScale: {x: 1.0888249, y: 1.0888249, z: 1.0888249}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1256197256}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &2016764682
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2016764680}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -326396,61 +323157,6 @@ CapsuleCollider:
   m_Height: 5.500305
   m_Direction: 1
   m_Center: {x: 0, y: 2.4579792, z: 0}
---- !u!1 &2058481638
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2058481639}
-  - component: {fileID: 2058481640}
-  m_Layer: 0
-  m_Name: PT_Pine_Tree_03_green_cut Collision
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &2058481639
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2058481638}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.39966267, z: -0, w: 0.9166623}
-  m_LocalPosition: {x: 114.69929, y: 38.92105, z: 100.79633}
-  m_LocalScale: {x: 1.046658, y: 1.046658, z: 1.046658}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1256197256}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &2058481640
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2058481638}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.38
-  m_Height: 6.4127107
-  m_Direction: 1
-  m_Center: {x: 0, y: 3.8313296, z: 0}
 --- !u!1 &2058549299
 GameObject:
   m_ObjectHideFlags: 0
@@ -327755,59 +324461,6 @@ CapsuleCollider:
   m_Height: 6.4127107
   m_Direction: 1
   m_Center: {x: 0, y: 3.8313296, z: 0}
---- !u!1 &2065130678
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2065130679}
-  - component: {fileID: 2065130680}
-  m_Layer: 0
-  m_Name: PT_Generic_Rock_01 Collision
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &2065130679
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2065130678}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.30405456, z: -0, w: 0.9526546}
-  m_LocalPosition: {x: 163.7047, y: 56.94334, z: 292.75385}
-  m_LocalScale: {x: 0.98880374, y: 0.98880374, z: 0.98880374}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1256197256}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &2065130680
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2065130678}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.25192297, y: 0.23156467, z: 0.21769409}
-  m_Center: {x: -0.005520433, y: 0.12129615, z: 0.002885133}
 --- !u!1 &2066451213
 GameObject:
   m_ObjectHideFlags: 0
@@ -340111,61 +336764,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.25192297, y: 0.23156467, z: 0.21769409}
   m_Center: {x: -0.005520433, y: 0.12129615, z: 0.002885133}
---- !u!1 &2146032737
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2146032738}
-  - component: {fileID: 2146032739}
-  m_Layer: 0
-  m_Name: PT_Pine_Tree_03_green_cut Collision
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &2146032738
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2146032737}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.9946475, z: -0, w: -0.103326276}
-  m_LocalPosition: {x: 88.22782, y: 12.395832, z: 11.471924}
-  m_LocalScale: {x: 0.9360758, y: 0.9360758, z: 0.9360758}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1256197256}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &2146032739
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2146032737}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.38
-  m_Height: 6.4127107
-  m_Direction: 1
-  m_Center: {x: 0, y: 3.8313296, z: 0}
 --- !u!1 &2146419398
 GameObject:
   m_ObjectHideFlags: 0
