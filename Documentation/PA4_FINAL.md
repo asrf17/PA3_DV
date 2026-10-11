@@ -2,7 +2,7 @@
 
 ## Juego y objetivo
 
-Sendero Dorado es una aventura breve de exploración fantástica 3D. La esfera viajera debe recuperar diez reliquias de luz en distintas zonas de un bosque encantado. También puede descubrir tres santuarios opcionales: Santuario del Alba, Mirador del Viento y Ruinas del Eco. Al acercarse a cada uno, el HUD registra el hallazgo. El guardián de las ruinas patrulla cuatro puntos y persigue al jugador cuando lo ve. Hay siete minutos y tres oportunidades; el contacto con el guardián quita una y devuelve al jugador al inicio con protección breve. Se gana al reunir las diez reliquias y se pierde al agotar tiempo u oportunidades. Las pantallas finales permiten reiniciar o volver al menú.
+Sendero Dorado es una aventura breve de exploración y supervivencia 3D. La esfera viajera recupera doce reliquias de luz en tres etapas: 3, 4 y 5. También puede descubrir tres santuarios opcionales: Santuario del Alba, Mirador del Viento y Ruinas del Eco. El bosque comienza con un guardián y cada reliquia agrega otro cerca del siguiente objetivo. Hay siete minutos y 100 puntos de vida; cada contacto resta 25 y da protección breve, sin devolver al jugador al inicio. Seis botiquines recuperan 35 puntos cada uno. El jugador alcanza mayor velocidad que los guardianes y puede evadirlos usando distancia y obstáculos. La vida a cero o el tiempo agotado causan derrota; reunir las doce reliquias produce victoria. Ambas pantallas permiten reiniciar o volver al menú.
 
 La inspiración es la sensación de exploración de aventuras fantásticas de mundo abierto. Personajes, modelos sencillos, historia, nombres y recursos son propios de este proyecto; no se usan personajes ni arte de otra franquicia.
 
@@ -13,28 +13,30 @@ La inspiración es la sensación de exploración de aventuras fantásticas de mu
 3. Usa **WASD** o las flechas para mover la esfera respecto a la cámara; mueve el mouse para mirar alrededor. La flecha superior señala aproximadamente la reliquia pendiente más cercana.
 4. Entra en los círculos de las piedras antiguas para descubrir los santuarios. Son opcionales y se reinician al comenzar otra expedición.
 5. Pulsa **Escape** para pausar. La pausa libera el cursor y detiene al personaje, el tiempo y la IA.
+6. Recoge botiquines verdes cuando falte vida. Los controles se muestran en la pausa; durante la partida queda libre la zona inferior de la pantalla.
 
 ## Sistemas y decisiones técnicas
 
 - `PlayerController` conserva el Rigidbody, la detección de suelo, aceleración, respuesta a pendientes y giro hacia la marcha.
 - `CameraController` sigue a la esfera con órbita independiente, limita el Pitch y se acerca cuando encuentra obstáculos.
-- `Coin` y `CoinManager` mantienen los Triggers y el registro interno del sistema original. En pantalla se presentan como reliquias. La recolección es única y se restablece al reiniciar.
+- `Coin` y `CoinManager` mantienen los Triggers originales. Doce reliquias se activan por etapas de 3, 4 y 5; cada una se recoge una sola vez.
 - `ExplorationLandmark` y `DiscoveryJournal` añaden tres lugares opcionales. Sus Triggers registran el hallazgo solo una vez; el contador y nombre aparecen en `ExpeditionHUD`. El registro se restablece en una nueva partida.
-- `GameManager` controla menú, juego, pausa, victoria, derrota, tiempo, oportunidades y reinicios.
-- `ForestGuardian` alterna entre **Patrol** y **Chase**. Recorre cuatro waypoints, usa Raycast para comprobar visión y SphereCast para evitar obstáculos. Actualiza la percepción cada 0,2 segundos.
+- `GameManager` controla menú, juego, pausa, victoria, derrota, tiempo, vida, daño, curación y reinicios.
+- `GuardianDirector` agrega un guardián por reliquia cerca del siguiente objetivo, a distancia segura del jugador. `ForestGuardian` alterna entre **Patrol** y **Chase**; usa Raycast para comprobar visión y SphereCast para evitar obstáculos. Actualiza la percepción cada 0,2 segundos. La velocidad de persecución es inferior a la del jugador, pero suficientemente cercana para crear presión.
+- `Medkit` cura 35 puntos si falta vida, desaparece al usarse y se restaura al reiniciar.
 - `CollectionFeedback` reproduce una campanada por reliquia y reutiliza cuatro sistemas de partículas. Este **Object Pooling** evita crear y destruir partículas en cada recogida. Usa tiempo no escalado para conservar el último efecto al ganar.
-- `Forest Ambience` reproduce viento y pájaros sintetizados. El nivel tiene Terrain, relieve, vegetación, materiales, iluminación URP y Volume global. Las reliquias combinan cristales luminosos y un Shader Graph propio con pulso de emisión. Tres piedras antiguas con luces suaves crean puntos de interés; se despejaron pequeños claros sin eliminar el bosque.
-- `PlayerSphere`, `GoldenCoin`, `ForestGuardian` y `AncientWaystone` son Prefabs reutilizables.
+- `Forest Ambience` reproduce viento y pájaros sintetizados. El Terrain conserva relieve y vegetación; se despejaron claros para tres pasajes de piedra y botiquines. Las reliquias combinan cristales luminosos y un Shader Graph propio con pulso de emisión. La interfaz usa paneles translúcidos, barra de vida y controles solo en la pausa.
+- `PlayerSphere`, `GoldenCoin`, `ForestGuardian`, `ForestMedkit`, `MoonstonePassage` y `AncientWaystone` son Prefabs reutilizables.
 
 ## Pruebas y compilación
 
 En Play Mode, el menú **Tools > Forest Journey** ejecuta las suites:
 
-- **Verify gameplay in Play Mode**: 41 comprobaciones de movimiento, colisiones, Triggers, menú, pausa, victoria y reinicio.
+- **Verify gameplay in Play Mode**: 45 comprobaciones de movimiento, colisiones, Triggers, menú, pausa, victoria y reinicio.
 - **Verify TPS in Play Mode**: 43 comprobaciones de cámara, WASD relativo, giro, cursor y estabilidad.
-- **Verify PA4 in Play Mode**: 35 comprobaciones de patrulla, persecución, contacto, tiempo, resultados, UI, audio, pool y descubrimiento de santuarios tanto por lógica como por Trigger real.
+- **Verify PA4 in Play Mode**: 59 comprobaciones de patrulla, persecución, refuerzos, etapas, daño, curación, tiempo, resultados, UI, audio, pool y santuarios.
 
-Los informes y capturas se guardan localmente en `Library`. Las 119 comprobaciones automatizadas incluyen traslados directos para cubrir todos los Triggers; conviene recorrer también el bosque manualmente para valorar la experiencia. La validación previa al Build comprueba referencias, Triggers, santuarios, HUD y ausencia de scripts faltantes.
+Los informes y capturas se guardan localmente en `Library`. Las 147 comprobaciones automatizadas incluyen traslados directos para cubrir todos los Triggers; conviene recorrer también el bosque manualmente para valorar la experiencia. La validación previa al Build comprueba referencias, Triggers, santuarios, HUD, botiquines y ausencia de scripts faltantes.
 
 **Tools > Forest Journey > Build Windows prototype** genera `Builds/SenderoDorado/SenderoDorado.exe`. Conserva junto al ejecutable la carpeta `SenderoDorado_Data`. `Builds` y `Library` están excluidos de Git.
 El paquete listo para trasladar se encuentra en `output/build/PA4_Ecos_del_Bosque_Windows.zip`.

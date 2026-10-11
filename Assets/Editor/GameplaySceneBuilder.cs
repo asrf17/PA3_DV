@@ -268,7 +268,7 @@ public static class GameplaySceneBuilder
     public static void Validate()
     {
         var game=Object.FindAnyObjectByType<GameManager>();
-        if(!game||!game.player||!game.followCamera||!game.coins||game.coins.Total!=10)throw new Exception("Missing gameplay references.");
+        if(!game||!game.player||!game.followCamera||!game.coins||game.coins.Total!=12)throw new Exception("Missing gameplay references.");
         if(game.coins.coins.Any(c=>!c||c.manager!=game.coins||!c.GetComponent<SphereCollider>().isTrigger))throw new Exception("Invalid coin trigger/references.");
         if(!game.mainMenu||!game.pauseMenu||!game.hud||!game.playButton||!game.continueButton)throw new Exception("Missing UI references.");
         if(!game.guardian||game.guardian.game!=game||game.guardian.player!=game.player||
@@ -287,10 +287,17 @@ public static class GameplaySceneBuilder
         var feedback=game.GetComponent<CollectionFeedback>();
         if(!feedback||!feedback.chime||!feedback.sparkMaterial||feedback.poolSize<1)
             throw new Exception("Missing coin sound or pooled visual effect.");
-        if(game.roundDuration<30||game.startingLives<1)throw new Exception("Invalid round duration or life count.");
+        if(game.roundDuration<30||game.maxHealth<1||game.guardianDamage<1)throw new Exception("Invalid round duration or health.");
+        if(!game.guardianDirector||game.guardianDirector.firstGuardian!=game.guardian||
+            !game.guardianDirector.guardianPrefab||!game.guardianDirector.terrain||
+            game.medkits==null||game.medkits.Length<4||game.medkits.Any(m=>!m||m.game!=game))
+            throw new Exception("Missing survival guardian or medkit references.");
+        if(game.coins.stageSizes==null||game.coins.stageSizes.Sum()!=game.coins.Total||
+            !game.hud.GetComponent<ExpeditionHUD>().healthFill)
+            throw new Exception("Invalid staged relics or health display.");
         var missing=Object.FindObjectsByType<Transform>(FindObjectsInactive.Include).Sum(t=>GameObjectUtility.GetMonoBehavioursWithMissingScriptCount(t.gameObject));
         if(missing!=0)throw new Exception("Missing scripts: "+missing);
-        File.WriteAllText("Library/GameplayValidation.txt","PASS: player, camera, 10 relic triggers, three discoverable sanctuaries, guardian AI, win/loss UI, ambience, pooled effects, no missing scripts. "+DateTime.Now.ToString("O"));
+        File.WriteAllText("Library/GameplayValidation.txt","PASS: player, camera, 12 staged relics, three sanctuaries, guardian escalation, health, medkits, win/loss UI, ambience, pooled effects, no missing scripts. "+DateTime.Now.ToString("O"));
     }
     [MenuItem("Tools/Forest Journey/Apply presentation polish")]
     public static void Polish()

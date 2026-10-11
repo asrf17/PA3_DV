@@ -19,6 +19,7 @@ public static class TPSVerification
     static GameObject fixture;
     static double next;
     static string report,errors;
+    static bool originalRunInBackground;
     static GameManager game;
     static PlayerController player;
     static CameraController camera;
@@ -29,6 +30,8 @@ public static class TPSVerification
     {
         if(!EditorApplication.isPlaying||suite!=null)throw new Exception("Enter Play Mode; only one verification may run.");
         EditorWindow.GetWindow(typeof(Editor).Assembly.GetType("UnityEditor.GameView")).Focus();
+        originalRunInBackground=Application.runInBackground;
+        Application.runInBackground=true;
         game=Object.FindAnyObjectByType<GameManager>();player=game.player;camera=game.followCamera;
         report="TPS integration verification — "+DateTime.Now.ToString("O")+"\n";errors="";
         Application.logMessageReceived+=OnLog;
@@ -61,6 +64,7 @@ public static class TPSVerification
     static void Finish()
     {
         EditorApplication.update-=Tick;Application.logMessageReceived-=OnLog;suite=null;
+        Application.runInBackground=originalRunInBackground;
         if(keyboard!=null)InputSystem.RemoveDevice(keyboard);if(mouse!=null)InputSystem.RemoveDevice(mouse);
         foreach(var device in suspendedMice)if(device.added)InputSystem.EnableDevice(device);suspendedMice.Clear();
         if(fixture)Object.Destroy(fixture);if(game)game.ShowMainMenu();

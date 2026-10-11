@@ -20,6 +20,7 @@ public static class GameplayVerification
     static string report;
     static GameObject fixture;
     static bool guardianWasEnabled;
+    static bool originalRunInBackground;
     static string runtimeErrors;
     [MenuItem("Tools/Forest Journey/Verify gameplay in Play Mode")]
     public static void Run()
@@ -27,6 +28,8 @@ public static class GameplayVerification
         if(!EditorApplication.isPlaying)throw new Exception("Enter Play Mode before verification.");
         if(suite!=null)throw new Exception("Verification is already running.");
         EditorWindow.GetWindow(typeof(Editor).Assembly.GetType("UnityEditor.GameView")).Focus();
+        originalRunInBackground=Application.runInBackground;
+        Application.runInBackground=true;
         report="Gameplay integration verification — "+DateTime.Now.ToString("O")+"\n";
         runtimeErrors="";Application.logMessageReceived+=Log;
         keyboard=InputSystem.AddDevice<Keyboard>("GameplayTestKeyboard");
@@ -55,6 +58,7 @@ public static class GameplayVerification
     {
         if(keyboard!=null)InputSystem.RemoveDevice(keyboard);
         Application.logMessageReceived-=Log;
+        Application.runInBackground=originalRunInBackground;
         if(fixture)Object.Destroy(fixture);
         suite=null;EditorApplication.update-=Tick;
         File.WriteAllText("Library/GameplayQA.txt",report);
@@ -83,7 +87,7 @@ public static class GameplayVerification
         Check(EventSystem.current.currentSelectedGameObject==game.playButton,"Keyboard navigation returns to Play");
         Keys(Key.Enter);yield return .2f;Keys();yield return .8f;
         Check(game.State==GameState.Playing && Time.timeScale==1 && player.Grounded,"Play button starts player on terrain");
-        Check(game.coins.Collected==0 && hud.counter.text=="Reliquias: 0 / 10","Counter starts at zero");
+        Check(game.coins.Collected==0 && hud.counter.text=="Reliquias: 0 / 12","Counter starts at zero");
         Check(guide.Target==game.coins.Nearest(player.transform.position) && guide.indicator.activeSelf,"Compass targets nearest available coin");
         ScreenCapture.CaptureScreenshot("Library/GameplayPlaying.png");yield return .3f;
         var start=player.Body.position;var rotation=player.GetComponentInChildren<BallRollingVisual>().transform.rotation;
@@ -108,7 +112,8 @@ public static class GameplayVerification
         float initialY=player.Body.position.y;Keys(Key.W);yield return .7f;Keys();yield return .15f;
         Check(player.Body.position.y>initialY+.6f,"Sphere climbs a twelve-degree ramp");
         Object.Destroy(fixture);fixture=null;pause.Restart();yield return .4f;
-        Check(game.coins.Collected==0 && game.coins.coins.All(c=>c.gameObject.activeSelf),"Restart restores every coin");
+        Check(game.coins.Collected==0 && game.coins.coins.Count(c=>c.gameObject.activeSelf)==3,
+            "Restart restores the three initial relics and locks later stages");
         var first=game.coins.Nearest(player.transform.position);
         foreach(var coin in game.coins.coins)
         {
@@ -118,7 +123,7 @@ public static class GameplayVerification
             if(coin==first && !game.coins.Complete)Check(guide.Target!=first,"Compass retargets after pickup");
         }
         yield return .2f;
-        Check(game.coins.Complete && game.resultSummary.text.Contains("10 reliquias"),"All coins produce a complete objective summary");
+        Check(game.coins.Complete && game.resultSummary.text.Contains("12 reliquias"),"All relics produce a complete objective summary");
         Check(game.State==GameState.Victory && game.resultMenu.activeSelf && !game.hud.activeSelf && !player.ControlsEnabled,"Last coin ends the expedition in victory");
         Check(!game.hud.activeSelf,"Compass and HUD hide when the round ends");
         ScreenCapture.CaptureScreenshot("Library/GameplayComplete.png");yield return .2f;

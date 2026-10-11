@@ -1,14 +1,14 @@
 # Sendero Dorado: Ecos del Bosque — evaluación final PA4
 
-Aventura original de exploración fantástica 3D hecha en Unity 6000.6.0f1. El jugador guía una esfera viajera por un bosque encantado para recuperar diez reliquias de luz y descubrir tres santuarios. Un guardián patrulla las ruinas y persigue al explorador si lo detecta. La partida tiene menú, pausa, victoria y derrota; dura como máximo siete minutos y comienza con tres oportunidades.
+Aventura original de exploración y supervivencia 3D hecha en Unity 6000.6.0f1. La esfera viajera recupera doce reliquias de luz en etapas de 3, 4 y 5, y puede descubrir tres santuarios. La partida empieza con un guardián y cada reliquia añade otro cerca del siguiente objetivo. El personaje tiene 100 puntos de vida, pierde 25 por contacto y recupera 35 con un botiquín. Hay siete minutos para completar la aventura.
 
-Abre `Assets/Scenes/Gameplay.unity`, pulsa **Play** y elige **Jugar**. Muévete con WASD o flechas en relación con la cámara. Usa el mouse para observar y **Escape** para pausar o liberar el cursor. La flecha indica el rumbo aproximado de la reliquia disponible más cercana. Acércate a los santuarios para registrarlos en el HUD; son hallazgos opcionales que premian la exploración. Recuperar las diez reliquias despierta el santuario y completa la aventura.
+Abre `Assets/Scenes/Gameplay.unity`, pulsa **Play** y elige **Jugar**. Muévete con WASD o flechas en relación con la cámara. Usa el mouse para observar y **Escape** para pausar o liberar el cursor. La flecha indica el rumbo aproximado de la reliquia disponible más cercana. Los botiquines verdes curan cuando falta vida. Los controles aparecen en la pausa, sin tapar la vista durante la partida. Recuperar las doce reliquias produce la victoria; perder toda la vida o agotar el tiempo produce la derrota. Se puede reintentar desde la pantalla final.
 
 - `main`: mapa original.
 - `feature/gameplay-3d`: personaje, cámara, coleccionables, brújula e interfaces.
-- `codex/pa4-final`: experiencia PA4 completa, con temática fantástica, guardián, santuarios, audio, efectos, finales y pruebas.
+- `codex/pa4-final`: experiencia PA4 con guardianes crecientes, etapas, botiquines, santuarios, audio, efectos, finales y pruebas.
 
-La esfera, las reliquias luminosas, el guardián y las piedras antiguas son Prefabs. El brillo de las reliquias utiliza un Shader Graph propio. Los efectos de recolección reutilizan cuatro sistemas de partículas mediante Object Pooling.
+La esfera, las reliquias luminosas, los guardianes, botiquines, pasajes y piedras antiguas son Prefabs. El brillo de las reliquias utiliza un Shader Graph propio. Los efectos de recolección reutilizan cuatro sistemas de partículas mediante Object Pooling.
 
 Consulta [GAMEPLAY.md](GAMEPLAY.md) para conocer los componentes y controles y [Documentation/PA4_FINAL.md](Documentation/PA4_FINAL.md) para las pruebas y la entrega. Los recursos grandes usan Git LFS. `Library`, `Temp`, `Logs` y `Builds` no se publican en Git.
 

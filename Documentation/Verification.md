@@ -1,5 +1,7 @@
 # Verificación del prototipo
 
+> Esta página conserva la evidencia histórica del prototipo de septiembre. La versión PA4 actual contiene doce reliquias, vida, botiquines y guardianes crecientes. Sus resultados vigentes son **45** comprobaciones de gameplay, **43** TPS y **59** PA4, todas aprobadas en Play Mode el 10 de octubre de 2026; consulta [PA4_FINAL.md](PA4_FINAL.md). El terreno compartido se modificó en esta rama para despejar pasajes y botiquines; `main` conserva el mapa original.
+
 Fecha de verificación final: 24 de septiembre de 2026. Editor: Unity 6000.6.0f1, Windows.
 
 ## Resultado de integración

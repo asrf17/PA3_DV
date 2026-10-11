@@ -10,8 +10,8 @@ using Object = UnityEngine.Object;
 // Captures an editor-only demonstration. It never changes the saved scene or the player build.
 public static class PA4DemoCapture
 {
-    const string FullFolder = "Library/PA4FantasyVideoFrames";
-    const string ContinuationFolder = "Library/PA4FantasyVideoContinuation";
+    const string FullFolder = "Library/PA4BalancedVideoFrames";
+    const string ContinuationFolder = "Library/PA4BalancedVideoContinuation";
     const float Duration = 205f;
     const float FrameInterval = .125f;
     static double started;
@@ -77,7 +77,7 @@ public static class PA4DemoCapture
             : elapsed < 155 ? 3 : elapsed < 177 ? 4 : elapsed < 190 ? 5 : 6;
         if (stage != lastStage) { EnterStage(stage); lastStage = stage; }
         if (stage == 1) DriveToCoin(elapsed);
-        if (stage == 2 && (game.State != GameState.Playing || game.LivesRemaining <= 1))
+        if (stage == 2 && (game.State != GameState.Playing || game.Health <= game.guardianDamage))
         {
             game.StartGame();
             ShowGuardianAgain();
@@ -160,7 +160,7 @@ public static class PA4DemoCapture
         }
         else if (stage == 6)
         {
-            game.startingLives = 1;
+            game.guardianDamage = game.maxHealth;
             game.StartGame();
             game.GuardianCaughtPlayer();
         }
@@ -219,7 +219,7 @@ public static class PA4DemoCapture
         if (keyboard != null) { InputSystem.RemoveDevice(keyboard); keyboard = null; }
         if (game)
         {
-            game.startingLives = 3;
+            game.guardianDamage = 25;
             game.guardian.enabled = guardianEnabled;
             game.ShowMainMenu();
         }
