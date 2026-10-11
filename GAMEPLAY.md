@@ -45,7 +45,7 @@ Todas las referencias indicadas ya están asignadas en el Inspector. Los scripts
 | CollectionFeedback | Gameplay Systems | Sonido sintetizado y partículas doradas al recoger monedas. AudioSource, clip CoinChime y material CollectionSpark asignados. |
 
 El jugador utiliza la capa **Ignore Raycast** para evitar que las consultas de suelo y cámara detecten su propio collider; sigue colisionando físicamente con el entorno.
-La configuración TPS, sensibilidades, velocidad de giro y preparación para apuntado se detallan en [Documentation/TPS_CONTROLLER.md](Documentation/TPS_CONTROLLER.md).
+La configuración TPS, las sensibilidades, la velocidad de giro y la preparación para apuntado se encuentran en los componentes del personaje y la cámara dentro de la escena.
 Los prefabs reutilizables están en `Assets/Prefabs/Gameplay`: PlayerSphere, GoldenCoin, ForestGuardian, ForestMedkit, MoonstonePassage y AncientWaystone. Al instanciarlos en otra escena, asigna sus referencias en el Inspector.
 
 ## Conservación del mapa
