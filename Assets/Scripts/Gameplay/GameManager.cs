@@ -22,6 +22,7 @@ namespace ForestJourney
         public ForestGuardian guardian;
         public GuardianDirector guardianDirector;
         public Medkit[] medkits;
+        public SpeedBoostPickup[] speedBoosts;
         public DiscoveryJournal discoveries;
         [Min(30)] public float roundDuration = 420f;
         [Min(1)] public int maxHealth = 100;
@@ -31,6 +32,7 @@ namespace ForestJourney
         public int Health { get; private set; }
         public float InvulnerabilityRemaining { get; private set; }
         public event Action Changed;
+        public event Action<Vector3> Damaged;
         public void NotifyThreatChanged() { Changed?.Invoke(); }
 
         void OnEnable() { if (coins) coins.Changed += OnCoinsChanged; }
@@ -54,6 +56,7 @@ namespace ForestJourney
             if (discoveries) discoveries.ResetDiscoveries();
             ResetThreatsAndAid();
             SetState(GameState.Playing);
+            if (guardianDirector) guardianDirector.BeginRound();
         }
         public void ShowMainMenu()
         {
@@ -70,19 +73,29 @@ namespace ForestJourney
             if (guardianDirector) guardianDirector.ResetGuardians();
             else if (guardian) guardian.ResetGuardian();
             if (medkits != null) foreach (var medkit in medkits) if (medkit) medkit.ResetMedkit();
+            if (speedBoosts != null) foreach (var boost in speedBoosts) if (boost) boost.ResetPickup();
         }
         void OnCoinsChanged()
         {
             Changed?.Invoke();
             if (State == GameState.Playing && coins.Complete) Finish(true);
         }
-        public void GuardianCaughtPlayer()
+        public void GuardianCaughtPlayer() { GuardianCaughtPlayer(guardian ? guardian.transform.position : player.transform.position - player.transform.forward); }
+        public void GuardianCaughtPlayer(Vector3 attackerPosition)
         {
             if (State != GameState.Playing || InvulnerabilityRemaining > 0) return;
             Health = Mathf.Max(0, Health - guardianDamage);
+            Damaged?.Invoke(attackerPosition);
             if (Health == 0) { Finish(false); return; }
             InvulnerabilityRemaining = 2.2f;
             Changed?.Invoke();
+        }
+        public bool GrantSpeedBoost(float duration, float multiplier)
+        {
+            if (State != GameState.Playing || !player || duration <= 0 || multiplier <= 1) return false;
+            player.ApplySpeedBoost(duration, multiplier);
+            Changed?.Invoke();
+            return true;
         }
         public bool Heal(int amount)
         {

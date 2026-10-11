@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace ForestJourney
 {
-    // One new patrol enters the forest after each relic. Each starts away from the player.
+    // A second patrol starts the round; relics and stage changes add safe-distance reinforcements.
     public sealed class GuardianDirector : MonoBehaviour
     {
         public GameManager game;
@@ -14,6 +14,7 @@ namespace ForestJourney
         [Min(8)] public float safeSpawnRadius = 18f;
 
         readonly List<ForestGuardian> reinforcements = new List<ForestGuardian>();
+        int lastStage = 1;
         public int ActiveCount => (firstGuardian ? 1 : 0) + reinforcements.Count;
         public bool AnyChasing
         {
@@ -42,7 +43,24 @@ namespace ForestJourney
         {
             if (!game || game.State != GameState.Playing || !guardianPrefab || !terrain) return;
             var nextRelic = coins.Nearest(game.player.transform.position);
-            Vector3 spawn = ChooseSpawn(nextRelic ? nextRelic.transform.position : relicPosition);
+            Vector3 target = nextRelic ? nextRelic.transform.position : relicPosition;
+            SpawnGuardian(target);
+            if (coins.Stage > lastStage) SpawnGuardian(target);
+            lastStage = coins.Stage;
+            game.NotifyThreatChanged();
+        }
+
+        public void BeginRound()
+        {
+            if (!game || !guardianPrefab || !terrain) return;
+            var relic = coins.Nearest(game.player.transform.position);
+            SpawnGuardian(relic ? relic.transform.position : game.player.transform.position + Vector3.forward * 32f);
+            game.NotifyThreatChanged();
+        }
+
+        void SpawnGuardian(Vector3 target)
+        {
+            Vector3 spawn = ChooseSpawn(target);
             var guardian = Instantiate(guardianPrefab, spawn, Quaternion.identity, transform);
             guardian.name = "Guardian " + (ActiveCount + 1).ToString("00");
             guardian.game = game;
@@ -50,13 +68,12 @@ namespace ForestJourney
             guardian.waypoints = null;
             // Later reinforcements remain threatening, while the player's top speed stays higher.
             guardian.patrolSpeed = 4.2f;
-            guardian.chaseSpeed = 10f + coins.Stage * .5f;
-            guardian.detectionRange = 24f + coins.Stage * 2f;
+            guardian.chaseSpeed = 10.5f + coins.Stage * .5f;
+            guardian.detectionRange = 27f + coins.Stage * 2f;
             guardian.releaseRange = guardian.detectionRange + 21f;
-            guardian.alertDelay = 3f;
+            guardian.alertDelay = 2f;
             guardian.ResetGuardian();
             reinforcements.Add(guardian);
-            game.NotifyThreatChanged();
         }
 
         Vector3 ChooseSpawn(Vector3 relicPosition)
@@ -94,6 +111,7 @@ namespace ForestJourney
                 Destroy(guardian.gameObject);
             }
             reinforcements.Clear();
+            lastStage = 1;
             if (firstGuardian) firstGuardian.ResetGuardian();
         }
     }

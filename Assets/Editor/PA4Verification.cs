@@ -103,6 +103,7 @@ public static class PA4Verification
         var player = game.player;
         var guardian = game.guardian;
         var hud = game.hud.GetComponent<ExpeditionHUD>();
+        var damageFeedback = game.hud.GetComponent<DamageFeedback>();
         var feedback = game.GetComponent<CollectionFeedback>();
         var journal = game.discoveries;
         var ambience = game.transform.Find("Forest Ambience").GetComponent<AudioSource>();
@@ -124,7 +125,17 @@ public static class PA4Verification
         Check(journal && journal.Total == 3 && journal.DiscoveredCount == 0,
             "Three optional fantasy landmarks are available from a fresh menu");
         Check(game.guardianDirector && game.guardianDirector.ActiveCount == 1 && game.medkits.Length >= 4,
-            "One starting guardian and reusable medkits are ready");
+            "A fresh menu has the first guardian and reusable medkits ready");
+        Check(game.speedBoosts != null && game.speedBoosts.Length >= 5 &&
+            game.speedBoosts.All(item => item && item.GetComponent<SphereCollider>().isTrigger),
+            "Five speed pickups are placed throughout the forest");
+        Check(player.jumpHeight > 0 && hud.healthTrail && hud.boostStatus && damageFeedback &&
+            damageFeedback.edgeFlash && damageFeedback.directionArrow &&
+            hud.healthFill.sprite && hud.healthTrail.sprite,
+            "Jump, animated health, boost status and directional damage feedback are connected");
+        Check(hud.healthFill.transform.parent.parent == game.hud.transform.Find("Health Display") &&
+            ((RectTransform)game.hud.transform.Find("Health Display")).anchorMin.y == 0,
+            "Health bar is fixed along the bottom of the screen");
         Check(guardian.chaseSpeed < player.speed && guardian.chaseSpeed > player.speed * .7f,
             "Guardian is close enough in speed to pressure the player while remaining escapable");
         Check(game.coins.Total == 12 && game.coins.Stage == 1 &&
@@ -139,6 +150,7 @@ public static class PA4Verification
         yield return .3f;
 
         game.StartGame();
+        Check(game.guardianDirector.ActiveCount == 2, "Two guardians begin each expedition");
         Check(journal.Discover(journal.landmarks[0]) && !journal.Discover(journal.landmarks[0])
             && journal.DiscoveredCount == 1, "A sanctuary records one discovery only");
         Check(hud.discoveryStatus.text.Contains("1/3") && hud.discoveryStatus.text.Contains("Alba"),
@@ -152,6 +164,12 @@ public static class PA4Verification
         Check(hud.timer.text.StartsWith("TIEMPO") && hud.lives.text.Contains("100") &&
             Mathf.Approximately(hud.healthFill.fillAmount, 1f) && game.resultMenu.activeSelf == false,
             "HUD displays time and full health while result screen stays hidden");
+        float takeoff = player.Body.position.y;
+        player.RequestJump();
+        yield return .12f;
+        Check(player.Body.position.y > takeoff + .15f && !player.Grounded,
+            "Space jump lifts the physics player without rotating the camera");
+        yield return .7f;
         Check(ambience.isPlaying, "Forest ambience plays during gameplay");
         Check(music.isPlaying, "Background music continues into gameplay");
         ScreenCapture.CaptureScreenshot("Library/PA4Playing.png");
@@ -193,6 +211,11 @@ public static class PA4Verification
         yield return .35f;
         Check(game.Health == 75 && game.State == GameState.Playing,
             "Guardian contact removes 25 health while the player stays in the world");
+        Check(hud.healthFill.fillAmount < .82f && hud.healthTrail.fillAmount > hud.healthFill.fillAmount &&
+            damageFeedback.edgeFlash.color.a > .01f && damageFeedback.directionArrow.color.a > .01f,
+            "Damage lowers the bottom bar and briefly shows a directional red hit warning");
+        ScreenCapture.CaptureScreenshot("Library/PA4Damage.png");
+        yield return .2f;
         Check(game.InvulnerabilityRemaining > 0, "Damage grants brief contact protection");
         var medkit = game.medkits[0];
         Vector3 outsideKit = medkit.transform.position + Vector3.back * 4f;
@@ -207,6 +230,20 @@ public static class PA4Verification
         yield return .35f;
         Check(game.Health == 100 && !medkit.gameObject.activeSelf,
             "Entering a medkit trigger restores health once and hides the pickup");
+        var speedPickup = game.speedBoosts[0];
+        Vector3 outsideBoost = speedPickup.transform.position + Vector3.back * 4f;
+        outsideBoost.y = terrain.SampleHeight(outsideBoost) + terrain.transform.position.y + 1.15f;
+        player.Body.position = outsideBoost;
+        player.Body.linearVelocity = Vector3.zero;
+        Physics.SyncTransforms();
+        yield return .15f;
+        player.Body.position = speedPickup.transform.position;
+        player.Body.linearVelocity = Vector3.zero;
+        Physics.SyncTransforms();
+        yield return .35f;
+        Check(!speedPickup.gameObject.activeSelf && player.CurrentSpeed > player.speed &&
+            player.SpeedBoostRemaining > 0 && hud.boostStatus.gameObject.activeSelf,
+            "Cyan pickup boosts movement speed and displays its remaining time");
         guardian.detectionRange = originalDetection;
         guardian.alertDelay = originalAlertDelay;
         guardian.sightMask = originalSight;
@@ -214,8 +251,9 @@ public static class PA4Verification
         game.StartGame();
         Check(journal.DiscoveredCount == 0 && !journal.landmarks[0].Discovered,
             "Starting a new expedition resets discovered places");
-        Check(game.medkits[0].gameObject.activeSelf && game.guardianDirector.ActiveCount == 1,
-            "Retry restores medkits and removes reinforcements");
+        Check(game.medkits[0].gameObject.activeSelf && game.speedBoosts[0].gameObject.activeSelf &&
+            player.SpeedBoostRemaining == 0 && game.guardianDirector.ActiveCount == 2,
+            "Retry restores pickups, clears boost and starts with two patrols");
         int particleCount = feedback.GetComponentsInChildren<ParticleSystem>(true).Length;
         Check(!game.coins.coins[3].TryCollect(), "Locked relic cannot be collected ahead of its stage");
         for (int i = 0; i < game.coins.Total; i++)
@@ -225,7 +263,7 @@ public static class PA4Verification
             {
                 var nextRelic = game.coins.Nearest(player.transform.position);
                 var reinforcement = Object.FindObjectsByType<ForestGuardian>(FindObjectsSortMode.None)
-                    .First(item => item != guardian);
+                    .First(item => item.name == "Guardian 03");
                 Check(nextRelic && Vector3.Distance(reinforcement.transform.position,
                         nextRelic.transform.position) < 35f &&
                     Vector3.Distance(reinforcement.transform.position, player.transform.position) >= 15f,
@@ -235,8 +273,9 @@ public static class PA4Verification
                 "Stage two unlocks four new relics");
             if (i == 6) Check(game.coins.Stage == 3 && game.coins.coins.Count(c => c.gameObject.activeSelf) == 5,
                 "Stage three unlocks five new relics");
-            if (i < game.coins.Total - 1) Check(game.guardianDirector.ActiveCount == i + 2,
-                "Each relic adds exactly one guardian to the forest");
+            if (i < game.coins.Total - 1) Check(game.guardianDirector.ActiveCount == i + 3 +
+                (i >= 2 ? 1 : 0) + (i >= 6 ? 1 : 0),
+                "Relics and new stages add guardians progressively");
         }
         yield return .25f;
         Check(game.State == GameState.Victory && game.resultMenu.activeSelf && !player.ControlsEnabled,
@@ -249,7 +288,7 @@ public static class PA4Verification
         game.retryButton.GetComponent<Button>().onClick.Invoke();
         yield return .15f;
         Check(game.State == GameState.Playing && game.coins.Collected == 0 && game.Health == 100 &&
-            game.guardianDirector.ActiveCount == 1,
+            game.guardianDirector.ActiveCount == 2,
             "Result retry starts a clean session");
 
         game.guardianDamage = game.maxHealth;

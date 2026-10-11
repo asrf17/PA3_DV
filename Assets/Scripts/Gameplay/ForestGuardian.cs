@@ -82,7 +82,7 @@ namespace ForestJourney
             controller.Move((horizontalVelocity + Vector3.up * verticalSpeed) * Time.deltaTime);
 
             if (alertCountdown <= 0 && Vector3.Distance(transform.position, player.transform.position) < catchDistance)
-                game.GuardianCaughtPlayer();
+                game.GuardianCaughtPlayer(transform.position);
         }
 
         Vector3 PatrolTarget()
