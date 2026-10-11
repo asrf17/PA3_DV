@@ -39,6 +39,7 @@ public static class GameplayDevelopment
             else if (command == "fantasy") FantasyExplorationUpgrade.Apply();
             else if (command == "survival") SurvivalExplorationUpgrade.Apply();
             else if (command == "roundui") RoundedInterfaceUpgrade.Apply();
+            else if (command == "music") BackgroundMusicSetup.Apply();
             else if (command == "pa4qa") PA4Verification.Run();
             else if (command == "pa4video") PA4DemoCapture.Run();
             else if (command == "pa4video90") PA4DemoCapture.RunContinuation();

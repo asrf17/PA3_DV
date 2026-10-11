@@ -106,6 +106,7 @@ public static class PA4Verification
         var feedback = game.GetComponent<CollectionFeedback>();
         var journal = game.discoveries;
         var ambience = game.transform.Find("Forest Ambience").GetComponent<AudioSource>();
+        var music = game.transform.Find("Background Music")?.GetComponent<AudioSource>();
         originalDuration = game.roundDuration;
         originalHealth = game.maxHealth;
         originalDamage = game.guardianDamage;
@@ -116,6 +117,9 @@ public static class PA4Verification
         Check(game.State == GameState.MainMenu && !player.ControlsEnabled, "Menu freezes player before starting");
         Check(guardian.waypoints.Length >= 3 && guardian.Mode == GuardianMode.Patrol, "Guardian begins on a multi-point patrol");
         Check(ambience.clip && ambience.loop && ambience.playOnAwake, "Original ambience is assigned and loops");
+        Check(music && music.GetComponent<BackgroundMusic>() && music.clip && music.loop && music.playOnAwake && music.ignoreListenerPause &&
+            music.clip.loadType == AudioClipLoadType.Streaming && music.isPlaying,
+            "Background music starts in the opening menu and streams from disk");
         Check(feedback.PooledEffectCount >= 3, "Collection effects use a preallocated pool");
         Check(journal && journal.Total == 3 && journal.DiscoveredCount == 0,
             "Three optional fantasy landmarks are available from a fresh menu");
@@ -149,6 +153,7 @@ public static class PA4Verification
             Mathf.Approximately(hud.healthFill.fillAmount, 1f) && game.resultMenu.activeSelf == false,
             "HUD displays time and full health while result screen stays hidden");
         Check(ambience.isPlaying, "Forest ambience plays during gameplay");
+        Check(music.isPlaying, "Background music continues into gameplay");
         ScreenCapture.CaptureScreenshot("Library/PA4Playing.png");
         yield return .3f;
 
@@ -159,6 +164,7 @@ public static class PA4Verification
         yield return .3f;
         Check(game.State == GameState.Paused && Vector3.Distance(pausedGuardian, guardian.transform.position) < .001f
             && Mathf.Abs(pausedTime - game.TimeRemaining) < .001f, "Pause freezes guardian and countdown");
+        Check(music.isPlaying, "Background music continues while the game is paused");
         ScreenCapture.CaptureScreenshot("Library/PA4Pause.png");
         yield return .3f;
         pause.Continue();
